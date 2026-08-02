@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class playerscript : MonoBehaviour
 {
-    bool fishing = false;
+    public bool fishing = false;
     public float walkspeed;
     public float maxspeed = 6f;
     public Rigidbody2D rb;

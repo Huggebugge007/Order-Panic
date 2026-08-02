@@ -19,7 +19,7 @@ public class handler : MonoBehaviour
 
     void Start()
     {
-
+        playerscript = player.GetComponent<playerscript>();
         parent = new GameObject();
         parent.name = "fishparent";
         for (int i = 0; i < fishCount; i++)
@@ -103,6 +103,14 @@ public class handler : MonoBehaviour
     }
     private void Update()
     {
-        dephttext.text = "Depth:" + Mathf.FloorToInt((ground.transform.position.y + (ground.transform.localScale.y)) - player.transform.position.y).ToString();
+        if (playerscript.fishing && player.transform.position.y < 5)
+        {
+            dephttext.text = "Depth:" + Mathf.FloorToInt((ground.transform.position.y + (ground.transform.localScale.y)) - player.transform.position.y).ToString();
+        }
+        else
+        {
+            dephttext.text = "Depth: ???";
+        }
+
     }
 }
