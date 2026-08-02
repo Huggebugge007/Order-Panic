@@ -25,7 +25,7 @@ public class camscript : MonoBehaviour
     {
         //cam.backgroundColor = watergradient.Evaluate((Mathf.Abs(transform.position.y) / depht));
 
-        if (!playerscript.isgrappled && playerscript.iswater())
+        if (!playerscript.isgrappled && player.transform.position.y < -1.5)
         {
             if(player.transform.position.y <= -3)
             {

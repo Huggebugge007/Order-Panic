@@ -24,7 +24,7 @@ TagManager:
   - weapon
   - rainlayer
   - background
-  - 
+  - poolwater
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 2974384135
+    locked: 0
+  - name: fish
+    uniqueID: 3129896595
     locked: 0
   m_RenderingLayers:
   - Default

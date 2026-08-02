@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class fishscript : MonoBehaviour
 {
-    public bool inwater;
+    public bool inwater, inpool;
     public stats stats;
 
     public float speed;
     public Vector2 goal;
 
-    public LayerMask waterlayer;
+    public LayerMask waterlayer, poollayer;
     public GameObject player;
     public bool chasingplayer = false;
 
@@ -18,6 +18,9 @@ public class fishscript : MonoBehaviour
     public float turnSpeed = 3f;
     public float wanderRadius = 10f;
     public float wanderY = 3f;
+    public float timetildry = 30f;
+    private float countdown;
+
 
 
     bool wasinwater = false;
@@ -30,7 +33,7 @@ public class fishscript : MonoBehaviour
 
     void Start()
     {
-        
+        countdown = timetildry;
         speed = stats.speed;
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -38,6 +41,23 @@ public class fishscript : MonoBehaviour
     void Update()
     {
         inwater = rb.IsTouchingLayers(waterlayer);
+        inpool = rb.IsTouchingLayers(poollayer);
+
+        if(inwater || inpool)
+        {
+            countdown = timetildry;
+        }
+
+        
+
+        if(!inwater && !inpool)
+        {
+            countdown -= Time.deltaTime;
+        }
+        if(countdown <= 0)
+        {
+            Destroy(gameObject);
+        }
 
         if (!wasinwater && inwater)
         {

@@ -28,7 +28,7 @@ public class playerscript : MonoBehaviour
     public SpringJoint2D joint;
     public float springfreq, springdamp;
     public float reelspeed;
-    public LayerMask water;
+    public LayerMask water, poolwater;
     public Transform fishpos;
     public float pickupradius;
     public LayerMask fishlayer;
@@ -38,7 +38,6 @@ public class playerscript : MonoBehaviour
     public GameObject mybait;
     public float rotationspeed = 200f;
     public float rolltorque = 15f;
-    public bool inwater;
     public GameObject cannonhookpos,cannonlinepos;
     public GameObject cannon, cannonbarrel;
     public float cannonatatchdistance = 1f;
@@ -49,6 +48,7 @@ public class playerscript : MonoBehaviour
     public float boostpower;
     public float usableboost;
     private bool previouswater = false;
+    private bool previouspool = false;
     public Transform fishpickuppoint;
 
     void Awake()
@@ -63,7 +63,20 @@ public class playerscript : MonoBehaviour
         {
             usableboost = totalboost;
         }
+        if (!previouspool && ispool())
+        {
+            usableboost = totalboost;
+        }
+        if (ispool())
+        {
+            fishing = true;
+        }
+        if(previouspool && !ispool())
+        {
+            fishing = false;
+        }
         previouswater = iswater();
+        previouspool = ispool();
 
         if (isgrappled && iswater())
         {
@@ -71,6 +84,8 @@ public class playerscript : MonoBehaviour
             joint.distance = Vector2.Distance(transform.position, grapplepoint);
             joint.enabled = true;
         }
+
+
 
         isgrounded();
 
@@ -103,7 +118,7 @@ public class playerscript : MonoBehaviour
             }
             currentAngle += -x * cannonrotationspeed * Time.deltaTime;
 
-            currentAngle = Mathf.Clamp(currentAngle, -90, 30);
+            currentAngle = Mathf.Clamp(currentAngle, -90, 20);
 
             cannonbarrel.transform.rotation = Quaternion.Euler(0, 0, currentAngle);
             grapplepoint = cannonlinepos.transform.position;
@@ -141,7 +156,7 @@ public class playerscript : MonoBehaviour
             drop();
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && fishing)
+        if (Input.GetKeyDown(KeyCode.R) && fishing && transform.position.y < 500)
         {
             stopfishing();
         }
@@ -226,18 +241,22 @@ public class playerscript : MonoBehaviour
             fightmanager.fightover = false;
         }
 
-        if (transform.position.y < -1.5f && isgrappled)
+        if (iswater() && isgrappled)
         {
-            rb.gravityScale = 0f;
+            rb.gravityScale = 0.1f;
+        }
+        else if (ispool())
+        {
+            rb.gravityScale = 0.1f;
         }
         else if (waiting)
-        {
-            rb.gravityScale = 0f;
-        }
-        else
-        {
-            rb.gravityScale = 0.35f;
-        }
+                {
+                    rb.gravityScale = 0f;
+                }
+                else
+                {
+                    rb.gravityScale = 0.35f;
+                }
     }
     
     private void FixedUpdate()
@@ -259,25 +278,28 @@ public class playerscript : MonoBehaviour
 
         if (fishing)
         {
-            if (Input.GetButton("Jump") && usableboost > 0 && iswater())
-            {
-                usableboost -= 5 * Time.deltaTime;
-                rb.AddForce(transform.up * boostpower, ForceMode2D.Force);
-            }
-
             rb.MoveRotation(rb.rotation - x * rotationspeed * Time.fixedDeltaTime);
 
-
-            if (Input.GetKey(KeyCode.W) && iswater())
+            if(iswater() || ispool())
             {
-                rb.AddForce(transform.up * reelspeed * 0.5f, ForceMode2D.Force);
+                if (Input.GetButton("Jump") && usableboost > 0)
+                {
+                    usableboost -= 5 * Time.deltaTime;
+                    rb.AddForce(transform.up * boostpower, ForceMode2D.Force);
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    rb.AddForce(transform.up * reelspeed * 0.5f, ForceMode2D.Force);
+                }
+
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    rb.AddForce(-transform.up * reelspeed * 0.5f, ForceMode2D.Force);
+                }
             }
 
 
-            if (Input.GetKey(KeyCode.S) && iswater())
-            {
-                rb.AddForce(-transform.up * reelspeed * 0.5f, ForceMode2D.Force);
-            }
 
             if (joint.distance >= ropelenght)
                 joint.enabled = true;
@@ -315,6 +337,10 @@ public class playerscript : MonoBehaviour
     public bool iswater()
     {
         return rb.IsTouchingLayers(water);
+    }
+    public bool ispool()
+    {
+        return rb.IsTouchingLayers(poolwater);
     }
 
     private void flip()

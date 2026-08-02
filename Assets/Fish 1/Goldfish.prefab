@@ -270,19 +270,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inwater: 0
+  inpool: 0
   stats: {fileID: 2707918806172923788}
   speed: 0
   goal: {x: 0, y: 0}
   waterlayer:
     serializedVersion: 2
     m_Bits: 64
+  poollayer:
+    serializedVersion: 2
+    m_Bits: 0
   player: {fileID: 0}
   chasingplayer: 0
   rb: {fileID: 0}
   turnSpeed: 3
   wanderRadius: 10
   wanderY: 3
-  col: {fileID: 0}
+  timetildry: 30
 --- !u!50 &-8001640566737035656
 Rigidbody2D:
   serializedVersion: 5
@@ -478,8 +482,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1165070701
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1619808052489644277, guid: a3bdcf3702b33a144848153762146ab1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
