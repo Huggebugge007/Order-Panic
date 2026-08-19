@@ -241,13 +241,9 @@ public class playerscript : MonoBehaviour
             fightmanager.fightover = false;
         }
 
-        if (iswater() && isgrappled)
+        if (fishing)
         {
-            rb.gravityScale = 0.1f;
-        }
-        else if (ispool())
-        {
-            rb.gravityScale = 0.1f;
+            rb.gravityScale = 0.05f;
         }
         else if (waiting)
                 {
@@ -268,7 +264,7 @@ public class playerscript : MonoBehaviour
 
             Vector2 v = rb.linearVelocity;
 
-            if (Mathf.Abs(v.x) > maxspeed)
+            if (Mathf.Abs(v.x) > maxspeed && !isgrappled)
             {
                 v.x = Mathf.Sign(v.x) * maxspeed;
                 rb.linearVelocity = v;
@@ -280,8 +276,9 @@ public class playerscript : MonoBehaviour
         {
             rb.MoveRotation(rb.rotation - x * rotationspeed * Time.fixedDeltaTime);
 
-            if(iswater() || ispool())
+            if (fishing)
             {
+                
                 if (Input.GetButton("Jump") && usableboost > 0)
                 {
                     usableboost -= 5 * Time.deltaTime;
@@ -407,6 +404,7 @@ public class playerscript : MonoBehaviour
     public void respawn()
     {
         transform.position = new Vector3(0, 0, 0);
+        transform.rotation = Quaternion.identity;
     }
 
     public void resurfacewithfish(GameObject fish)
@@ -424,5 +422,26 @@ public class playerscript : MonoBehaviour
         fishstats.defeated = true;
         fish.transform.parent = fishpos;
         fish.transform.localPosition = new Vector3(0, 0, 0);
+    }
+
+    public void upgraderopelenght(float amount)
+    {
+        ropelenght = amount;
+    }
+    public void upgradecannonpower(float amount)
+    {
+        cannonlaunchforce = amount;
+    }
+    public void upgradeboostamount(float amount)
+    {
+        usableboost = amount;
+    }
+    public void upgradereelspeed(float amount)
+    {
+        reelspeed = amount;
+    }
+    public void upgradecatchradius(float amount)
+    {
+        pickupradius = amount;
     }
 }

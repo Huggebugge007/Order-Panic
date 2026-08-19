@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -54,6 +55,10 @@ public class playertavern : MonoBehaviour
             currentrooms++;
             roompos -= roomspacing;
         }
+    }
+    public void addroom(int amount)
+    {
+        unlockedrooms = amount;
     }
 
     private void UpdateCameraSize()

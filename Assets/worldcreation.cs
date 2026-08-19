@@ -52,10 +52,7 @@ public class worldcreation : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.LogError(
-                "Player Transform is not assigned.",
-                this
-            );
+ 
 
             enabled = false;
             return;
@@ -70,10 +67,7 @@ public class worldcreation : MonoBehaviour
         UpdateVisibility(current);
         lastChunk = current;
 
-        Debug.Log(
-            $"Chunk system initialized with {chunks.Count} existing chunks.",
-            this
-        );
+
     }
 
 
@@ -367,20 +361,14 @@ public class worldcreation : MonoBehaviour
         {
             worldparent = existingWorld;
 
-            Debug.Log(
-                $"Found existing World object: {worldparent.name}",
-                worldparent
-            );
+
         }
         else
         {
             worldparent =
                 new GameObject("World");
 
-            Debug.Log(
-                "No existing World object found. Created a new one.",
-                worldparent
-            );
+   
         }
     }
     void RebuildChunkDictionary()
@@ -389,10 +377,7 @@ public class worldcreation : MonoBehaviour
 
         if (worldparent == null)
         {
-            Debug.LogError(
-                "Cannot rebuild chunks because World is null.",
-                this
-            );
+  
 
             return;
         }
@@ -407,21 +392,14 @@ public class worldcreation : MonoBehaviour
 
             if (chunk.tilemap == null)
             {
-                Debug.LogWarning(
-                    $"Ignoring {chunk.name}: Tilemap reference is missing.",
-                    chunk
-                );
+      
 
                 continue;
             }
 
             if (chunks.ContainsKey(chunk.coord))
             {
-                Debug.LogWarning(
-                    $"Duplicate chunk coordinate {chunk.coord}. " +
-                    $"Ignoring {chunk.name}.",
-                    chunk
-                );
+
 
                 continue;
             }
@@ -429,20 +407,16 @@ public class worldcreation : MonoBehaviour
             chunks.Add(chunk.coord, chunk);
         }
 
-        Debug.Log(
-            $"Recovered {chunks.Count} generated chunks from {worldparent.name}.",
-            worldparent
-        );
     }
 
 
 
     Chunk GetOrCreateChunk(Vector2Int coord)
     {
-        Debug.Log($"Looking for chunk {coord}");
+
         if (chunks.TryGetValue(coord, out Chunk existing))
         {
-            Debug.Log($"Chunk {coord} already exists");
+
             // Unity's overridden == null check also catches objects
             // that were destroyed (e.g. by exiting Play mode, or by
             // deleting the World object), where the C# reference
@@ -458,7 +432,7 @@ public class worldcreation : MonoBehaviour
 
         EnsureWorldParent();
 
-        Debug.Log($"Creating NEW chunk {coord}");
+
         GameObject chunkObject =
             new GameObject(
                 "Chunk " + coord
