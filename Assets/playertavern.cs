@@ -13,10 +13,37 @@ public class playertavern : MonoBehaviour
 
     [Header("Rooms")]
     public int unlockedrooms;
-    [SerializeField] private GameObject room;
+    [SerializeField] private GameObject roomnohole, roomhole;
+    GameObject roomClone = null;
     [SerializeField] private Transform roomparent;
-    [SerializeField] private float roomspacing = 1.04f;
+    [SerializeField] private float roomspacing = 0.96f;
 
+    [SerializeField] private LayerMask ladderLayer;
+    [SerializeField] private float climbSpeed = 3f;
+    [SerializeField] private Vector2 ladderCheckSize = new Vector2(0.8f, 1.5f);
+
+private Rigidbody2D rb;
+
+private void Awake()
+{
+    rb = GetComponent<Rigidbody2D>();
+}
+
+private void FixedUpdate()
+{
+    bool onLadder = Physics2D.OverlapBox(
+        transform.position,
+        ladderCheckSize,
+        0f,
+        ladderLayer
+    );
+
+    if (onLadder && Input.GetKey(KeyCode.W))
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, climbSpeed);
+    }
+}
+    
     private int currentrooms;
     private float roompos;
     private bool ready;
@@ -25,7 +52,7 @@ public class playertavern : MonoBehaviour
     {
         roompos = 0f;
         currentrooms = 1;
-        unlockedrooms = 1;
+        unlockedrooms = 2;
         ready = true;
 
         if (playerscript == null)
@@ -37,14 +64,37 @@ public class playertavern : MonoBehaviour
     private void Update()
     {
         AddUnlockedRooms();
+        ladderClimb();
     }
+
+    private void ladderClimb()
+    {
+        bool onLadder = Physics2D.OverlapBox(transform.position,ladderCheckSize,0f,ladderLayer);
+
+        if (onLadder && Input.GetKey(KeyCode.W))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x/2, climbSpeed);
+        }
+    }
+
 
     private void AddUnlockedRooms()
     {
         while (unlockedrooms > currentrooms)
         {
-            GameObject roomClone = Instantiate(
-                room,
+            if (roomClone != null)
+            {
+                Destroy(roomClone);
+                roomClone = Instantiate(
+                roomhole,
+                new Vector2(0f, roompos+roomspacing),
+                Quaternion.identity,
+                roomparent
+            );
+                roomClone.transform.localPosition += Vector3.up * 0.12f;
+            }
+            roomClone = Instantiate(
+                roomnohole,
                 new Vector2(0f, roompos),
                 Quaternion.identity,
                 roomparent
