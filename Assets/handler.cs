@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,13 @@ public class handler : MonoBehaviour
     public TMP_Text dephttext;
     GameObject parent;
     public GameObject ground;
+    public Transform duckspawn;
+    public GameObject duckprefab;
+    public List<Transform> fallpoints;
+    public List<GameObject> avalibleseats = new List<GameObject>();
+    public List<GameObject> seats = new List<GameObject>();
+
+    public Transform tavernentrance, tavernexit;
 
 
     void Start()
@@ -28,6 +36,22 @@ public class handler : MonoBehaviour
         }
 
         StartCoroutine(CheckFish());
+    }
+
+
+    public void findseats()
+    {
+        GameObject[] seatObjects = GameObject.FindGameObjectsWithTag("seat");
+        seats = new List<GameObject>(seatObjects);
+        seats.RemoveAll(s => s == null);
+
+        foreach (GameObject seat in seats)
+        {
+            if (!avalibleseats.Contains(seat))
+            {
+                avalibleseats.Add(seat);
+            }
+        }
     }
 
     void SpawnRandom()
@@ -112,5 +136,31 @@ public class handler : MonoBehaviour
             dephttext.text = "Depth: ???";
         }
 
+    }
+    [ContextMenu("Spawn Duck")]
+    private void spawnduck()
+    {
+        avalibleseats.RemoveAll(s => s == null); // clean stale/destroyed refs first
+
+        if (avalibleseats.Count == 0)
+        {
+            Debug.LogWarning("No available seats to spawn duck.");
+            return;
+        }
+
+        GameObject duckclone = Instantiate(duckprefab, duckspawn);
+        int seatindex = Random.Range(0, avalibleseats.Count);
+        duckscript duckclonescript = duckclone.GetComponent<duckscript>();
+        duckclonescript.handler = this;
+        duckclonescript.seat = avalibleseats[seatindex];
+
+        duckclonescript.tavernentrance = tavernentrance;
+        duckclonescript.tavernexit = tavernexit;
+
+        duckclonescript.targets.Add(tavernentrance);
+        duckclonescript.targets.Add(avalibleseats[seatindex].transform.parent);
+        duckclonescript.targets.Add(avalibleseats[seatindex].transform);
+
+        avalibleseats.RemoveAt(seatindex);
     }
 }

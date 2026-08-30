@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playertavern : MonoBehaviour
@@ -8,6 +9,7 @@ public class playertavern : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private playerscript playerscript;
+    [SerializeField] private handler handler;
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject image;
 
@@ -23,6 +25,7 @@ public class playertavern : MonoBehaviour
     [SerializeField] private Vector2 ladderCheckSize = new Vector2(0.8f, 1.5f);
 
 private Rigidbody2D rb;
+    private int previousamountofrooms;
 
 private void Awake()
 {
@@ -50,6 +53,7 @@ private void FixedUpdate()
 
     private void Start()
     {
+        previousamountofrooms = 0;
         roompos = 0f;
         currentrooms = 1;
         unlockedrooms = 2;
@@ -65,6 +69,17 @@ private void FixedUpdate()
     {
         AddUnlockedRooms();
         ladderClimb();
+        if(currentrooms != previousamountofrooms)
+        {
+            StartCoroutine(FindSeatsNextFrame());
+
+        }
+        previousamountofrooms = currentrooms;
+    }
+    private IEnumerator FindSeatsNextFrame()
+    {
+        yield return null;
+        handler.findseats();
     }
 
     private void ladderClimb()

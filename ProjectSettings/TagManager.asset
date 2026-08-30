@@ -10,6 +10,7 @@ TagManager:
   - cloudgoal
   - spawn
   - fightmanager
+  - seat
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - Interactable
   - ladder
   - duck
-  - 
+  - seat
   - 
   - 
   - 
