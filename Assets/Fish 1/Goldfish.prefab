@@ -257,6 +257,7 @@ MonoBehaviour:
   evadetime: 0
   aggression: 0
   idlemiddletime: 0
+  cost: 15
 --- !u!114 &-6718270772153880579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,8 @@ MonoBehaviour:
   wanderRadius: 10
   wanderY: 3
   timetildry: 30
+  explosion1: {fileID: 1597623158702358751, guid: fa23cb21bc629c4478ff7f5e70fbd45a, type: 3}
+  explosion2: {fileID: 8889277204553287237, guid: 43d4fb53def25c046a25af663e88ac34, type: 3}
 --- !u!50 &-8001640566737035656
 Rigidbody2D:
   serializedVersion: 5
@@ -420,7 +423,7 @@ GameObject:
   - component: {fileID: 2610845111243761761}
   - component: {fileID: 2357558705451026422}
   m_Layer: 0
-  m_Name: fishes_9
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

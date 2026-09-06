@@ -30,11 +30,11 @@ public class waterlightscript : MonoBehaviour
             }
             else if (player.position.y >= -1.5f)
             {
-                globallightlevel = 0.4f;
+                globallightlevel = 0.3f;
             }
             else
             {
-                globallightlevel = (1 - Mathf.Abs(player.position.y / 100f)) * 0.4f;
+                globallightlevel = (1 - Mathf.Abs(player.position.y / 100f)) * 0.3f;
             }
         }
         globallight.intensity = globallightlevel;

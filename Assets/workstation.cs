@@ -1,11 +1,11 @@
-using UnityEngine;
-using System.Collections;
-using Microsoft.Unity.VisualStudio.Editor;
 using Cainos.LucidEditor;
+using System.Collections;
+using System.Text.RegularExpressions;
 using TMPro;
-using UnityEngine.UI;
-using UnityEngine.PlayerLoop;
 using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class workstation : MonoBehaviour, IInteractable
 {
@@ -14,6 +14,7 @@ public class workstation : MonoBehaviour, IInteractable
     public playerscript playerscript;
     public moneyhandler moneyscript;
 
+    public Button[] buttons;
     private bool inshop = false;
     private bool ready = true;
 
@@ -21,7 +22,13 @@ public class workstation : MonoBehaviour, IInteractable
     public Transform faderimage;
     public GameObject shopui;
 
+    public float money;
 
+
+    private void Awake()
+    {
+        buttons = moneyscript.buttons;
+    }
 
 
     public void Interact()
@@ -53,14 +60,45 @@ public class workstation : MonoBehaviour, IInteractable
 
         shopui.SetActive(!shopui.activeSelf);
 
+        foreach (Button btn in buttons)
+        {
+            string pricetext = btn.transform.parent.Find("Price").GetComponent<TMP_Text>().text;
+            string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
+
+            if (float.TryParse(numberText, out float price))
+            {
+                upgrade upgradescript = btn.GetComponentInParent<upgrade>();
+                if (upgradescript.currentrupgradenumber >= upgradescript.maxupgrade)
+                {
+                    btn.interactable = false;
+                    btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+                    btn.GetComponentInChildren<TMP_Text>().text = "MAX";
+                }
+                else
+                {
+                    if (money >= price)
+                    {
+                        btn.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
+                    }
+                    else
+                    {
+                        btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+                    }
+                }
+
+
+
+            }
+        }
+
         yield return faderimage.GetComponent<fadescript>().FadeOut(1);
         ready = true;
     }
 
     void Update()
     {
+        money = moneyscript.money;
 
-        
     }
 
 }

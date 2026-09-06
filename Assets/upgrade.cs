@@ -8,7 +8,11 @@ public class upgrade : MonoBehaviour
     public moneyhandler moneyhandler;
     public playerscript playerscript;
     public playertavern playertavernscript;
+
+    public int maxupgrade;
+    public handler handler;
     public int upgradenumber;
+    public int currentrupgradenumber;
 
     private void Start()
     {
@@ -25,11 +29,12 @@ public class upgrade : MonoBehaviour
     {
         if(moneyhandler.money >= cost)
         {
+            currentrupgradenumber +=1;
             moneyhandler.Changemoney(-cost);
             cost *= costmultiplier;
 
             currentamount += upgradeamount;
-
+            
             string formattedcost = NumberFormatter.FormatNumber(cost);
             pricetext.text = "Cost: " + formattedcost + "$";
             string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
@@ -60,6 +65,14 @@ public class upgrade : MonoBehaviour
             else if (upgradenumber == 6)
             {
                 playertavernscript.addroom(((int)currentamount));
+            }
+            else if (upgradenumber == 7)
+            {
+                handler.upgradespawnrate(((int)currentamount));
+            }
+            else if (upgradenumber == 8)
+            {
+                handler.upgradequality(((int)currentamount));
             }
         }
     }

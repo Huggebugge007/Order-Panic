@@ -1,15 +1,19 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
+using static UnityEngine.Rendering.DebugUI;
 public class duckscript : MonoBehaviour
 {
     public LayerMask waterLayer, groundLayer;
     public Transform target;
 
     private SpriteRenderer spriteRenderer;
+    public moneyhandler moneyhandler;
     public Transform floatPoint, tavernentrance, tavernexit;
     public float flatAngleThreshold = 5f;
     public float maxTiltAngle = 40f;
@@ -19,6 +23,7 @@ public class duckscript : MonoBehaviour
     public float movementSpeed = 5f;
     public float floatForce = 15f;
     public float waterDrag = 3f;
+    public GameObject explosion1, explosion2;
 
     float time;
     public bool finsihed = false;
@@ -35,8 +40,16 @@ public class duckscript : MonoBehaviour
 
     private int iterationCount = 0;
 
+    public GameObject wantedfish;
+    private bool exploding = false;
+
+    private GameObject thoughtbubble;
+
+    public LayerMask fishlayer;
     void Awake()
     {
+        thoughtbubble = transform.Find("thoughtbubble").gameObject;
+        thoughtbubble.SetActive(false);
         time = 0;
         arewethereyet = false;
         targetindex = 0;
@@ -49,6 +62,7 @@ public class duckscript : MonoBehaviour
     {
         yield return null;
         target = targets[targetindex];
+        wantedfish = handler.avaliblefish[Random.Range(0, handler.resturantquality - 1)];
     }
 
     void FixedUpdate()
@@ -74,7 +88,11 @@ public class duckscript : MonoBehaviour
 
         if (!arewethereyet)
         {
-            movement();
+            if (!exploding)
+            {
+                movement();
+            }
+
         }
 
         float angle = rb.rotation;
@@ -145,15 +163,30 @@ public class duckscript : MonoBehaviour
 
         if (target != null)
         {
-            if (Vector2.Distance(transform.position, target.position) < 0.05f && !arewethereyet)
+            if (Vector2.Distance(transform.position, target.position) < 0.035f && !arewethereyet)
             {
                 if (targetindex == targets.Count - 1)
                 {
                     arewethereyet = true;
+                    if(target.name.Contains("3") || target.name.Contains("1"))
+                    {
+                        transform.localScale = new Vector3(-1, 1, 1);
+                    }
+                    thoughtbubble.SetActive(true);
+                    int sortingnumber = 0;
+
+                    if (target.name.Contains("(") && target.name.Contains(")"))
+                    {
+                        int.TryParse(target.name.Split('(', ')')[1], out sortingnumber);
+                    }
+                    thoughtbubble.GetComponent<SpriteRenderer>().sortingOrder = -sortingnumber;
+                    SpriteRenderer thoughtbubblechildrenderer = thoughtbubble.transform.GetChild(0).GetComponent<SpriteRenderer>();
+                    thoughtbubblechildrenderer.sortingOrder = -sortingnumber;
+                    thoughtbubblechildrenderer.sprite = wantedfish.transform.Find("sprite").GetComponent<SpriteRenderer>().sprite;
                 }
                 else
                 {
-                    if (Vector2.Distance(transform.position, tavernentrance.position) < 0.1f)
+                    if (target == tavernentrance)
                     {
                         transform.position = tavernexit.position;
                     }
@@ -172,12 +205,12 @@ public class duckscript : MonoBehaviour
                     if (!handler.avalibleseats.Contains(seat))
                     {
                         handler.avalibleseats.Add(seat);
-                        Destroy(gameObject);
+                        DestroyWithExplosion();
                     }
                 }
                 else
                 {
-                    Destroy(gameObject);
+                    DestroyWithExplosion();
                 }
             }
         }
@@ -188,16 +221,33 @@ public class duckscript : MonoBehaviour
                 if (!handler.avalibleseats.Contains(seat))
                 {
                     handler.avalibleseats.Add(seat);
-                    Destroy(gameObject);
+                    DestroyWithExplosion();
                 }
             }
             else
             {
-                Destroy(gameObject);
+                DestroyWithExplosion();
             }
         }
         iterationCount++;
+        if(arewethereyet && !exploding && !finsihed)
+        {
+            bool touchingfish = Physics2D.OverlapCircle(transform.position, 0.2f, fishlayer);
+            if (touchingfish)
+            {
+                Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f);
+                if (hit.name.Substring(0, hit.name.Length - 7) == wantedfish.name)
+                {
 
+                    int cost = hit.GetComponent<stats>().cost;
+                    moneyhandler.Changemoney(cost);
+
+                    hit.GetComponent<fishscript>().DestroyWithExplosion();
+                    finsihed = true;
+                    DestroyWithExplosion();
+                }
+            }
+        }
     }
 
     private void movement()
@@ -219,7 +269,6 @@ public class duckscript : MonoBehaviour
 
         if (Mathf.Abs(transform.position.x - target.position.x) > 0.03f)
         {
-            // Changed from 0.3f to 0.15f
             RaycastHit2D hit = Physics2D.Raycast(
                 transform.position,
                 Vector2.down,
@@ -251,5 +300,20 @@ public class duckscript : MonoBehaviour
                 );
             }
         }
+    }
+    public void DestroyWithExplosion()
+    {
+        rb.gravityScale = 0f;
+        rb.linearVelocity = Vector2.zero;
+        exploding = true;
+        Instantiate(explosion1, transform.position, Quaternion.identity);
+        Instantiate(explosion2, transform.position, Quaternion.identity);
+        StartCoroutine(DestroyAfterExplosion());
+    }
+
+    IEnumerator DestroyAfterExplosion()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Destroy(gameObject);
     }
 }

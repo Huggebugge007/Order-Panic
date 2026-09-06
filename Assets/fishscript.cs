@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 
 public class fishscript : MonoBehaviour
 {
@@ -21,10 +21,11 @@ public class fishscript : MonoBehaviour
     public float timetildry = 30f;
     private float countdown;
 
-
+    private bool exploding = false;
 
     bool wasinwater = false;
 
+    public GameObject explosion1, explosion2;
     void Awake()
     {
         wasinwater = false;
@@ -56,7 +57,7 @@ public class fishscript : MonoBehaviour
         }
         if(countdown <= 0)
         {
-            Destroy(gameObject);
+            DestroyWithExplosion();
         }
 
         if (!wasinwater && inwater)
@@ -88,7 +89,11 @@ public class fishscript : MonoBehaviour
     {
         if (!inwater) return;
 
-        SwimTowardsGoal();
+        if (!exploding)
+        {
+            SwimTowardsGoal();
+        }
+
     }
 
     void SwimTowardsGoal()
@@ -135,5 +140,20 @@ public class fishscript : MonoBehaviour
             PickNewGoal();
         }
         
+    }
+    public void DestroyWithExplosion()
+    {
+        rb.gravityScale = 0f;
+        rb.linearVelocity = Vector2.zero;
+        exploding = true;
+        Instantiate(explosion1, transform.position, Quaternion.identity);
+        Instantiate(explosion2, transform.position, Quaternion.identity);
+        StartCoroutine(DestroyAfterExplosion());
+    }
+
+    IEnumerator DestroyAfterExplosion()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Destroy(gameObject);
     }
 }

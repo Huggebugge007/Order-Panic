@@ -24,9 +24,15 @@ public class handler : MonoBehaviour
 
     public Transform tavernentrance, tavernexit;
 
+    public int resturantquality = 1;
+
+    public float spawntime = 60f;
+    public float usablespawntime;
+
 
     void Start()
     {
+        usablespawntime = spawntime;
         playerscript = player.GetComponent<playerscript>();
         parent = new GameObject();
         parent.name = "fishparent";
@@ -127,6 +133,15 @@ public class handler : MonoBehaviour
     }
     private void Update()
     {
+        if(avalibleseats.Count > 0)
+        {
+            usablespawntime -= Time.deltaTime;
+            if(usablespawntime <= 0)
+            {
+                spawnduck();
+                usablespawntime = spawntime;
+            }
+        }
         if (playerscript.fishing && player.transform.position.y < 5)
         {
             dephttext.text = "Depth:" + Mathf.FloorToInt((ground.transform.position.y + (ground.transform.localScale.y)) - player.transform.position.y).ToString();
@@ -152,6 +167,7 @@ public class handler : MonoBehaviour
         int seatindex = Random.Range(0, avalibleseats.Count);
         duckscript duckclonescript = duckclone.GetComponent<duckscript>();
         duckclonescript.handler = this;
+        duckclonescript.moneyhandler = gameObject.GetComponent<moneyhandler>();
         duckclonescript.seat = avalibleseats[seatindex];
 
         duckclonescript.tavernentrance = tavernentrance;
@@ -162,5 +178,14 @@ public class handler : MonoBehaviour
         duckclonescript.targets.Add(avalibleseats[seatindex].transform);
 
         avalibleseats.RemoveAt(seatindex);
+    }
+
+    public void upgradequality(int amount)
+    {
+        resturantquality = amount;
+    }
+    public void upgradespawnrate(int amount)
+    {
+        spawntime = amount;
     }
 }

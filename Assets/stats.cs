@@ -38,6 +38,7 @@ public class stats : MonoBehaviour
     public float evadetime;
     public float aggression;
     public float idlemiddletime;
+    public int cost;
 
     private void Awake()
     {

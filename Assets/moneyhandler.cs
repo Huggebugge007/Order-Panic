@@ -1,23 +1,19 @@
 using System;
-using System.Text.RegularExpressions;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class moneyhandler : MonoBehaviour
 {
     public float money = 0;
     public TMP_Text moneytext;
     public Button[] buttons;
+
+    private Coroutine moneyAnimation;
+
     void Start()
     {
-        Changemoney(0);
-    }
-
-    
-    void Update()
-    {
-
+        UpdateMoneyText(money);
     }
 
     [ContextMenu("add100")]
@@ -27,31 +23,43 @@ public class moneyhandler : MonoBehaviour
         Debug.Log("press");
     }
 
-    
     public void Changemoney(float change)
     {
+        money += change;
 
-        money = money + change;
-        string moneyformatted = NumberFormatter.FormatNumber(money);
-        moneytext.text = "Cash: " + moneyformatted + "$";
-        foreach (Button btn in buttons)
+        // Stop an existing animation if another money change happens
+        if (moneyAnimation != null)
+            StopCoroutine(moneyAnimation);
+
+        moneyAnimation = StartCoroutine(AnimateMoney(money - change, money));
+    }
+
+    private System.Collections.IEnumerator AnimateMoney(float startMoney, float targetMoney)
+    {
+        float duration = 2f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
         {
-            string pricetext = btn.transform.parent.Find("Price").GetComponent<TMP_Text>().text;
-            string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
+            elapsed += Time.deltaTime;
 
-            if (float.TryParse(numberText, out float price))
-            {
-                if (money >= price)
-                {
-                    btn.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
-                }
-                else
-                {
-                    btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
-                }
+            float currentMoney = Mathf.Lerp(startMoney, targetMoney, elapsed / duration);
 
+            UpdateMoneyText(currentMoney);
 
-            }
+            yield return null;
         }
+
+        // Make sure we end exactly on the correct amount
+        UpdateMoneyText(targetMoney);
+
+        moneyAnimation = null;
+    }
+
+    private void UpdateMoneyText(float amount)
+    {
+        string moneyformatted = NumberFormatter.FormatNumber(amount);
+        moneytext.text = "Cash: " + moneyformatted + "$";
     }
 }
+
