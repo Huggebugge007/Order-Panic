@@ -29,7 +29,7 @@ public class PlayerCombat : MonoBehaviour
         if (gameObject.GetComponent<stats>() != null)
         {
             usingfish = true;
-            maxSpeed = gameObject.GetComponent<stats>().speed;
+            maxSpeed = gameObject.GetComponent<stats>().speed * 0.7f;
             moveforce = 20f;
             rotationspeed = 200f;
             stabdir = Vector3.right;

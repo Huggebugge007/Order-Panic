@@ -17,7 +17,7 @@ public class fightscript : MonoBehaviour
     public int fightersleft;
     public bool alive = true;
     public Image image;
-    public TMP_Text countdowntext;
+    public TMP_Text countdowntext, fighttimer;
     bool fightover;
     public GameObject myplayerprefab;
     public GameObject healthbar;
@@ -27,9 +27,12 @@ public class fightscript : MonoBehaviour
     public float countdowntimer;
     float timertime;
 
+    public float allowedfighttime = 120f;
+    private float timeleft;
 
     private void Awake()
     {
+        timeleft = allowedfighttime;
         countdowntext.enabled = false;
         timertime = countdowntimer;
         started = false;
@@ -126,6 +129,25 @@ public class fightscript : MonoBehaviour
 
     private void Update()
     {
+        if(countdowntext.enabled == false)
+        {
+            timeleft -= Time.deltaTime;
+        }
+
+        int minutes = Mathf.FloorToInt(timeleft / 60);
+        int seconds = Mathf.FloorToInt(timeleft % 60);
+
+        fighttimer.text = minutes + "m " + seconds + "s";
+        if (timeleft <= 0)
+        {
+            fighttimer.text = "0" + "m " + "0" + "s";
+        }
+
+        if (timeleft <= 0)
+        {
+            alive = false;
+        }
+
         if (started && !initialized)
         {
             playercombat.enabled = true;
@@ -178,7 +200,7 @@ public class fightscript : MonoBehaviour
             fightmanager.instance.changeback(true, fishamount);
             fightover = true;
         }
-        else if(fightersleft <= 1 && !alive && !fightover)
+        else if(!alive && !fightover)
         {
             fightmanager.instance.changeback(false, fishamount);
             fightover = true;
