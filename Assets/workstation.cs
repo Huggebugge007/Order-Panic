@@ -59,36 +59,39 @@ public class workstation : MonoBehaviour, IInteractable
         yield return faderimage.GetComponent<fadescript>().FadeIn(1);
 
         shopui.SetActive(!shopui.activeSelf);
-
-        foreach (Button btn in buttons)
+        if(shopui.activeSelf == true)
         {
-            string pricetext = btn.transform.parent.Find("Price").GetComponent<TMP_Text>().text;
-            string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
-
-            if (float.TryParse(numberText, out float price))
+            foreach (Button btn in buttons)
             {
-                upgrade upgradescript = btn.GetComponentInParent<upgrade>();
-                if (upgradescript.currentrupgradenumber >= upgradescript.maxupgrade)
+                string pricetext = btn.transform.parent.Find("Price").GetComponent<TMP_Text>().text;
+                string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
+
+                if (float.TryParse(numberText, out float price))
                 {
-                    btn.interactable = false;
-                    btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
-                    btn.GetComponentInChildren<TMP_Text>().text = "MAX";
-                }
-                else
-                {
-                    if (money >= price)
+                    upgrade upgradescript = btn.GetComponentInParent<upgrade>();
+                    if (upgradescript.currentrupgradenumber >= upgradescript.maxupgrade)
                     {
-                        btn.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
+                        btn.interactable = false;
+                        btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+                        btn.GetComponentInChildren<TMP_Text>().text = "MAX";
                     }
                     else
                     {
-                        btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+                        if (money >= price)
+                        {
+                            btn.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
+                        }
+                        else
+                        {
+                            btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+                        }
                     }
+
+
+
                 }
-
-
-
             }
+        
         }
 
         yield return faderimage.GetComponent<fadescript>().FadeOut(1);

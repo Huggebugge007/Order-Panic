@@ -30,25 +30,40 @@ public class fightscript : MonoBehaviour
     public float allowedfighttime = 120f;
     private float timeleft;
 
+    public sketchmarket sketchmarket;
+
     private void Awake()
     {
+        sketchmarket = GameObject.FindGameObjectWithTag("sketchmarket").GetComponent<sketchmarket>();
         timeleft = allowedfighttime;
         countdowntext.enabled = false;
         timertime = countdowntimer;
         started = false;
         initialized = false;
         player = GameObject.FindGameObjectWithTag("Player");
-        fish = player.GetComponent<playerscript>().catchingfish;
+        playerscript playerscript = player.GetComponent<playerscript>();
+        if (playerscript.catchingfish != null)
+        {
+            fish = playerscript.catchingfish;
+        }
+        else if(sketchmarket.opponent.Count == 1)
+        {
+            fish = sketchmarket.opponent[0];
+        }
+        else if (sketchmarket.opponent.Count > 1)
+        {
+            fishamount = sketchmarket.opponent.Count;
+        }
         fightover = false;
         alive = true;
         fighters.Clear();
         spawns.Clear();
         fishamount = fightmanager.instance.fishamount;
-        
-        if (player.transform.Find("FIshpos").childCount > 0)
+        Transform fishpos = player.transform.Find("FIshpos");
+        if (fishpos.childCount > 0)
         {
             usingbait = true;
-            bait = player.GetComponent<playerscript>().mybait;
+            bait = fishpos.GetChild(0).gameObject;
         }
         else
         {
@@ -66,22 +81,23 @@ public class fightscript : MonoBehaviour
 
         if(fishamount > 1)
         {
-            for(int i = 0; i < spawns.Count; i++)
+            foreach (GameObject opponent in sketchmarket.opponent)
             {
-                int spawn = Random.Range(0, spawns.Count);
-                GameObject enemy = Instantiate(fish, spawns[spawn].transform);
-                enemy.transform.localPosition = Vector3.zero;
-                enemy.transform.parent = null;
-                enemy.transform.rotation = spawns[spawn].transform.rotation;
-                enemy.transform.localScale = new Vector3(Mathf.Abs(enemy.transform.localScale.x), enemy.transform.localScale.y, enemy.transform.localScale.z);
-                spawns.RemoveAt(spawn);
-                //random stats for fish, based on the fishstats it gets feeded. Du ska alltså skapa en average fishstats och sen göra lite random bättre lite random sämmre.
-
-                healthbar = Instantiate(healthbar, enemy.transform.position, Quaternion.identity);
-                healthbar.transform.parent = enemy.transform;
-
-                fighters.Add(enemy);
-                fightersleft += 1;
+                if (opponent != null)
+                {
+                    int spawn = Random.Range(0, spawns.Count);
+                    GameObject enemy = Instantiate(opponent, spawns[spawn].transform);
+                    enemy.transform.localPosition = Vector3.zero;
+                    enemy.transform.parent = null;
+                    enemy.transform.rotation = spawns[spawn].transform.rotation;
+                    enemy.transform.localScale = new Vector3(Mathf.Abs(enemy.transform.localScale.x), enemy.transform.localScale.y, enemy.transform.localScale.z);
+                    spawns.RemoveAt(spawn);
+                    enemy.GetComponent<fishscript>().enabled = false;
+                    healthbar = Instantiate(healthbar, enemy.transform.position, Quaternion.identity);
+                    healthbar.transform.parent = enemy.transform;
+                    fighters.Add(enemy);
+                    fightersleft += 1;
+                }
             }
         }
         else

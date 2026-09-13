@@ -16,6 +16,8 @@ public class fightmanager : MonoBehaviour
     public playerscript playerscript;
     public Gradient fadegradient;
 
+    private sketchmarket sketchmarket;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -27,7 +29,7 @@ public class fightmanager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        
+        sketchmarket = GameObject.FindGameObjectWithTag("sketchmarket").GetComponent<sketchmarket>();
     }
 
     public void changescene(int numberoffish)
@@ -73,8 +75,14 @@ public class fightmanager : MonoBehaviour
         yield return image.GetComponent<fadescript>().FadeIn(2);
 
         sceneparent.SetActive(true);
-        playerscript.enabled = true;
-        playerscript.gameObject.GetComponent<LineRenderer>().enabled = true;
+        if (sketchmarket.fightingusingmarket == false)
+        {
+            playerscript.enabled = true;
+            playerscript.gameObject.GetComponent<LineRenderer>().enabled = true;
+            Debug.Log("Linerenderer");
+        }
+        sketchmarket.fightingusingmarket = false;
+
 
         yield return SceneManager.UnloadSceneAsync("Fightscene");
 

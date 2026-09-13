@@ -40,6 +40,8 @@ public class stats : MonoBehaviour
     public float idlemiddletime;
     public int cost;
 
+    public int skilllevel;
+
     private void Awake()
     {
         if (!instanisated)

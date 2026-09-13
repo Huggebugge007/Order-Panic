@@ -16,14 +16,17 @@ public class fishscript : MonoBehaviour
     public Rigidbody2D rb;
 
     public float turnSpeed = 3f;
-    public float wanderRadius = 10f;
+    public float wanderRadius = 2f;
     public float wanderY = 3f;
     public float timetildry = 30f;
-    private float countdown;
+    public float countdown;
 
     private bool exploding = false;
 
+    public Vector2 startpos;
+
     bool wasinwater = false;
+    public GameObject market;
 
     public GameObject explosion1, explosion2;
     void Awake()
@@ -41,6 +44,15 @@ public class fishscript : MonoBehaviour
 
     void Update()
     {
+        if(transform.parent.transform.parent == player.transform)
+        {
+            transform.position = transform.parent.position;
+        }
+
+        if(startpos == Vector2.zero)
+        {
+            startpos = transform.position;
+        }
         inwater = rb.IsTouchingLayers(waterlayer);
         inpool = rb.IsTouchingLayers(poollayer);
 
@@ -53,7 +65,11 @@ public class fishscript : MonoBehaviour
 
         if(!inwater && !inpool)
         {
-            countdown -= Time.deltaTime;
+            if (market.activeSelf == false)
+            {
+                countdown -= Time.deltaTime;
+            }
+            
         }
         if(countdown <= 0)
         {
@@ -62,6 +78,7 @@ public class fishscript : MonoBehaviour
 
         if (!wasinwater && inwater)
         {
+            startpos = transform.position;
             PickNewGoal();
         }
 
@@ -131,8 +148,8 @@ public class fishscript : MonoBehaviour
     void PickNewGoal()
     {
         goal = new Vector2(
-            transform.position.x + Random.Range(-wanderRadius, wanderRadius),
-            transform.position.y + Random.Range(-wanderY, wanderY)
+            startpos.x + Random.Range(-wanderRadius, wanderRadius),
+            startpos.y + Random.Range(-wanderY, wanderY)
         );
         goal.y = Mathf.Min(goal.y, -2.5f);
         if (Mathf.Abs(goal.x)< ((Mathf.Abs(goal.y)*2)+ 1))

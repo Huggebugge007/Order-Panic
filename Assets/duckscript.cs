@@ -46,6 +46,7 @@ public class duckscript : MonoBehaviour
     private GameObject thoughtbubble;
 
     public LayerMask fishlayer;
+
     void Awake()
     {
         thoughtbubble = transform.Find("thoughtbubble").gameObject;
@@ -240,7 +241,7 @@ public class duckscript : MonoBehaviour
                 {
 
                     int cost = hit.GetComponent<stats>().cost;
-                    moneyhandler.Changemoney(cost);
+                    moneyhandler.Changemoney(cost * (1+handler.fishelinstars));
 
                     hit.GetComponent<fishscript>().DestroyWithExplosion();
                     finsihed = true;

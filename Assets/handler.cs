@@ -24,10 +24,13 @@ public class handler : MonoBehaviour
 
     public Transform tavernentrance, tavernexit;
 
+    public GameObject market;
     public int resturantquality = 1;
 
     public float spawntime = 60f;
     public float usablespawntime;
+
+    public int fishelinstars = 0;
 
 
     void Start()
@@ -86,7 +89,7 @@ public class handler : MonoBehaviour
         {
             GameObject fish = Instantiate(selected, pos, Quaternion.identity);
             fishList.Add(fish);
-
+            fish.GetComponent<fishscript>().market = market;
             fish.transform.parent = parent.transform;
         }
 
@@ -148,7 +151,7 @@ public class handler : MonoBehaviour
         }
         else
         {
-            dephttext.text = "Depth: ???";
+            dephttext.text = "Depth:???";
         }
 
     }

@@ -165,6 +165,7 @@ MonoBehaviour:
   aggression: 0
   idlemiddletime: 0
   cost: 70
+  skilllevel: 1
 --- !u!114 &1960532222918325413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   wanderRadius: 10
   wanderY: 3
   timetildry: 30
+  market: {fileID: 0}
   explosion1: {fileID: 1597623158702358751, guid: fa23cb21bc629c4478ff7f5e70fbd45a, type: 3}
   explosion2: {fileID: 8889277204553287237, guid: 43d4fb53def25c046a25af663e88ac34, type: 3}
 --- !u!50 &2955113095936640288
@@ -394,7 +396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8546675114197692999, guid: 7f721f9dbacd7114ab6eaa30b2cad40e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

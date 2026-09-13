@@ -11,6 +11,8 @@ TagManager:
   - spawn
   - fightmanager
   - seat
+  - Market
+  - sketchmarket
   layers:
   - Default
   - TransparentFX

@@ -51,6 +51,9 @@ public class playerscript : MonoBehaviour
     private bool previouspool = false;
     public Transform fishpickuppoint;
 
+    Bounds waterBounds;
+    public Collider2D waterCollider; 
+
     void Awake()
     {
         fightmanager = GameObject.FindGameObjectWithTag("fightmanager").GetComponent<fightmanager>();
@@ -58,35 +61,39 @@ public class playerscript : MonoBehaviour
 
     void Update()
     {
-        
-        if (!previouswater && iswater() && isgrappled && !fishing)
-        {
-            usableboost = totalboost;
-        }
-        if (!previouspool && ispool())
-        {
-            usableboost = totalboost;
-        }
-        if (ispool())
-        {
-            fishing = true;
-        }
-        if(previouspool && !ispool())
-        {
-            fishing = false;
-        }
-        previouswater = iswater();
-        previouspool = ispool();
 
-        if (isgrappled && iswater())
+        bool inWater = waterCollider.bounds.Contains(transform.position);
+        bool inPool = ispool();
+
+        // När spelaren precis går ner i vatten
+        if (!previouswater && inWater && isgrappled)
         {
-            fishing = true;
+            usableboost = totalboost;
+        }
+
+
+        if (!previouspool && inPool)
+        {
+            usableboost = totalboost;
+        }
+
+
+        fishing = inPool || (inWater && isgrappled);
+
+        previouswater = inWater;
+        previouspool = inPool;
+
+        if (isgrappled && inWater)
+        {
             joint.distance = Vector2.Distance(transform.position, grapplepoint);
             joint.enabled = true;
         }
 
 
 
+
+
+        
         isgrounded();
 
 
@@ -109,17 +116,18 @@ public class playerscript : MonoBehaviour
         if (waiting)
         {
             transform.position = new Vector2(cannonhookpos.transform.position.x, cannonhookpos.transform.position.y);
-            transform.rotation = Quaternion.Euler(0, 0, cannonbarrel.transform.rotation.eulerAngles.z - 90);
+
+
+            rb.MoveRotation(cannonbarrel.transform.rotation.eulerAngles.z - 90);
 
             if (Input.GetButtonDown("Jump"))
             {
                 waiting = false;
+                rb.angularVelocity = 0f;
                 rb.AddForce(-transform.up * cannonlaunchforce, ForceMode2D.Impulse);
             }
             currentAngle += -x * cannonrotationspeed * Time.deltaTime;
-
-            currentAngle = Mathf.Clamp(currentAngle, -90, 20);
-
+            currentAngle = Mathf.Clamp(currentAngle, -54, 20);
             cannonbarrel.transform.rotation = Quaternion.Euler(0, 0, currentAngle);
             grapplepoint = cannonlinepos.transform.position;
         }
@@ -208,15 +216,13 @@ public class playerscript : MonoBehaviour
 
                 if (col == null || fish == null) return;
 
-                col.enabled = false;
-                fishscript.enabled = false;
                 fish.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                 fish.transform.parent = fishpos;
                 fish.transform.position = fishpos.position;
             }
         }
 
-        if (fightmanager.fightover)
+        if (fightmanager.fightover && catchingfish != null)
         {
             if (!fightmanager.won && mybait != null)
             {
@@ -229,15 +235,12 @@ public class playerscript : MonoBehaviour
                 catchingfish.GetComponent<stats>().defeated = true;
                 catchingfish.GetComponent<fishscript>().chasingplayer = false;
             }
-            else if (fightmanager.won && fightmanager.fishamount > 1)
-            {
-            }
             else if (!fightmanager.won && fightmanager.fishamount == 1)
             {
                 stopfishing();
                 catchingfish.GetComponent<fishscript>().chasingplayer = false;
             }
-
+            catchingfish = null;
             fightmanager.fightover = false;
         }
 
@@ -281,7 +284,7 @@ public class playerscript : MonoBehaviour
                 
                 if (Input.GetButton("Jump") && usableboost > 0)
                 {
-                    usableboost -= 5 * Time.deltaTime;
+                    usableboost -= 1 * Time.fixedDeltaTime;
                     rb.AddForce(transform.up * boostpower, ForceMode2D.Force);
                 }
                 if (Input.GetKey(KeyCode.W))
@@ -333,7 +336,7 @@ public class playerscript : MonoBehaviour
 
     public bool iswater()
     {
-        return rb.IsTouchingLayers(water);
+        return waterCollider.bounds.Contains(transform.position);
     }
     public bool ispool()
     {
@@ -416,8 +419,6 @@ public class playerscript : MonoBehaviour
         if (col == null || fish == null) return;
 
         stopfishing();
-        col.enabled = false;
-        fishscript.enabled = false;
         fish.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         fishstats.defeated = true;
         fish.transform.parent = fishpos;
@@ -434,7 +435,7 @@ public class playerscript : MonoBehaviour
     }
     public void upgradeboostamount(float amount)
     {
-        usableboost = amount;
+        totalboost = amount;
     }
     public void upgradereelspeed(float amount)
     {

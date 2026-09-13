@@ -23,6 +23,7 @@ public class FishAI : MonoBehaviour
     public float scanRadius = 12f;
     public float scanInterval = 0.2f;
 
+    public bool IsDead => isDead;
     private float nextScanTime;
 
     // =========================================================
@@ -418,6 +419,10 @@ public class FishAI : MonoBehaviour
         foreach (var hit in hits)
         {
             if (hit.transform == transform) continue;
+
+            // Skip dead fish
+            var otherFish = hit.GetComponent<FishAI>();
+            if (otherFish != null && otherFish.IsDead) continue;
 
             for (int i = 0; i < targetTags.Length; i++)
             {
