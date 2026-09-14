@@ -194,14 +194,17 @@ MonoBehaviour:
     m_Bits: 64
   poollayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   player: {fileID: 0}
   chasingplayer: 0
   rb: {fileID: 0}
   turnSpeed: 3
-  wanderRadius: 10
+  wanderRadius: 3
   wanderY: 3
-  timetildry: 30
+  timetildry: 60
+  countdown: 0
+  exploding: 0
+  startpos: {x: 0, y: 0}
   market: {fileID: 0}
   explosion1: {fileID: 1597623158702358751, guid: fa23cb21bc629c4478ff7f5e70fbd45a, type: 3}
   explosion2: {fileID: 8889277204553287237, guid: 43d4fb53def25c046a25af663e88ac34, type: 3}

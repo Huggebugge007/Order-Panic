@@ -76,6 +76,10 @@ public class playerscript : MonoBehaviour
         {
             usableboost = totalboost;
         }
+        if (!previouswater && inWater && isgrappled || !previouspool && inPool)
+        {
+            rb.angularVelocity = 0f;
+        }
 
 
         fishing = inPool || (inWater && isgrappled);

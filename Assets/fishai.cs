@@ -533,16 +533,16 @@ public class FishAI : MonoBehaviour
                 ChangeState(State.Idle);
                 yield break;
             }
-            else if(timeEvading > escapeLimit)
+            else if (timeEvading > escapeLimit)
             {
                 ChangeState(State.Chase);
                 yield break;
             }
 
-                // =====================================================
-                // BASE ESCAPE DIRECTION
-                // =====================================================
-                Vector2 away = ((Vector2)transform.position - (Vector2)currentTarget.position).normalized;
+            // =====================================================
+            // BASE ESCAPE DIRECTION
+            // =====================================================
+            Vector2 away = ((Vector2)transform.position - (Vector2)currentTarget.position).normalized;
 
             // =====================================================
             // STEERING (avoid walls + optimize escape path)

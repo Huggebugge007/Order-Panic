@@ -67,20 +67,24 @@ public class handler : MonoBehaviour
     {
         GameObject selected = GetRandomPrefab();
         float spawndepht = selected.GetComponent<stats>().spawndepht;
-        Vector2 pos = new Vector2(Random.Range(-width / 2f, width * 1.5f), spawndepht + (Random.Range(-10,10)));
 
-
+        Vector2 pos = Vector2.zero;
         bool found = false;
-        for(int i = 0; i < 3; i++)
-        {
-            pos = new Vector2(Random.Range(-width / 2f, width * 1.5f), spawndepht + (Random.Range(-10, 10)));
 
-            if(!(Mathf.Abs(pos.x) < ((Mathf.Abs(pos.y) * 2)+1)))
+        for (int i = 0; i < 3; i++)
+        {
+            pos = new Vector2(
+                Random.Range(-width / 2f, width * 1.5f),
+                spawndepht + Random.Range(-10, 10)
+            );
+
+            // X position of the sloped edge at this Y position
+            float slopeX = -3f + ((pos.y + 1f) * 2f);
+
+            // Only allow positions on the left side of the slope
+            if (pos.x < slopeX)
             {
                 found = true;
-            }
-            if (found)
-            {
                 break;
             }
         }
@@ -89,11 +93,10 @@ public class handler : MonoBehaviour
         {
             GameObject fish = Instantiate(selected, pos, Quaternion.identity);
             fishList.Add(fish);
+
             fish.GetComponent<fishscript>().market = market;
             fish.transform.parent = parent.transform;
         }
-
-        
     }
 
     IEnumerator CheckFish()

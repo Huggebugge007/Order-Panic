@@ -21,14 +21,17 @@ public class fishscript : MonoBehaviour
     public float timetildry = 30f;
     public float countdown;
 
-    private bool exploding = false;
+    public bool exploding = false;
 
     public Vector2 startpos;
 
     bool wasinwater = false;
+    bool wasinpool = false;
     public GameObject market;
 
     public GameObject explosion1, explosion2;
+
+    private float timetonewgoal;
     void Awake()
     {
         wasinwater = false;
@@ -44,12 +47,14 @@ public class fishscript : MonoBehaviour
 
     void Update()
     {
-        if(transform.parent.transform.parent == player.transform)
+        Transform grandparent = transform.parent?.parent;
+
+        if (grandparent == player.transform)
         {
             transform.position = transform.parent.position;
         }
 
-        if(startpos == Vector2.zero)
+        if (startpos == Vector2.zero)
         {
             startpos = transform.position;
         }
@@ -60,7 +65,13 @@ public class fishscript : MonoBehaviour
         {
             countdown = timetildry;
         }
+        timetonewgoal -= Time.deltaTime;
 
+        if(timetonewgoal <= 0)
+        {
+            PickNewGoal();
+            timetonewgoal = 8;
+        }
         
 
         if(!inwater && !inpool)
@@ -80,35 +91,59 @@ public class fishscript : MonoBehaviour
         {
             startpos = transform.position;
             PickNewGoal();
+            timetonewgoal = 8;
+        }
+        if(inpool && !wasinpool)
+        {
+            startpos = transform.position;
+            PickNewGoal();
+            timetonewgoal = 8;
         }
 
         wasinwater = inwater;
+        wasinpool = inpool;
 
-        if (!inwater)
+        if (!inwater && !inpool)
         {
             rb.gravityScale = 0.354f;
-            return;
-        }
 
-        rb.gravityScale = 0f;
+        }
+        else
+        {
+            rb.gravityScale = 0f;
+        }
+        
 
         if (chasingplayer && player != null)
         {
             goal = player.transform.position;
         }
-        else if (Vector2.Distance(transform.position, goal) < 0.7f)
+        else if (Vector2.Distance(transform.position, goal) < 0.3f)
         {
             PickNewGoal();
+            timetonewgoal = 8;
+        }
+
+        if(Vector2.Distance(transform.position, goal) > 10)
+        {
+            PickNewGoal();
+            timetonewgoal = 8;
+        }
+        if (inwater)
+        {
+            goal.y = Mathf.Min(goal.y, -2.5f);
         }
     }
 
     void FixedUpdate()
     {
-        if (!inwater) return;
-
-        if (!exploding)
+        if (inwater || inpool)
         {
-            SwimTowardsGoal();
+            if (!exploding)
+            {
+                SwimTowardsGoal();
+            }
+
         }
 
     }
@@ -147,16 +182,23 @@ public class fishscript : MonoBehaviour
 
     void PickNewGoal()
     {
-        goal = new Vector2(
-            startpos.x + Random.Range(-wanderRadius, wanderRadius),
-            startpos.y + Random.Range(-wanderY, wanderY)
-        );
-        goal.y = Mathf.Min(goal.y, -2.5f);
-        if (Mathf.Abs(goal.x)< ((Mathf.Abs(goal.y)*2)+ 1))
+        do
         {
-            PickNewGoal();
-        }
-        
+            goal = new Vector2(
+                startpos.x + Random.Range(-wanderRadius, wanderRadius),
+                startpos.y + Random.Range(-wanderY, wanderY)
+            );
+
+            // X position of the slope at this Y
+            float slopeX = -3f + ((goal.y + 1f) * 2f);
+
+            // Keep trying while the goal is NOT on the left side
+            if (goal.x < slopeX)
+            {
+                break;
+            }
+
+        } while (true);
     }
     public void DestroyWithExplosion()
     {
