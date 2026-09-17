@@ -6,10 +6,14 @@ public class FishAI : MonoBehaviour
 {
     [Header("Obstacle Avoidance")]
     public LayerMask wallLayer;
+    public float wallLookAhead = 0.7f;
+    [Range(8, 32)] public int wallDirectionChecks = 24;
+    [Range(0.25f, 1f)] public float wallBodyRadiusScale = 0.75f;
     // =========================================================
     // CORE COMPONENTS (cached)
     // =========================================================
     private Rigidbody2D rb;
+    private Collider2D bodyCollider;
     private stats fishStats;
     private floatinghealthbar healthbar;
     private BoxCollider2D weaponHitbox;
@@ -88,6 +92,7 @@ public class FishAI : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        bodyCollider = GetComponent<Collider2D>();
         fishStats = GetComponent<stats>();
         SpriteRenderer sr = Weapon.GetComponentInChildren<SpriteRenderer>();
         weaponHitbox = Weapon.GetComponentInChildren<BoxCollider2D>();
@@ -249,11 +254,6 @@ public class FishAI : MonoBehaviour
             {
                 ChangeState(State.Evade);
             }
-            else if (panic && Random.value > aggression)
-            {
-                ChangeState(State.Evade);
-                evadeUntilTime = Time.time + evadeTime;
-            }
             else if (far && Random.value < 0.4f)
             {
                 ChangeState(State.Idle);
@@ -301,18 +301,11 @@ public class FishAI : MonoBehaviour
             {
                 float dist = Vector2.Distance(transform.position, currentTarget.position);
 
-                // Panic check
+                // A nearby target should make the fish engage.
+                // Aggression is only rolled after an attack, not repeatedly while approaching.
                 if (dist < panicRange)
                 {
-                    if (Random.value > aggression)
-                    {
-                        evadeUntilTime = Time.time + evadeTime;
-                        ChangeState(State.Evade);
-                    }
-                    else
-                    {
-                        ChangeState(State.Chase);
-                    }
+                    ChangeState(State.Chase);
                     yield break;
                 }
 
@@ -367,7 +360,7 @@ public class FishAI : MonoBehaviour
             Vector2 toTarget = (currentTarget.position - transform.position);
             float dist = toTarget.magnitude;
 
-            Vector2 dir = toTarget.normalized;
+            Vector2 dir = GetSteeredDirection(toTarget.normalized);
 
             RotateTowards(dir);
 
@@ -401,12 +394,6 @@ public class FishAI : MonoBehaviour
             yield return null;
         }
 
-        // Small chance to switch behavior after chase burst
-        if (Random.value < (1f - aggression) * 0.2f)
-        {
-            evadeUntilTime = Time.time + evadeTime;
-            ChangeState(State.Evade);
-        }
     }
 
     void FindTarget()
@@ -470,29 +457,68 @@ public class FishAI : MonoBehaviour
     // =========================================================
     Vector2 GetSteeredDirection(Vector2 desired)
     {
+        if (desired.sqrMagnitude < 0.001f)
+            return transform.right;
+
+        desired.Normalize();
+
+        // Faster movement needs more distance to react to a wall.
+        float speedMultiplier = Mathf.Clamp(
+            rb.linearVelocity.magnitude / Mathf.Max(moveSpeed, 0.01f),
+            1f,
+            2.2f
+        );
+
+        float lookAhead = wallLookAhead * speedMultiplier;
+        float bodyRadius = GetWallCheckRadius();
+
         Vector2 best = desired;
-        float bestScore = -999f;
+        float bestScore = float.NegativeInfinity;
 
-        for (int i = -3; i <= 3; i++)
+        int checks = Mathf.Max(8, wallDirectionChecks);
+        float angleStep = 360f / checks;
+
+        // Check the full 360 degrees. This is especially important in the
+        // square arena because a fish in a corner may need to move sideways
+        // or briefly less directly away from its target to escape the corner.
+        for (int i = 0; i < checks; i++)
         {
-            float angle = i * 25f;
-            Vector2 test = Quaternion.Euler(0, 0, angle) * desired;
+            float angle = i * angleStep;
+            Vector2 test = Quaternion.Euler(0f, 0f, angle) * desired;
+            test.Normalize();
 
-            RaycastHit2D hit = Physics2D.Raycast(
+            RaycastHit2D hit = Physics2D.CircleCast(
                 transform.position,
+                bodyRadius,
                 test,
-                2f,
+                lookAhead,
                 wallLayer
             );
 
-            float score = 0f;
+            // 1 = completely clear for the entire look-ahead distance.
+            // 0 = wall is immediately in front of the fish.
+            float clearance = hit.collider == null
+                ? 1f
+                : Mathf.Clamp01(hit.distance / lookAhead);
 
-            if (!hit)
-                score += 3f;
-            else
-                score -= 3f / Mathf.Max(hit.distance, 0.1f);
+            // Prefer the original wanted direction when several paths are safe.
+            float desiredAlignment = (Vector2.Dot(test, desired) + 1f) * 0.5f;
 
-            score += Vector2.Dot(test, desired);
+            // Slightly prefer directions that do not require an unnecessarily
+            // large turn. This stops the fish from flicking between directions.
+            float forwardAlignment = (Vector2.Dot(test, transform.right) + 1f) * 0.5f;
+
+            float score =
+                clearance * 6f +
+                desiredAlignment * 2.5f +
+                forwardAlignment * 0.25f;
+
+            // A very close wall should overpower the desire to keep travelling
+            // toward the target/escape direction.
+            if (hit.collider != null && hit.distance < lookAhead * 0.35f)
+            {
+                score -= (1f - clearance) * 8f;
+            }
 
             if (score > bestScore)
             {
@@ -502,6 +528,22 @@ public class FishAI : MonoBehaviour
         }
 
         return best.normalized;
+    }
+
+    float GetWallCheckRadius()
+    {
+        if (bodyCollider == null)
+            return 0.2f;
+
+        Bounds bounds = bodyCollider.bounds;
+
+        // Use the smaller half of the collider as the cast radius so the cast
+        // represents the fish's body without becoming excessively large for
+        // long fish.
+        float radius = Mathf.Min(bounds.extents.x, bounds.extents.y);
+        radius *= wallBodyRadiusScale;
+
+        return Mathf.Max(radius, 0.05f);
     }
     // =========================================================
     // EVADE STATE
@@ -523,18 +565,21 @@ public class FishAI : MonoBehaviour
             float dist = Vector2.Distance(transform.position, currentTarget.position);
             float timeEvading = Time.time - startTime;
 
-            float escapeLimit = Mathf.Lerp(2f, 6f, aggression);
+            // More aggressive fish retreat for less time when they do choose to evade.
+            float escapeLimit = Mathf.Lerp(evadeTime * 1.5f, evadeTime * 0.6f, aggression);
 
             // Exit conditions
             // Exit conditions
             if (dist > safeEvadeDistance)
             {
+                evadeUntilTime = 0f;
                 idleUntilTime = Time.time + Random.Range(1.5f, 3.5f);
                 ChangeState(State.Idle);
                 yield break;
             }
             else if (timeEvading > escapeLimit)
             {
+                evadeUntilTime = 0f;
                 ChangeState(State.Chase);
                 yield break;
             }
@@ -545,39 +590,9 @@ public class FishAI : MonoBehaviour
             Vector2 away = ((Vector2)transform.position - (Vector2)currentTarget.position).normalized;
 
             // =====================================================
-            // STEERING (avoid walls + optimize escape path)
+            // STEERING (shared full-circle wall avoidance)
             // =====================================================
-            Vector2 bestDir = away;
-            float bestScore = -999f;
-
-            for (int i = -3; i <= 3; i++)
-            {
-                float angle = i * 25f;
-                Vector2 testDir = Quaternion.Euler(0, 0, angle) * away;
-
-                RaycastHit2D hit = Physics2D.Raycast(
-                    transform.position,
-                    testDir,
-                    2f,
-                    wallLayer
-                );
-
-                float score = 0f;
-
-                if (!hit)
-                    score += 3f;
-                else
-                    score -= 5f / Mathf.Max(hit.distance, 0.1f);
-
-                // strongly prefer moving away from target
-                score += Vector2.Dot(testDir, away) * 2f;
-
-                if (score > bestScore)
-                {
-                    bestScore = score;
-                    bestDir = testDir;
-                }
-            }
+            Vector2 bestDir = GetSteeredDirection(away);
 
             // Smooth direction changes
             smoothedDirection = Vector2.Lerp(smoothedDirection, bestDir, 0.25f).normalized;

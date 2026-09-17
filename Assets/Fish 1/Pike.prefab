@@ -106,8 +106,8 @@ GameObject:
   - component: {fileID: 8603879748995801571}
   - component: {fileID: 4994633912047767654}
   - component: {fileID: 6965905590436462474}
-  - component: {fileID: 3225962249723022104}
   - component: {fileID: 5139615156227613173}
+  - component: {fileID: 1825858556150418746}
   m_Layer: 7
   m_Name: Pike
   m_TagString: fish
@@ -250,6 +250,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
+  wallLookAhead: 0.7
+  wallDirectionChecks: 24
+  wallBodyRadiusScale: 0.75
   Weapon: {fileID: 1750706125940242191}
   targetTags:
   - Player
@@ -265,8 +268,27 @@ MonoBehaviour:
   reactionMax: 0.1
   evadeTime: 3
   currentState: 2
---- !u!61 &3225962249723022104
-BoxCollider2D:
+--- !u!114 &5139615156227613173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343218465050497601}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf1ae42b44466d47892d42a76fbe59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  rb: {fileID: 0}
+  moveforce: 0
+  maxSpeed: 8
+  rotationspeed: 0
+  attackreloadtime: 0
+  fighthealth: 0
+--- !u!70 &1825858556150418746
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -299,37 +321,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.010480136, y: -0.0070890337}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.3351838, y: 0.18842736}
-  m_EdgeRadius: 0
---- !u!114 &5139615156227613173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2343218465050497601}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf1ae42b44466d47892d42a76fbe59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacking: 0
-  rb: {fileID: 0}
-  moveforce: 0
-  maxSpeed: 8
-  rotationspeed: 0
-  attackreloadtime: 0
-  fighthealth: 0
+  m_Offset: {x: 0, y: -0.015}
+  m_Size: {x: 0.4, y: 0.16}
+  m_Direction: 1
 --- !u!1 &3263025808598669305
 GameObject:
   m_ObjectHideFlags: 0

@@ -237,16 +237,22 @@ public class duckscript : MonoBehaviour
             if (touchingfish)
             {
                 Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f);
-                if (hit.name.Substring(0, hit.name.Length - 7) == wantedfish.name)
+                if(hit.name.Length > 7)
                 {
+                    if (hit.name.Substring(0, hit.name.Length - 7) == wantedfish.name)
+                    {
+                        if(hit.transform.parent == null)
+                        {
+                            int cost = hit.GetComponent<stats>().cost;
+                            moneyhandler.Changemoney(cost * (1 + handler.fishelinstars));
 
-                    int cost = hit.GetComponent<stats>().cost;
-                    moneyhandler.Changemoney(cost * (1+handler.fishelinstars));
-
-                    hit.GetComponent<fishscript>().DestroyWithExplosion();
-                    finsihed = true;
-                    DestroyWithExplosion();
+                            hit.GetComponent<fishscript>().DestroyWithExplosion();
+                            finsihed = true;
+                            DestroyWithExplosion();
+                        }
+                    }
                 }
+
             }
         }
     }

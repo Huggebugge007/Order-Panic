@@ -67,10 +67,6 @@ public class sketchmarket : MonoBehaviour, IInteractable
             return;
         }
 
-
-
-
-
         ready = false;
         inshop = !inshop;
         if (inshop)
@@ -96,9 +92,10 @@ public class sketchmarket : MonoBehaviour, IInteractable
     }
     public void closeshopwithoutfade()
     {
+        inshop = !inshop;
         playerscript.enabled = true;
         playertarvenscript.enabled = true;
-        marketui.SetActive(!marketui.activeSelf);
+        marketui.SetActive(false);
         ready = true;
     }
     public void ShowText()
@@ -203,7 +200,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
 
         opponent.Add(possibleopponents[Random.Range(0, possibleopponents.Count)]);
         possibleopponents.Clear();
-        fightmanager.changescene(1);
+        StartCoroutine(Singlefight());
     }
 
     public void tournamenttab()
@@ -280,7 +277,6 @@ public class sketchmarket : MonoBehaviour, IInteractable
     {
         for (int j = 2; j < 5; j++)
         {
-            Debug.Log(j);
             startAtournamentfight(j);
 
 
@@ -309,23 +305,38 @@ public class sketchmarket : MonoBehaviour, IInteractable
         handler.fishelinstars += 1;
         StartCoroutine(ShowTextForSeconds(15, wontournamentscreen));
     }
+    private IEnumerator Singlefight()
+    {
+
+        startAtournamentfight(1);
+
+
+        yield return new WaitUntil(() => fightmanager.fightover);
+
+
+        if (!fightmanager.won && playerfishholder.childCount == 1)
+        {
+            fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
+            closeshopwithoutfade();
+            fishscript.DestroyWithExplosion();
+            opponent.Clear();
+        }
+        else if (fightmanager.won)
+        {
+            fightmanager.fightover = false;
+            opponent.Clear();
+            yield return null;
+            closeshopwithoutfade();
+            StartCoroutine(WaitForObjectAndGiveMoney());
+        }
+
+        
+
+
+
+    }
     private void Update()
     {
-        if (fightmanager.fightover && fightingusingmarket)
-        {
-            opponent.Clear();
-            if (!fightmanager.won && playerfishholder.childCount == 1)
-            {
-                fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
-                closeshopwithoutfade();
-                fishscript.DestroyWithExplosion();
-            }
-            else if (fightmanager.won && playerfishholder.childCount == 1)
-            {
-                closeshopwithoutfade();
-                StartCoroutine(WaitForObjectAndGiveMoney());
-            }
-            fightmanager.fightover = false;
-        }
+
     }
 }

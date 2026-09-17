@@ -123,7 +123,7 @@ public class fightscript : MonoBehaviour
             myplayer.transform.rotation = spawns[0].transform.rotation;
             myplayer.GetComponent<fishscript>().enabled = false;
             myplayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            myplayer.GetComponent<BoxCollider2D>().enabled = true;
+            myplayer.GetComponent<Collider2D>().enabled = true;
             healthbar = Instantiate(healthbar, myplayer.transform.position, Quaternion.identity);
             healthbar.transform.parent = myplayer.transform;
             fightersleft += 1;
