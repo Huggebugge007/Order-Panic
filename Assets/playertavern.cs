@@ -24,7 +24,13 @@ public class playertavern : MonoBehaviour
     [SerializeField] private float climbSpeed = 3f;
     [SerializeField] private Vector2 ladderCheckSize = new Vector2(0.8f, 1.5f);
 
-private Rigidbody2D rb;
+    [SerializeField] private GameObject wanimation;
+    [SerializeField] private Vector3 wAnimationOffset = new Vector3(0, 1f, 0);
+    [SerializeField] private Vector3 wAnimationScale = Vector3.one;
+
+    private GameObject currentWAnimation;
+
+    private Rigidbody2D rb;
     private int previousamountofrooms;
 
 private void Awake()
@@ -32,21 +38,21 @@ private void Awake()
     rb = GetComponent<Rigidbody2D>();
 }
 
-private void FixedUpdate()
-{
-    bool onLadder = Physics2D.OverlapBox(
-        transform.position,
-        ladderCheckSize,
-        0f,
-        ladderLayer
-    );
-
-    if (onLadder && Input.GetKey(KeyCode.W))
+    private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, climbSpeed);
+        bool onLadder = Physics2D.OverlapBox(
+            transform.position,
+            ladderCheckSize,
+            0f,
+            ladderLayer
+        );
+
+        if (onLadder && Input.GetKey(KeyCode.W))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, climbSpeed);
+        }
     }
-}
-    
+
     private int currentrooms;
     private float roompos;
     private bool ready;
@@ -84,11 +90,48 @@ private void FixedUpdate()
 
     private void ladderClimb()
     {
-        bool onLadder = Physics2D.OverlapBox(transform.position,ladderCheckSize,0f,ladderLayer);
+        bool onLadder = Physics2D.OverlapBox(
+            transform.position,
+            ladderCheckSize,
+            0f,
+            ladderLayer
+        );
+
+        // Show W prompt
+        if (onLadder)
+        {
+            if (currentWAnimation == null)
+            {
+                currentWAnimation = Instantiate(
+                    wanimation,
+                    transform.position + wAnimationOffset,
+                    Quaternion.identity
+                );
+
+                currentWAnimation.transform.localScale = wAnimationScale;
+            }
+
+            // Follow player without rotating/flipping/scaling with player
+            currentWAnimation.transform.position =
+                transform.position + wAnimationOffset;
+
+            currentWAnimation.transform.rotation = Quaternion.identity;
+            currentWAnimation.transform.localScale = wAnimationScale;
+        }
+        else
+        {
+            if (currentWAnimation != null)
+            {
+                Destroy(currentWAnimation);
+                currentWAnimation = null;
+            }
+        }
+
 
         if (onLadder && Input.GetKey(KeyCode.W))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x/2, climbSpeed);
+            rb.linearVelocity =
+                new Vector2(rb.linearVelocity.x / 2, climbSpeed);
         }
     }
 

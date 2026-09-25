@@ -75,7 +75,7 @@ public class worldcreation : MonoBehaviour
     void LateUpdate()
     {
         Vector2Int current =
-            GetPlayerChunkCoord(player.position);
+            GetPlayerChunkCoord(Camera.main.transform.position);
 
 
 

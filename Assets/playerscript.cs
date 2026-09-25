@@ -73,11 +73,14 @@ public class playerscript : MonoBehaviour
     private GameObject currentWaterRAnimation;
     private GameObject currentGAnimation;
 
+    
     private Transform currentFishAnimationTarget;
 
     Bounds waterBounds;
     public Collider2D waterCollider;
 
+    public ParticleSystem rocketparticlesystem;
+    public ParticleSystem jumppartiiclessystem;
 
     void Awake()
     {
@@ -257,6 +260,8 @@ public class playerscript : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isgrounded() && !waiting)
             {
                 rb.AddForce(transform.up * jumppower, ForceMode2D.Impulse);
+
+                jumppartiiclessystem.Play();
             }
         }
 
@@ -580,16 +585,29 @@ public class playerscript : MonoBehaviour
 
             if (fishing)
             {
-                if (Input.GetButton("Jump") &&
-                    usableboost > 0)
+                if (Input.GetButton("Jump") && usableboost > 0)
                 {
-                    usableboost -=
-                        1 * Time.fixedDeltaTime;
+                    usableboost -= 1 * Time.fixedDeltaTime;
+
+                    if (!rocketparticlesystem.isPlaying)
+                    {
+                        rocketparticlesystem.Play();
+                    }
 
                     rb.AddForce(
                         transform.up * boostpower,
                         ForceMode2D.Force
                     );
+                }
+                else
+                {
+                    if (rocketparticlesystem.isPlaying)
+                    {
+                        rocketparticlesystem.Stop(
+                            true,
+                            ParticleSystemStopBehavior.StopEmitting
+                        );
+                    }
                 }
 
 
@@ -624,6 +642,13 @@ public class playerscript : MonoBehaviour
                     1f,
                     ropelenght
                 );
+        }
+        if (!fishing && rocketparticlesystem.isPlaying)
+        {
+            rocketparticlesystem.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmitting
+            );
         }
 
 

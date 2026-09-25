@@ -14,12 +14,23 @@ public class upgrade : MonoBehaviour
     public int upgradenumber;
     public int currentrupgradenumber;
 
+    public int addormult;
+
     private void Start()
     {
         string formattedcost = NumberFormatter.FormatNumber(cost);
         pricetext.text = "Cost: " + formattedcost + "$";
-        string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
-        upgradenexttext.text = formattedupgrade;
+        if(addormult == 1)
+        {
+            string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
+            upgradenexttext.text = formattedupgrade;
+        }
+        else
+        {
+            string formattedupgrade = NumberFormatter.FormatNumber((currentamount * upgradeamount));
+            upgradenexttext.text = formattedupgrade;
+        }
+        
         string formattedcurrentupgrade = NumberFormatter.FormatNumber(currentamount);
         currentupgradetext.text = formattedcurrentupgrade;
     }
@@ -33,12 +44,24 @@ public class upgrade : MonoBehaviour
             moneyhandler.Changemoney(-cost);
             cost *= costmultiplier;
 
-            currentamount += upgradeamount;
+            
             
             string formattedcost = NumberFormatter.FormatNumber(cost);
             pricetext.text = "Cost: " + formattedcost + "$";
-            string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
-            upgradenexttext.text = formattedupgrade;
+            if (addormult == 1)
+            {
+                currentamount += upgradeamount;
+                string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
+                upgradenexttext.text = formattedupgrade;
+            }
+            else
+            {
+                currentamount *= upgradeamount;
+                string formattedupgrade = NumberFormatter.FormatNumber((currentamount * upgradeamount));
+                upgradenexttext.text = formattedupgrade;
+            }
+            
+            
             string formattedcurrentupgrade = NumberFormatter.FormatNumber(currentamount);
             currentupgradetext.text = formattedcurrentupgrade;
 
