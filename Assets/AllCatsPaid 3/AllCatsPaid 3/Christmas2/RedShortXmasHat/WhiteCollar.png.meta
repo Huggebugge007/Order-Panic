@@ -1,0 +1,2492 @@
+fileFormatVersion: 2
+guid: d9e2b1c56523c4f46b59e2b55337584c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6366332135186610724
+    second: WhiteCollar_0
+  - first:
+      213: 9098549889772121699
+    second: WhiteCollar_1
+  - first:
+      213: -2922711259706155697
+    second: WhiteCollar_2
+  - first:
+      213: 900574641008483249
+    second: WhiteCollar_3
+  - first:
+      213: 1549943218584382549
+    second: WhiteCollar_4
+  - first:
+      213: 3367122275072174308
+    second: WhiteCollar_5
+  - first:
+      213: 8796892885996240944
+    second: WhiteCollar_6
+  - first:
+      213: -8489247999561175033
+    second: WhiteCollar_7
+  - first:
+      213: -2347509701387392996
+    second: WhiteCollar_8
+  - first:
+      213: 7520966095014678719
+    second: WhiteCollar_9
+  - first:
+      213: -5626594406707481080
+    second: WhiteCollar_10
+  - first:
+      213: -3635070630773473197
+    second: WhiteCollar_11
+  - first:
+      213: 3334956727977985620
+    second: WhiteCollar_12
+  - first:
+      213: -2052207809140050071
+    second: WhiteCollar_13
+  - first:
+      213: 402474583741146853
+    second: WhiteCollar_14
+  - first:
+      213: 8210635423121562083
+    second: WhiteCollar_15
+  - first:
+      213: 5751016921770630699
+    second: WhiteCollar_16
+  - first:
+      213: -5167463757250279192
+    second: WhiteCollar_17
+  - first:
+      213: -4579014869445237186
+    second: WhiteCollar_18
+  - first:
+      213: -354953072111382625
+    second: WhiteCollar_19
+  - first:
+      213: -7427605757871601057
+    second: WhiteCollar_20
+  - first:
+      213: -3394293776198053022
+    second: WhiteCollar_21
+  - first:
+      213: -4856275727829691269
+    second: WhiteCollar_22
+  - first:
+      213: 4876027351092352926
+    second: WhiteCollar_23
+  - first:
+      213: 3270136680046466468
+    second: WhiteCollar_24
+  - first:
+      213: -5323988363116464453
+    second: WhiteCollar_25
+  - first:
+      213: -1629094088953787867
+    second: WhiteCollar_26
+  - first:
+      213: 6263205033736988265
+    second: WhiteCollar_27
+  - first:
+      213: -9006377865119870559
+    second: WhiteCollar_28
+  - first:
+      213: 5350435595833638250
+    second: WhiteCollar_29
+  - first:
+      213: 139381203960949250
+    second: WhiteCollar_30
+  - first:
+      213: -1818898873843867049
+    second: WhiteCollar_31
+  - first:
+      213: 660784724208291857
+    second: WhiteCollar_32
+  - first:
+      213: -7959411994751119674
+    second: WhiteCollar_33
+  - first:
+      213: 2538688492003594789
+    second: WhiteCollar_34
+  - first:
+      213: -2338709690560963037
+    second: WhiteCollar_35
+  - first:
+      213: -221397402315637189
+    second: WhiteCollar_36
+  - first:
+      213: 6674073624217635486
+    second: WhiteCollar_37
+  - first:
+      213: 731625803514157131
+    second: WhiteCollar_38
+  - first:
+      213: 6767994351375959352
+    second: WhiteCollar_39
+  - first:
+      213: -5252788813068949937
+    second: WhiteCollar_40
+  - first:
+      213: -7741033947188065731
+    second: WhiteCollar_41
+  - first:
+      213: -6868131417275546320
+    second: WhiteCollar_42
+  - first:
+      213: 4454675200381236235
+    second: WhiteCollar_43
+  - first:
+      213: -8243562973451013488
+    second: WhiteCollar_44
+  - first:
+      213: -7279912853617383812
+    second: WhiteCollar_45
+  - first:
+      213: -5906157653248822340
+    second: WhiteCollar_46
+  - first:
+      213: 2737761597646966577
+    second: WhiteCollar_47
+  - first:
+      213: -7417856482575480896
+    second: WhiteCollar_48
+  - first:
+      213: -4685616752333909008
+    second: WhiteCollar_49
+  - first:
+      213: -2837668883383200073
+    second: WhiteCollar_50
+  - first:
+      213: 2553912734128147634
+    second: WhiteCollar_51
+  - first:
+      213: -6151171761596226544
+    second: WhiteCollar_52
+  - first:
+      213: 6991104206726632241
+    second: WhiteCollar_53
+  - first:
+      213: 4673583265073579770
+    second: WhiteCollar_54
+  - first:
+      213: 6701822572911167792
+    second: WhiteCollar_55
+  - first:
+      213: 8714557226622696558
+    second: WhiteCollar_56
+  - first:
+      213: 1347807705262470504
+    second: WhiteCollar_57
+  - first:
+      213: 197772062579111923
+    second: WhiteCollar_58
+  - first:
+      213: 3648538665432628961
+    second: WhiteCollar_59
+  - first:
+      213: 3186322495089139452
+    second: WhiteCollar_60
+  - first:
+      213: -4237976976178848839
+    second: WhiteCollar_61
+  - first:
+      213: 5703034298551528904
+    second: WhiteCollar_62
+  - first:
+      213: -1203600974853725823
+    second: WhiteCollar_63
+  - first:
+      213: -265396471628961851
+    second: WhiteCollar_64
+  - first:
+      213: 1030442493711821653
+    second: WhiteCollar_65
+  - first:
+      213: -1966778595132206885
+    second: WhiteCollar_66
+  - first:
+      213: 1496978453129633342
+    second: WhiteCollar_67
+  - first:
+      213: -9106690606535075423
+    second: WhiteCollar_68
+  - first:
+      213: -4497274139026133445
+    second: WhiteCollar_69
+  - first:
+      213: -344573660441342731
+    second: WhiteCollar_70
+  - first:
+      213: -2512644602331020444
+    second: WhiteCollar_71
+  - first:
+      213: 1433151976667109213
+    second: WhiteCollar_72
+  - first:
+      213: 1468475292622826173
+    second: WhiteCollar_73
+  - first:
+      213: 4629925653640748959
+    second: WhiteCollar_74
+  - first:
+      213: 8864422393513475421
+    second: WhiteCollar_75
+  - first:
+      213: 7465473635354576048
+    second: WhiteCollar_76
+  - first:
+      213: 463017086221995691
+    second: WhiteCollar_77
+  - first:
+      213: -2076580787599291393
+    second: WhiteCollar_78
+  - first:
+      213: -1196231668684532429
+    second: WhiteCollar_79
+  - first:
+      213: -154100108720619067
+    second: WhiteCollar_80
+  - first:
+      213: -5657285066089579169
+    second: WhiteCollar_81
+  - first:
+      213: 7007222771428202141
+    second: WhiteCollar_82
+  - first:
+      213: 4470567425215543468
+    second: WhiteCollar_83
+  - first:
+      213: -3325791245257694397
+    second: WhiteCollar_84
+  - first:
+      213: 315077885448617511
+    second: WhiteCollar_85
+  - first:
+      213: 6983015384376186424
+    second: WhiteCollar_86
+  - first:
+      213: 5230437092392573600
+    second: WhiteCollar_87
+  - first:
+      213: 4596428415313980402
+    second: WhiteCollar_88
+  - first:
+      213: 6755804289432414868
+    second: WhiteCollar_89
+  - first:
+      213: 5640412879045573769
+    second: WhiteCollar_90
+  - first:
+      213: 2025904541584766066
+    second: WhiteCollar_91
+  - first:
+      213: 3068466809319075041
+    second: WhiteCollar_92
+  - first:
+      213: -198653393763251461
+    second: WhiteCollar_93
+  - first:
+      213: 1911940778701068038
+    second: WhiteCollar_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteCollar_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ab3ffb851c95850800000000000000
+      internalID: 6366332135186610724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e69072bea844e70800000000000000
+      internalID: 9098549889772121699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 287
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d1e2038917077d0800000000000000
+      internalID: -2922711259706155697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 287
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb19035ddb7f7c00800000000000000
+      internalID: 900574641008483249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 287
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c6fb53521828510800000000000000
+      internalID: 1549943218584382549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 258
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e86bf09edb6abe20800000000000000
+      internalID: 3367122275072174308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 287
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03087fcc877d41a70800000000000000
+      internalID: 8796892885996240944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 259
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700f5ff1ce1203a80800000000000000
+      internalID: -8489247999561175033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 266
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18650e3d58fb6fd0800000000000000
+      internalID: -2347509701387392996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 287
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb05b1dc0d6df5860800000000000000
+      internalID: 7520966095014678719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8063005b2325ae1b0800000000000000
+      internalID: -5626594406707481080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 287
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350ca4f4582ad8dc0800000000000000
+      internalID: -3635070630773473197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_12
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 287
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4564d688975284e20800000000000000
+      internalID: 3334956727977985620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 287
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967bce2eed71583e0800000000000000
+      internalID: -2052207809140050071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 287
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6a3036080e59500800000000000000
+      internalID: 402474583741146853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_15
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 287
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9566f5a6902f170800000000000000
+      internalID: 8210635423121562083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_16
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 287
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e166f8b67bfcf40800000000000000
+      internalID: 5751016921770630699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_17
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 255
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e84467571b7948b0800000000000000
+      internalID: -5167463757250279192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 255
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e362c75ac321470c0800000000000000
+      internalID: -4579014869445237186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 255
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f0ed0cf04f21bf0800000000000000
+      internalID: -354953072111382625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 255
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5aca669ae7dbe890800000000000000
+      internalID: -7427605757871601057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 261
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26355665bcb05e0d0800000000000000
+      internalID: -3394293776198053022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_22
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 258
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b741c5784fa0b9cb0800000000000000
+      internalID: -4856275727829691269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_23
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 256
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97d2f0aa012ba340800000000000000
+      internalID: 4876027351092352926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_24
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 255
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5152d0cfbd16d20800000000000000
+      internalID: 3270136680046466468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_25
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 255
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6312c9ac46d16b0800000000000000
+      internalID: -5323988363116464453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_26
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 255
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a8832be8b4469e0800000000000000
+      internalID: -1629094088953787867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 223
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966e4575bcf5be650800000000000000
+      internalID: 6263205033736988265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 223
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1d69cac0be20380800000000000000
+      internalID: -9006377865119870559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_29
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 223
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6df44b93d0904a40800000000000000
+      internalID: 5350435595833638250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 223
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a657e677e2fe100800000000000000
+      internalID: 139381203960949250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752ad267c19f1c6e0800000000000000
+      internalID: -1818898873843867049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_32
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 223
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1109077a4349b2900800000000000000
+      internalID: 660784724208291857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_33
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 223
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce40e726fc7a8190800000000000000
+      internalID: -7959411994751119674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_34
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 223
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5221f31abbb3b3320800000000000000
+      internalID: 2538688492003594789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_35
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 223
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e995d6deb3b8fd0800000000000000
+      internalID: -2338709690560963037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 223
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e38c05c307decf0800000000000000
+      internalID: -221397402315637189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_37
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 223
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9acb48b9921f9c50800000000000000
+      internalID: 6674073624217635486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_38
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 223
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4898febac1472a00800000000000000
+      internalID: 731625803514157131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_39
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 223
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8354d93110fbced50800000000000000
+      internalID: 6767994351375959352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_40
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 223
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4621eca7685a17b0800000000000000
+      internalID: -5252788813068949937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_41
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 224
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a8d9783a2529490800000000000000
+      internalID: -7741033947188065731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_42
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 223
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035479a6dde7fa0a0800000000000000
+      internalID: -6868131417275546320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_43
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 223
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04377c2e7f22dd30800000000000000
+      internalID: 4454675200381236235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_44
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 191
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092b3e3e62bf89d80800000000000000
+      internalID: -8243562973451013488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_45
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 191
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76e55c84dd88fa90800000000000000
+      internalID: -7279912853617383812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_46
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 191
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb336a218ec190ea0800000000000000
+      internalID: -5906157653248822340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_47
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 191
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f0473faab7ef520800000000000000
+      internalID: 2737761597646966577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_48
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 191
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c78241a4da7e0990800000000000000
+      internalID: -7417856482575480896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_49
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 191
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f39483a36859feb0800000000000000
+      internalID: -4685616752333909008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_50
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 191
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6d3c76f239e98d0800000000000000
+      internalID: -2837668883383200073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_51
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 191
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc0e09b912517320800000000000000
+      internalID: 2553912734128147634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_52
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 191
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014a4a58fd5a2aaa0800000000000000
+      internalID: -6151171761596226544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_53
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 191
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1331ead4c34650160800000000000000
+      internalID: 6991104206726632241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_54
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 191
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6cbe6c737ebd040800000000000000
+      internalID: 4673583265073579770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_55
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 191
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039801e4f18a10d50800000000000000
+      internalID: 6701822572911167792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_56
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 191
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6cb8ab30a350f870800000000000000
+      internalID: 8714557226622696558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_57
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 191
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86534b987ff54b210800000000000000
+      internalID: 1347807705262470504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_58
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 191
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f73680a4a0aeb200800000000000000
+      internalID: 197772062579111923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_59
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 159
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eeb36ed59632a230800000000000000
+      internalID: 3648538665432628961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_60
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 159
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfedf9b6d67183c20800000000000000
+      internalID: 3186322495089139452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_61
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 159
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb5398d46eaf25c0800000000000000
+      internalID: -4237976976178848839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_62
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 159
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd68038a7f352f40800000000000000
+      internalID: 5703034298551528904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_63
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 159
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181a7825a43fb4fe0800000000000000
+      internalID: -1203600974853725823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_64
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 163
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7e9efa05f115cf0800000000000000
+      internalID: -265396471628961851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_65
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 163
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b292f0dfddc4e00800000000000000
+      internalID: 1030442493711821653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_66
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd09d45c94994b4e0800000000000000
+      internalID: -1966778595132206885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_67
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 127
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e9437c8f556c410800000000000000
+      internalID: 1496978453129633342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_68
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 127
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9171684298e9180800000000000000
+      internalID: -9106690606535075423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 127
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3eebc58ff87691c0800000000000000
+      internalID: -4497274139026133445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc007ad414d73bf0800000000000000
+      internalID: -344573660441342731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_71
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 127
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463c147fb0b412dd0800000000000000
+      internalID: -2512644602331020444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_72
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 127
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57546e212493e310800000000000000
+      internalID: 1433151976667109213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_73
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 95
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaa8329f72116410800000000000000
+      internalID: 1468475292622826173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_74
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 95
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f99b10adcc04040800000000000000
+      internalID: 4629925653640748959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_75
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 95
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d73608331c40b70800000000000000
+      internalID: 8864422393513475421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_76
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 95
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b48a53b7b0ba9760800000000000000
+      internalID: 7465473635354576048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_77
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 95
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baec2353697fc6600800000000000000
+      internalID: 463017086221995691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_78
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 66
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb4ebf96c08e23e0800000000000000
+      internalID: -2076580787599291393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_79
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 68
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3355cfe92a1266fe0800000000000000
+      internalID: -1196231668684532429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_80
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 68
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1cbdf74c68cddf0800000000000000
+      internalID: -154100108720619067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5dbb9ab4394d71b0800000000000000
+      internalID: -5657285066089579169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_82
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9691091cf7ae3160800000000000000
+      internalID: 7007222771428202141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 52
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8b76c1365aa0e30800000000000000
+      internalID: 4470567425215543468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_84
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 63
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343af45bb7a68d1d0800000000000000
+      internalID: -3325791245257694397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_85
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 65
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72efebedaa16f5400800000000000000
+      internalID: 315077885448617511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_86
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 63
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83694d69e77a8e060800000000000000
+      internalID: 6983015384376186424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_87
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 72
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa1610d2de369840800000000000000
+      internalID: 5230437092392573600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_88
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 71
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb2d427a4bc9cf30800000000000000
+      internalID: 4596428415313980402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_89
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49aedab153071cd50800000000000000
+      internalID: 6755804289432414868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_90
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 31
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cbc0a11a5c64e40800000000000000
+      internalID: 5640412879045573769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_91
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274b20662757d1c10800000000000000
+      internalID: 2025904541584766066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_92
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec2a8e3e42659a20800000000000000
+      internalID: 3068466809319075041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_93
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfac0577acd3e3df0800000000000000
+      internalID: -198653393763251461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteCollar_94
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6079f022204988a10800000000000000
+      internalID: 1911940778701068038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

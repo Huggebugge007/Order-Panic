@@ -1,0 +1,2517 @@
+fileFormatVersion: 2
+guid: eff3a3069036d1a42a7af94ddd615729
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4897682707967449988
+    second: OrangeCollar_0
+  - first:
+      213: -6886693276273064994
+    second: OrangeCollar_1
+  - first:
+      213: -2465625943391261180
+    second: OrangeCollar_2
+  - first:
+      213: -7224638127904691913
+    second: OrangeCollar_3
+  - first:
+      213: -6078169725148017909
+    second: OrangeCollar_4
+  - first:
+      213: 642107605941176308
+    second: OrangeCollar_5
+  - first:
+      213: -5206072235924835840
+    second: OrangeCollar_6
+  - first:
+      213: -7039436288694229912
+    second: OrangeCollar_7
+  - first:
+      213: 5852093278637186977
+    second: OrangeCollar_8
+  - first:
+      213: 4927566030555833814
+    second: OrangeCollar_9
+  - first:
+      213: 5019000467562474153
+    second: OrangeCollar_10
+  - first:
+      213: 5423228879116953501
+    second: OrangeCollar_11
+  - first:
+      213: -5148842451099526196
+    second: OrangeCollar_12
+  - first:
+      213: 7376487934207567848
+    second: OrangeCollar_13
+  - first:
+      213: -2503322088331499799
+    second: OrangeCollar_14
+  - first:
+      213: -6270558411268020887
+    second: OrangeCollar_15
+  - first:
+      213: -5162827561739254664
+    second: OrangeCollar_16
+  - first:
+      213: -2341997815950146025
+    second: OrangeCollar_17
+  - first:
+      213: 804416591236860867
+    second: OrangeCollar_18
+  - first:
+      213: 3847454830877728196
+    second: OrangeCollar_19
+  - first:
+      213: -3929643683709499205
+    second: OrangeCollar_20
+  - first:
+      213: 847474220888901492
+    second: OrangeCollar_21
+  - first:
+      213: -8770010778890300995
+    second: OrangeCollar_22
+  - first:
+      213: 9200055446295023238
+    second: OrangeCollar_23
+  - first:
+      213: 6710313998421055314
+    second: OrangeCollar_24
+  - first:
+      213: 1651650628183956748
+    second: OrangeCollar_25
+  - first:
+      213: 6648750794907448202
+    second: OrangeCollar_26
+  - first:
+      213: 7665336939819289150
+    second: OrangeCollar_27
+  - first:
+      213: 868219780213937683
+    second: OrangeCollar_28
+  - first:
+      213: 4729107712409255395
+    second: OrangeCollar_29
+  - first:
+      213: -6053684843251373567
+    second: OrangeCollar_30
+  - first:
+      213: -3299897599301508330
+    second: OrangeCollar_31
+  - first:
+      213: 1558072044484126216
+    second: OrangeCollar_32
+  - first:
+      213: 55786884712860489
+    second: OrangeCollar_33
+  - first:
+      213: 5331744608523368880
+    second: OrangeCollar_34
+  - first:
+      213: 8554116272127974791
+    second: OrangeCollar_35
+  - first:
+      213: -4778442048805620264
+    second: OrangeCollar_36
+  - first:
+      213: 235103324389016446
+    second: OrangeCollar_37
+  - first:
+      213: 9104552576051549917
+    second: OrangeCollar_38
+  - first:
+      213: 7338367477118597201
+    second: OrangeCollar_39
+  - first:
+      213: 1628222131415163613
+    second: OrangeCollar_40
+  - first:
+      213: 243073501094714317
+    second: OrangeCollar_41
+  - first:
+      213: 2060535629791173762
+    second: OrangeCollar_42
+  - first:
+      213: -4709698097010017252
+    second: OrangeCollar_43
+  - first:
+      213: -4908331653845055691
+    second: OrangeCollar_44
+  - first:
+      213: 1353837201645370038
+    second: OrangeCollar_45
+  - first:
+      213: 3153533314508197728
+    second: OrangeCollar_46
+  - first:
+      213: 6729279190188549913
+    second: OrangeCollar_47
+  - first:
+      213: -4263535762894131071
+    second: OrangeCollar_48
+  - first:
+      213: -9032199588296316721
+    second: OrangeCollar_49
+  - first:
+      213: 5052228487726837354
+    second: OrangeCollar_50
+  - first:
+      213: -2090746565836824755
+    second: OrangeCollar_51
+  - first:
+      213: 1842537158669005393
+    second: OrangeCollar_52
+  - first:
+      213: 5216160266294494414
+    second: OrangeCollar_53
+  - first:
+      213: 562522038594792660
+    second: OrangeCollar_54
+  - first:
+      213: 2719069720280978409
+    second: OrangeCollar_55
+  - first:
+      213: -2697176309352883577
+    second: OrangeCollar_56
+  - first:
+      213: -5089276085172606342
+    second: OrangeCollar_57
+  - first:
+      213: -4303674351915298586
+    second: OrangeCollar_58
+  - first:
+      213: -4955925913205766822
+    second: OrangeCollar_59
+  - first:
+      213: -8813554879639719831
+    second: OrangeCollar_60
+  - first:
+      213: 2285455613290512328
+    second: OrangeCollar_61
+  - first:
+      213: 1042873863246934451
+    second: OrangeCollar_62
+  - first:
+      213: -4110644720510866329
+    second: OrangeCollar_63
+  - first:
+      213: 54005550362357030
+    second: OrangeCollar_64
+  - first:
+      213: 3633935729539779506
+    second: OrangeCollar_65
+  - first:
+      213: -3636787548064248888
+    second: OrangeCollar_66
+  - first:
+      213: 9029680666599895106
+    second: OrangeCollar_67
+  - first:
+      213: -8330257302817315245
+    second: OrangeCollar_68
+  - first:
+      213: -2460343022745009896
+    second: OrangeCollar_69
+  - first:
+      213: 5025324099659063308
+    second: OrangeCollar_70
+  - first:
+      213: -5492324042446548857
+    second: OrangeCollar_71
+  - first:
+      213: -6374484337544829178
+    second: OrangeCollar_72
+  - first:
+      213: -9164253748479628210
+    second: OrangeCollar_73
+  - first:
+      213: 290831337618144455
+    second: OrangeCollar_74
+  - first:
+      213: 8529422183934573145
+    second: OrangeCollar_75
+  - first:
+      213: 1506155185336256567
+    second: OrangeCollar_76
+  - first:
+      213: 5478133280140983446
+    second: OrangeCollar_77
+  - first:
+      213: 1839747033457594075
+    second: OrangeCollar_78
+  - first:
+      213: 8408463164924826468
+    second: OrangeCollar_79
+  - first:
+      213: 3719636864634436105
+    second: OrangeCollar_80
+  - first:
+      213: 1704663476889581076
+    second: OrangeCollar_81
+  - first:
+      213: -1212649708786061440
+    second: OrangeCollar_82
+  - first:
+      213: 6141568009179258638
+    second: OrangeCollar_83
+  - first:
+      213: -7499527538494301576
+    second: OrangeCollar_84
+  - first:
+      213: -233294986642101413
+    second: OrangeCollar_85
+  - first:
+      213: -3363175208952964836
+    second: OrangeCollar_86
+  - first:
+      213: -8260160749307086447
+    second: OrangeCollar_87
+  - first:
+      213: 978863301084557662
+    second: OrangeCollar_88
+  - first:
+      213: -490892227238510165
+    second: OrangeCollar_89
+  - first:
+      213: -9022242974756433350
+    second: OrangeCollar_90
+  - first:
+      213: -199127501864347599
+    second: OrangeCollar_91
+  - first:
+      213: 6890507293036168005
+    second: OrangeCollar_92
+  - first:
+      213: 517019837085670727
+    second: OrangeCollar_93
+  - first:
+      213: -855629951383957054
+    second: OrangeCollar_94
+  - first:
+      213: 6219915010460742883
+    second: OrangeCollar_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OrangeCollar_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 287
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b19fe497018f340800000000000000
+      internalID: 4897682707967449988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 287
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed34ca6d3fc8d60a0800000000000000
+      internalID: -6886693276273064994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 287
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e2d27944658cdd0800000000000000
+      internalID: -2465625943391261180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 287
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7396f7386edecbb90800000000000000
+      internalID: -7224638127904691913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 287
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bc408a6d006aba0800000000000000
+      internalID: -6078169725148017909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 258
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f743bf277939e800800000000000000
+      internalID: 642107605941176308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 287
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0023da662e050c7b0800000000000000
+      internalID: -5206072235924835840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 259
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864e261fdf5ee4e90800000000000000
+      internalID: -7039436288694229912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 266
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afde99c4dfc63150800000000000000
+      internalID: 5852093278637186977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 287
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5ef8a823b326440800000000000000
+      internalID: 4927566030555833814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 287
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aaa49c555217a540800000000000000
+      internalID: 5019000467562474153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 287
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97e76b9eed234b40800000000000000
+      internalID: 5423228879116953501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_12
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 287
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbd2c90213ab88b0800000000000000
+      internalID: -5148842451099526196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 287
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7a560a1bc8e5660800000000000000
+      internalID: 7376487934207567848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 287
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6ac96e2d9624dd0800000000000000
+      internalID: -2503322088331499799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_15
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 287
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965280909508af8a0800000000000000
+      internalID: -6270558411268020887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_16
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 287
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8748fe9bfa3f958b0800000000000000
+      internalID: -5162827561739254664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_17
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 255
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7160d83156d8f7fd0800000000000000
+      internalID: -2341997815950146025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 255
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb8a14b0acd92b00800000000000000
+      internalID: 804416591236860867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 255
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdd3d3b8c7e46530800000000000000
+      internalID: 3847454830877728196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 255
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb843aac3e91779c0800000000000000
+      internalID: -3929643683709499205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 261
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47742645055d2cb00800000000000000
+      internalID: 847474220888901492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_22
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 258
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db195ef79a9aa4680800000000000000
+      internalID: -8770010778890300995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_23
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 256
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e00563fa92daf70800000000000000
+      internalID: 9200055446295023238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_24
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 255
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257d73f5703df1d50800000000000000
+      internalID: 6710313998421055314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_25
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 255
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d94f9de77dbe610800000000000000
+      internalID: 1651650628183956748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_26
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 255
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83fd821f9b154c50800000000000000
+      internalID: 6648750794907448202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_27
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 223
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3acb95855fb06a60800000000000000
+      internalID: 7665336939819289150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 223
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3169e924a498c0c00800000000000000
+      internalID: 868219780213937683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_29
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 223
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3edb6b6986a21a140800000000000000
+      internalID: 4729107712409255395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 223
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ae5d775bdfcfba0800000000000000
+      internalID: -6053684843251373567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6132876fd986432d0800000000000000
+      internalID: -3299897599301508330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_32
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 223
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80661f9f4426f9510800000000000000
+      internalID: 1558072044484126216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_33
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 223
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b8f6640e136c000800000000000000
+      internalID: 55786884712860489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_34
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 223
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9b32009792ef940800000000000000
+      internalID: 5331744608523368880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_35
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 223
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d93978d6356b670800000000000000
+      internalID: 8554116272127974791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 223
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5b62d16409fadb0800000000000000
+      internalID: -4778442048805620264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_37
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 223
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7388b75a31434300800000000000000
+      internalID: 235103324389016446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_38
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 223
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd69b66745ed95e70800000000000000
+      internalID: 9104552576051549917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_39
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 223
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158fee0175e17d560800000000000000
+      internalID: 7338367477118597201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_40
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 223
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd22e6ed66b989610800000000000000
+      internalID: 1628222131415163613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_41
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 223
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb9f07bf029f5300800000000000000
+      internalID: 243073501094714317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_42
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 224
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c1db4fc3e789c10800000000000000
+      internalID: 2060535629791173762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_43
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 223
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c7268a88ac3aeb0800000000000000
+      internalID: -4709698097010017252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_44
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 223
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53782c4cd5a12ebb0800000000000000
+      internalID: -4908331653845055691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_45
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 191
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6baf7cf03cbc9c210800000000000000
+      internalID: 1353837201645370038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_46
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 191
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f0f9667d993cb20800000000000000
+      internalID: 3153533314508197728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_47
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 191
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917ed9d25c3336d50800000000000000
+      internalID: 6729279190188549913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_48
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 191
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180758510d0e4d4c0800000000000000
+      internalID: -4263535762894131071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_49
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 191
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc82b2f345e27a280800000000000000
+      internalID: -9032199588296316721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 191
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e211faa0f1d1640800000000000000
+      internalID: 5052228487726837354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_51
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 191
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f9deb531d2cf2e0800000000000000
+      internalID: -2090746565836824755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_52
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 191
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1527ceb98c1029910800000000000000
+      internalID: 1842537158669005393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_53
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 191
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec48df33026836840800000000000000
+      internalID: 5216160266294494414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_54
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 191
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc65c050da7ec700800000000000000
+      internalID: 562522038594792660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_55
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 191
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e35edc11831cb520800000000000000
+      internalID: 2719069720280978409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_56
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 191
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a1c68df64b19ad0800000000000000
+      internalID: -2697176309352883577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_57
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 191
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a656b5d524f59b0800000000000000
+      internalID: -5089276085172606342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_58
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 191
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e011219af64644c0800000000000000
+      internalID: -4303674351915298586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_59
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 191
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55873ab3a3093bb0800000000000000
+      internalID: -4955925913205766822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_60
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 159
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960f9ae7886ffa580800000000000000
+      internalID: -8813554879639719831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_61
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 159
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf7a1c75c197bf10800000000000000
+      internalID: 2285455613290512328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_62
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 159
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b17f54d048097e00800000000000000
+      internalID: 1042873863246934451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_63
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 159
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c6d14e76e04f6c0800000000000000
+      internalID: -4110644720510866329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_64
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 159
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d6f3d03cddfb000800000000000000
+      internalID: 54005550362357030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_65
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 163
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb81d7ea455e6230800000000000000
+      internalID: 3633935729539779506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_66
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 163
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb011a5ef8878dc0800000000000000
+      internalID: -3636787548064248888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_67
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24036e799bedf4d70800000000000000
+      internalID: 9029680666599895106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_68
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 127
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35668f16e1bf46c80800000000000000
+      internalID: -8330257302817315245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_69
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 127
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8114ca76e0b1bddd0800000000000000
+      internalID: -2460343022745009896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 127
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c006361b4a98db540800000000000000
+      internalID: 5025324099659063308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 127
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780d2aa026857c3b0800000000000000
+      internalID: -5492324042446548857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_72
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 127
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607695ab4484987a0800000000000000
+      internalID: -6374484337544829178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_73
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 127
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c645225c702d080800000000000000
+      internalID: -9164253748479628210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_74
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 95
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ccf7488f8d390400800000000000000
+      internalID: 290831337618144455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_75
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 95
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ab1c419489e5670800000000000000
+      internalID: 8529422183934573145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_76
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 95
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738849e3920f6e410800000000000000
+      internalID: 1506155185336256567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_77
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 95
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c7c03a13d360c40800000000000000
+      internalID: 5478133280140983446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 95
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde81d5fd28188910800000000000000
+      internalID: 1839747033457594075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_79
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 66
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4631d44d2bcd0b470800000000000000
+      internalID: 8408463164924826468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_80
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 68
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90abbf9550ece9330800000000000000
+      internalID: 3719636864634436105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_81
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 68
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416f599866e28a710800000000000000
+      internalID: 1704663476889581076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f63d6c38dcb2fe0800000000000000
+      internalID: -1212649708786061440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_83
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f580f909b3b3550800000000000000
+      internalID: 6141568009179258638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_84
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 57
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a99cc10735ce790800000000000000
+      internalID: -7499527538494301576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_85
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 63
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b6159127b23ccf0800000000000000
+      internalID: -233294986642101413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_86
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 65
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1955f067f99351d0800000000000000
+      internalID: -3363175208952964836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_87
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 63
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1993ded00930e5d80800000000000000
+      internalID: -8260160749307086447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_88
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 72
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51bfc07cfe959d00800000000000000
+      internalID: 978863301084557662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_89
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 71
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1c274ce100039f0800000000000000
+      internalID: -490892227238510165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_90
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32116cf0dd8ac280800000000000000
+      internalID: -9022242974756433350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_91
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 31
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1385d52979e8c3df0800000000000000
+      internalID: -199127501864347599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_92
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543c8a320efff9f50800000000000000
+      internalID: 6890507293036168005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_93
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d52537dc2dc2700800000000000000
+      internalID: 517019837085670727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_94
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c11390b7113024f0800000000000000
+      internalID: -855629951383957054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeCollar_95
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4f1ab5fb3915650800000000000000
+      internalID: 6219915010460742883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

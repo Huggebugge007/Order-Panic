@@ -1,0 +1,2492 @@
+fileFormatVersion: 2
+guid: 706c1710609a3c444b9c1f33a77a2fbc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8134218098532416806
+    second: PirateCats1_0
+  - first:
+      213: -3930679393025797310
+    second: PirateCats1_1
+  - first:
+      213: 8977831298950550218
+    second: PirateCats1_2
+  - first:
+      213: 1864472569811501515
+    second: PirateCats1_3
+  - first:
+      213: 4911119596618443263
+    second: PirateCats1_4
+  - first:
+      213: -6871748587549719950
+    second: PirateCats1_5
+  - first:
+      213: -7491198544025657053
+    second: PirateCats1_6
+  - first:
+      213: -6633875188083115809
+    second: PirateCats1_7
+  - first:
+      213: 5877392047905640182
+    second: PirateCats1_8
+  - first:
+      213: -7703717723953863252
+    second: PirateCats1_9
+  - first:
+      213: 4893227257785132438
+    second: PirateCats1_10
+  - first:
+      213: -4986679719342270762
+    second: PirateCats1_11
+  - first:
+      213: 6730282739807102106
+    second: PirateCats1_12
+  - first:
+      213: -7856465307395007262
+    second: PirateCats1_13
+  - first:
+      213: -8471766855451120259
+    second: PirateCats1_14
+  - first:
+      213: -1560473500287022264
+    second: PirateCats1_15
+  - first:
+      213: -5500784672583329158
+    second: PirateCats1_16
+  - first:
+      213: -3176814521182843666
+    second: PirateCats1_17
+  - first:
+      213: -8464377757175637811
+    second: PirateCats1_18
+  - first:
+      213: 8625150495035135270
+    second: PirateCats1_19
+  - first:
+      213: -2724804819572205391
+    second: PirateCats1_20
+  - first:
+      213: -2210700996919350384
+    second: PirateCats1_21
+  - first:
+      213: 6854608173804723080
+    second: PirateCats1_22
+  - first:
+      213: -792989865205306870
+    second: PirateCats1_23
+  - first:
+      213: 2075682049861248631
+    second: PirateCats1_24
+  - first:
+      213: -2016178160766121204
+    second: PirateCats1_25
+  - first:
+      213: -4349344436717374164
+    second: PirateCats1_26
+  - first:
+      213: 8543144894837385131
+    second: PirateCats1_27
+  - first:
+      213: 5921832120834632629
+    second: PirateCats1_28
+  - first:
+      213: -1160131562815947935
+    second: PirateCats1_29
+  - first:
+      213: -6180012023862057625
+    second: PirateCats1_30
+  - first:
+      213: 9207124956535900136
+    second: PirateCats1_31
+  - first:
+      213: -4774589011046196843
+    second: PirateCats1_32
+  - first:
+      213: 2303060374391031729
+    second: PirateCats1_33
+  - first:
+      213: -8578452667431448673
+    second: PirateCats1_34
+  - first:
+      213: -8182168014541178461
+    second: PirateCats1_35
+  - first:
+      213: 2340043329230749169
+    second: PirateCats1_36
+  - first:
+      213: -8723998113713535370
+    second: PirateCats1_37
+  - first:
+      213: -4298324047599921490
+    second: PirateCats1_38
+  - first:
+      213: 8710595583676982157
+    second: PirateCats1_39
+  - first:
+      213: 2672785279609089710
+    second: PirateCats1_40
+  - first:
+      213: 5888486761222056785
+    second: PirateCats1_41
+  - first:
+      213: -4574118751286774430
+    second: PirateCats1_42
+  - first:
+      213: 8403625961321605298
+    second: PirateCats1_43
+  - first:
+      213: 7458163582003076579
+    second: PirateCats1_44
+  - first:
+      213: -1495665295979715112
+    second: PirateCats1_45
+  - first:
+      213: -1494489697073977313
+    second: PirateCats1_46
+  - first:
+      213: 1179638455632418187
+    second: PirateCats1_47
+  - first:
+      213: 6287285043334676448
+    second: PirateCats1_48
+  - first:
+      213: 3445481039347975425
+    second: PirateCats1_49
+  - first:
+      213: -3345504803656083830
+    second: PirateCats1_50
+  - first:
+      213: 8436275743709937275
+    second: PirateCats1_51
+  - first:
+      213: -8428297687291562694
+    second: PirateCats1_52
+  - first:
+      213: -6395454110450505560
+    second: PirateCats1_53
+  - first:
+      213: 5486272025490001857
+    second: PirateCats1_54
+  - first:
+      213: -8572195977539491750
+    second: PirateCats1_55
+  - first:
+      213: 8630674654471905312
+    second: PirateCats1_56
+  - first:
+      213: 4251102711150710125
+    second: PirateCats1_57
+  - first:
+      213: -1981002140653317347
+    second: PirateCats1_58
+  - first:
+      213: -4443115734528800655
+    second: PirateCats1_59
+  - first:
+      213: -4181177192754187531
+    second: PirateCats1_60
+  - first:
+      213: -5483054326080346867
+    second: PirateCats1_61
+  - first:
+      213: 8457846652353220542
+    second: PirateCats1_62
+  - first:
+      213: 3087265432928946383
+    second: PirateCats1_63
+  - first:
+      213: -5503149908178185743
+    second: PirateCats1_64
+  - first:
+      213: 348726209411613222
+    second: PirateCats1_65
+  - first:
+      213: 1738995521695092005
+    second: PirateCats1_66
+  - first:
+      213: 784947340649990038
+    second: PirateCats1_67
+  - first:
+      213: -187550326175841345
+    second: PirateCats1_68
+  - first:
+      213: -9185183894945521912
+    second: PirateCats1_69
+  - first:
+      213: 5467165673534410776
+    second: PirateCats1_70
+  - first:
+      213: -5190062631940445681
+    second: PirateCats1_71
+  - first:
+      213: 426720505727853202
+    second: PirateCats1_72
+  - first:
+      213: -1789576586587301940
+    second: PirateCats1_73
+  - first:
+      213: -3150483070199402635
+    second: PirateCats1_74
+  - first:
+      213: -6743825470527519005
+    second: PirateCats1_75
+  - first:
+      213: -7582723238136850524
+    second: PirateCats1_76
+  - first:
+      213: 270762798241226877
+    second: PirateCats1_77
+  - first:
+      213: 664690474805363510
+    second: PirateCats1_78
+  - first:
+      213: -5530449756744328551
+    second: PirateCats1_79
+  - first:
+      213: 5175418178904596057
+    second: PirateCats1_80
+  - first:
+      213: -4187960114371523858
+    second: PirateCats1_81
+  - first:
+      213: 2516567614783987453
+    second: PirateCats1_82
+  - first:
+      213: -4111231415414358747
+    second: PirateCats1_83
+  - first:
+      213: 3900734165907324508
+    second: PirateCats1_84
+  - first:
+      213: -7222115000563011557
+    second: PirateCats1_85
+  - first:
+      213: 484624096791093594
+    second: PirateCats1_86
+  - first:
+      213: -989973983132476580
+    second: PirateCats1_87
+  - first:
+      213: -8905295038688549107
+    second: PirateCats1_88
+  - first:
+      213: 7203975307984454632
+    second: PirateCats1_89
+  - first:
+      213: -3749369404738805972
+    second: PirateCats1_90
+  - first:
+      213: 2001703970787320993
+    second: PirateCats1_91
+  - first:
+      213: 6748601172121917782
+    second: PirateCats1_92
+  - first:
+      213: -7005864678814769090
+    second: PirateCats1_93
+  - first:
+      213: -3942580794218702849
+    second: PirateCats1_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PirateCats1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 287
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62df390834c82e070800000000000000
+      internalID: 8134218098532416806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 287
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243dfbceaeb6379c0800000000000000
+      internalID: -3930679393025797310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 287
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2d453fff9a79c70800000000000000
+      internalID: 8977831298950550218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 287
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc103118cefefd910800000000000000
+      internalID: 1864472569811501515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 287
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9e6edb04dc72440800000000000000
+      internalID: 4911119596618443263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 287
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2728e455115a2a0a0800000000000000
+      internalID: -6871748587549719950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 287
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3216d614d9ae90890800000000000000
+      internalID: -7491198544025657053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 287
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8370a0aadbfe3a0800000000000000
+      internalID: -6633875188083115809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_8
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 287
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe0f158de0b09150800000000000000
+      internalID: 5877392047905640182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 287
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca569ddcb85e61590800000000000000
+      internalID: -7703717723953863252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 287
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695aa89f34c38e340800000000000000
+      internalID: 4893227257785132438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_11
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 287
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d695ff3731cbcab0800000000000000
+      internalID: -4986679719342270762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_12
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 287
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9425284e74c66d50800000000000000
+      internalID: 6730282739807102106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 287
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec5a82ad6a38f290800000000000000
+      internalID: -7856465307395007262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 287
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d68e82eec3e6a80800000000000000
+      internalID: -8471766855451120259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_15
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 288
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b4bf58e95185ae0800000000000000
+      internalID: -1560473500287022264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_16
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 287
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ad1c41c7949a3b0800000000000000
+      internalID: -5500784672583329158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 287
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec08934600b9e3d0800000000000000
+      internalID: -3176814521182843666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 255
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc814daa64d788a80800000000000000
+      internalID: -8464377757175637811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_19
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 255
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6259ade5da0b2b770800000000000000
+      internalID: 8625150495035135270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_20
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 255
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b85027047c8f2ad0800000000000000
+      internalID: -2724804819572205391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_21
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 255
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b2506f7230251e0800000000000000
+      internalID: -2210700996919350384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_22
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 255
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b9e1a11d5702f50800000000000000
+      internalID: 6854608173804723080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_23
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 255
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ae3f54bebbef4f0800000000000000
+      internalID: -792989865205306870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 255
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77662a0b3dd4ecc10800000000000000
+      internalID: 2075682049861248631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_25
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 255
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b82ab15a81504e0800000000000000
+      internalID: -2016178160766121204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_26
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 255
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25b3a3574604a3c0800000000000000
+      internalID: -4349344436717374164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_27
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 255
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba76971b4095f8670800000000000000
+      internalID: 8543144894837385131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_28
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 255
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bba8dd40f29e2250800000000000000
+      internalID: 5921832120834632629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_29
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 255
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bf2a18d7266efe0800000000000000
+      internalID: -1160131562815947935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_30
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 255
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7652f02becf2c3aa0800000000000000
+      internalID: -6180012023862057625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_31
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 255
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7c4f4dd5746cf70800000000000000
+      internalID: 9207124956535900136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 255
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5999b1067904dbdb0800000000000000
+      internalID: -4774589011046196843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_33
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 223
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b70bd7553d16ff10800000000000000
+      internalID: 2303060374391031729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_34
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 223
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9f0f33efb633f880800000000000000
+      internalID: -8578452667431448673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_35
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 223
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9b5b0ba89137e80800000000000000
+      internalID: -8182168014541178461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 223
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd32d58201897020800000000000000
+      internalID: 2340043329230749169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6764de2ffe12ee680800000000000000
+      internalID: -8723998113713535370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_38
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 194
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6994d5d094954c0800000000000000
+      internalID: -4298324047599921490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_39
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 195
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83272b588042e870800000000000000
+      internalID: 8710595583676982157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_40
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 223
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae2efffc04a71520800000000000000
+      internalID: 2672785279609089710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_41
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 223
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b2b33c28b18b150800000000000000
+      internalID: 5888486761222056785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_42
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 223
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265391dfa377580c0800000000000000
+      internalID: -4574118751286774430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_43
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 223
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b823d9994daf9470800000000000000
+      internalID: 8403625961321605298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 223
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed5c064348b08760800000000000000
+      internalID: 7458163582003076579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_45
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 223
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5ef3276545e3be0800000000000000
+      internalID: -1495665295979715112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_46
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 223
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18ac65e981824be0800000000000000
+      internalID: -1494489697073977313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_47
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 223
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b855c57eceaee5010800000000000000
+      internalID: 1179638455632418187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 191
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eff6997f6ce04750800000000000000
+      internalID: 6287285043334676448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_49
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 191
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1050ea610cec0df20800000000000000
+      internalID: 3445481039347975425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_50
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 191
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8657b73b116291d0800000000000000
+      internalID: -3345504803656083830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_51
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 191
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e3313771ca31570800000000000000
+      internalID: 8436275743709937275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_52
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 199
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a357dbf88eba80b80800000000000000
+      internalID: -8428297687291562694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_53
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 197
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a829410f58ce37a0800000000000000
+      internalID: -6395454110450505560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_54
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 194
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf8e74f657232c40800000000000000
+      internalID: 5486272025490001857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_55
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 192
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58e9b50d21790980800000000000000
+      internalID: -8572195977539491750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_56
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 191
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020e3c7fed056c770800000000000000
+      internalID: 8630674654471905312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_57
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 191
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d86d97463fefa30800000000000000
+      internalID: 4251102711150710125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_58
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 191
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1312138c011284e0800000000000000
+      internalID: -1981002140653317347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_59
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 159
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1784673b7c1e652c0800000000000000
+      internalID: -4443115734528800655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_60
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 159
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2fbeafe7979f5c0800000000000000
+      internalID: -4181177192754187531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_61
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 159
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05efc1142748e3b0800000000000000
+      internalID: -5483054326080346867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 159
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf8d3ef7be406570800000000000000
+      internalID: 8457846652353220542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_63
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 159
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc88211ed8b28da20800000000000000
+      internalID: 3087265432928946383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_64
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 163
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1d051c052e0a3b0800000000000000
+      internalID: -5503149908178185743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_65
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 163
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62209dbc3ace6d400800000000000000
+      internalID: 348726209411613222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_66
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 127
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d81a0a637222810800000000000000
+      internalID: 1738995521695092005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_67
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 127
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69784de8271b4ea00800000000000000
+      internalID: 784947340649990038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_68
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 127
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3c7c6d8ffa56df0800000000000000
+      internalID: -187550326175841345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_69
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 127
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f1229a9eba78080800000000000000
+      internalID: -9185183894945521912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_70
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 127
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8105a3bb6364fdb40800000000000000
+      internalID: 5467165673534410776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_71
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 98
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a292dc88139f7b0800000000000000
+      internalID: -5190062631940445681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_72
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 99
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292a8420a040ce500800000000000000
+      internalID: 426720505727853202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_73
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 99
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc79b1a73952a27e0800000000000000
+      internalID: -1789576586587301940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_74
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 97
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fe1e1f65c3744d0800000000000000
+      internalID: -3150483070199402635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_75
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6c9f1077e1962a0800000000000000
+      internalID: -6743825470527519005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_76
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 95
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7d0c0d361c4c690800000000000000
+      internalID: -7582723238136850524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_77
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 95
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d702f879451f1c300800000000000000
+      internalID: 270762798241226877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_78
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 95
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6330c541774793900800000000000000
+      internalID: 664690474805363510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_79
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 95
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99adb117f35ef33b0800000000000000
+      internalID: -5530449756744328551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_80
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 104
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e15b5c967c2d740800000000000000
+      internalID: 5175418178904596057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_81
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 103
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea8169f67061e5c0800000000000000
+      internalID: -4187960114371523858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_82
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 63
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe937c89e4ace220800000000000000
+      internalID: 2516567614783987453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_83
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 63
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52dfcc65fc8f1f6c0800000000000000
+      internalID: -4111231415414358747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_84
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 52
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5eb2229e01322630800000000000000
+      internalID: 3900734165907324508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 63
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10fb60eba4e5cb90800000000000000
+      internalID: -7222115000563011557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_86
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 63
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51e3d26c0bb9b600800000000000000
+      internalID: 484624096791093594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_87
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 63
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b928e48e7e242f0800000000000000
+      internalID: -989973983132476580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_88
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 63
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07abe638590a6480800000000000000
+      internalID: -8905295038688549107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_89
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 31
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e34913df59a9f360800000000000000
+      internalID: 7203975307984454632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_90
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 31
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f53d2346097fbc0800000000000000
+      internalID: -3749369404738805972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_91
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4644ce72b77cb10800000000000000
+      internalID: 2001703970787320993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_92
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6599c1ba209d7ad50800000000000000
+      internalID: 6748601172121917782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_93
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e302aca713b26ce90800000000000000
+      internalID: -7005864678814769090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirateCats1_94
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7115608a32949c0800000000000000
+      internalID: -3942580794218702849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
