@@ -17,7 +17,7 @@ public class handler : MonoBehaviour
     GameObject parent;
     public GameObject ground;
     public Transform duckspawn;
-    public GameObject duckprefab;
+    public List<GameObject> cats = new List<GameObject>();
     public List<Transform> fallpoints;
     public List<GameObject> avalibleseats = new List<GameObject>();
     public List<GameObject> seats = new List<GameObject>();
@@ -134,7 +134,7 @@ public class handler : MonoBehaviour
 
             random -= w;
         }
-
+        
         return avaliblefish[0];
     }
     private void Update()
@@ -168,7 +168,7 @@ public class handler : MonoBehaviour
             Debug.LogWarning("No available seats to spawn duck.");
             return;
         }
-
+        GameObject duckprefab = cats[Random.Range(0, cats.Count)];
         GameObject duckclone = Instantiate(duckprefab, duckspawn);
         int seatindex = Random.Range(0, avalibleseats.Count);
         duckscript duckclonescript = duckclone.GetComponent<duckscript>();

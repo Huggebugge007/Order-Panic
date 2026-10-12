@@ -47,8 +47,11 @@ public class duckscript : MonoBehaviour
 
     public LayerMask fishlayer;
 
+    public Animator animator;
+
     void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         thoughtbubble = transform.Find("thoughtbubble").gameObject;
         thoughtbubble.SetActive(false);
         time = 0;
@@ -108,6 +111,9 @@ public class duckscript : MonoBehaviour
             0.3f, // tweak this to your character's height/leg length
             groundLayer
         );
+        bool falling = groundHit.collider == null && rb.linearVelocity.y < -0.05f;
+
+        animator.SetBool("Falling", falling);
 
         if (groundHit.collider != null)
         {
@@ -164,14 +170,15 @@ public class duckscript : MonoBehaviour
 
         if (target != null)
         {
-            if (Vector2.Distance(transform.position, target.position) < 0.035f && !arewethereyet)
+            if (Vector2.Distance(transform.position, target.position) < 0.052f && !arewethereyet)
             {
+
                 if (targetindex == targets.Count - 1)
                 {
                     arewethereyet = true;
-                    if(target.name.Contains("3") || target.name.Contains("1"))
+                    if (target.name.Contains("3") || target.name.Contains("1"))
                     {
-                        transform.localScale = new Vector3(-1, 1, 1);
+                        transform.localScale = new Vector3(1, 1, 1);
                     }
                     thoughtbubble.SetActive(true);
                     int sortingnumber = 0;
@@ -180,6 +187,7 @@ public class duckscript : MonoBehaviour
                     {
                         int.TryParse(target.name.Split('(', ')')[1], out sortingnumber);
                     }
+                    animator.SetBool("Walking", false);
                     thoughtbubble.GetComponent<SpriteRenderer>().sortingOrder = -sortingnumber;
                     SpriteRenderer thoughtbubblechildrenderer = thoughtbubble.transform.GetChild(0).GetComponent<SpriteRenderer>();
                     thoughtbubblechildrenderer.sortingOrder = -sortingnumber;
@@ -261,11 +269,16 @@ public class duckscript : MonoBehaviour
     {
         if (target == null)
         {
+            animator.SetBool("Walking", false);
             return;
         }
 
+        bool moving = Mathf.Abs(transform.position.x - target.position.x) > 0.03f;
+
+        animator.SetBool("Walking", moving);
+
         float direction = Mathf.Sign(target.position.x - transform.position.x);
-        if(target.position.x > transform.position.x)
+        if (target.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
         }

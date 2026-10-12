@@ -82,6 +82,8 @@ public class playerscript : MonoBehaviour
     public ParticleSystem rocketparticlesystem;
     public ParticleSystem jumppartiiclessystem;
 
+    public breeding breedingscript;
+
     void Awake()
     {
         fightmanager = GameObject.FindGameObjectWithTag("fightmanager").GetComponent<fightmanager>();
@@ -94,8 +96,8 @@ public class playerscript : MonoBehaviour
         bool inPool = ispool();
 
 
-        // R animation above player while in water
-        if (inWater || inPool)
+
+        if (fishing && !inPool)
         {
             if (currentWaterRAnimation == null)
             {
@@ -418,7 +420,7 @@ public class playerscript : MonoBehaviour
 
         if (fishCol != null &&
             Input.GetKeyDown(KeyCode.F) &&
-            fishpos.transform.childCount <= 1)
+            fishpos.transform.childCount <= 1 && !breedingscript.isBreeding)
         {
             if (!fishCol.GetComponent<stats>().defeated)
             {
@@ -690,7 +692,7 @@ public class playerscript : MonoBehaviour
 
     private bool isgrounded()
     {
-        return rb.IsTouchingLayers(ground);
+        return Physics2D.OverlapCircle(groundcheck.position, 0.3f, ground);
     }
 
 

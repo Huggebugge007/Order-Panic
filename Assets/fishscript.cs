@@ -32,6 +32,10 @@ public class fishscript : MonoBehaviour
     public GameObject explosion1, explosion2;
 
     private float timetonewgoal;
+
+    public float breedtimer = 0f;
+
+    public bool countingdown = true;
     void Awake()
     {
         wasinwater = false;
@@ -47,6 +51,11 @@ public class fishscript : MonoBehaviour
 
     void Update()
     {
+        if(breedtimer > 0)
+        {
+            breedtimer -= Time.deltaTime;
+        }
+
         Transform grandparent = transform.parent?.parent;
 
         if (grandparent == player.transform)
@@ -74,7 +83,7 @@ public class fishscript : MonoBehaviour
         }
         
 
-        if(!inwater && !inpool)
+        if(!inwater && !inpool && countingdown)
         {
             if (market.activeSelf == false)
             {

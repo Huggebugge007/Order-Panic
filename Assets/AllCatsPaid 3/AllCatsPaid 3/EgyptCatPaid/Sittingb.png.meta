@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sittingb_0: -7431899244715136592
+      Sittingb_1: 725610533951486388
+      Sittingb_2: 2087144304499795148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

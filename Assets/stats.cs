@@ -42,6 +42,7 @@ public class stats : MonoBehaviour
 
     public int skilllevel;
 
+
     private void Awake()
     {
         if (!instanisated)
@@ -78,4 +79,5 @@ public class stats : MonoBehaviour
         }
 
     }
+
 }
