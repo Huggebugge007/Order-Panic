@@ -14,6 +14,8 @@ public class workstation : MonoBehaviour, IInteractable
     public playerscript playerscript;
     public moneyhandler moneyscript;
 
+
+
     public Button[] buttons;
     private bool inshop = false;
     private bool ready = true;
@@ -24,10 +26,38 @@ public class workstation : MonoBehaviour, IInteractable
 
     public float money;
 
+    public Transform fishholder;
 
+    private Interact interact;
+
+
+    private void Update()
+    {
+        money = moneyscript.money;
+
+        if (!interact.CanInteractWith(this))
+        {
+            if (inshop)
+            {
+                if (fishholder.childCount > 0)
+                {
+                    foreach (Transform fish in fishholder)
+                    {
+                        fish.GetComponent<fishscript>().countingdown = true;
+                    }
+                }
+                playerscript.enabled = true;
+                playertarvenscript.enabled = true;
+                inshop = false;
+                StartCoroutine(openshop());
+            }
+
+        }
+    }
     private void Awake()
     {
         buttons = moneyscript.buttons;
+        interact = playerscript.GetComponent<Interact>();
     }
 
 
@@ -44,9 +74,23 @@ public class workstation : MonoBehaviour, IInteractable
             playertarvenscript.enabled = false;
 
             StartCoroutine(openshop());
+            if(fishholder.childCount > 0)
+            {
+                foreach (Transform fish in fishholder)
+                {
+                    fish.GetComponent<fishscript>().countingdown = false;
+                }
+            }
         }
         if (!inshop)
         {
+            if (fishholder.childCount > 0)
+            {
+                foreach (Transform fish in fishholder)
+                {
+                    fish.GetComponent<fishscript>().countingdown = true;
+                }
+            }
             playerscript.enabled = true;
             playertarvenscript.enabled = true;
 
@@ -98,10 +142,5 @@ public class workstation : MonoBehaviour, IInteractable
         ready = true;
     }
 
-    void Update()
-    {
-        money = moneyscript.money;
-
-    }
 
 }

@@ -17,6 +17,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
     public moneyhandler moneyscript;
     public fightmanager fightmanager;
 
+
     public Transform playerfishholder;
 
     private bool inshop = false;
@@ -45,18 +46,37 @@ public class sketchmarket : MonoBehaviour, IInteractable
 
     public int tournamentlevel = 1;
 
-    public int maxtournamentlevel = 8;
 
     public Button tournamentbutton;
     private float tournamententryfeevalue;
 
     public GameObject wontournamentscreen;
 
+    public int maxlevel;
 
-    public void Start()
+    private Interact interact;
+
+    public void Update()
     {
+        if (!interact.CanInteractWith(this))
+        {
+            if (inshop)
+            {
+                inshop = false;
+                playerfishholder.GetChild(0).GetComponent<fishscript>().countingdown = true;
+                closeshop();
+            }
+
+        }
+    }
+    private void Start()
+    {
+        interact = playerscript.GetComponent<Interact>();
         fightmanager = GameObject.FindGameObjectWithTag("fightmanager").GetComponent<fightmanager>();
     }
+
+
+
     public void Interact()
     {
         if (!ready)
@@ -71,6 +91,9 @@ public class sketchmarket : MonoBehaviour, IInteractable
         inshop = !inshop;
         if (inshop)
         {
+
+            maxlevel = Mathf.FloorToInt(handler.avaliblefish.Count/3);
+            playerfishholder.GetChild(0).GetComponent<fishscript>().countingdown = false;
             playerscript.enabled = false;
             playertarvenscript.enabled = false;
             selltab();
@@ -85,6 +108,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
     }
     public void closeshop()
     {
+        playerfishholder.GetChild(0).GetComponent<fishscript>().countingdown = true;
         playerscript.enabled = true;
         playertarvenscript.enabled = true;
 
@@ -92,6 +116,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
     }
     public void closeshopwithoutfade()
     {
+        playerfishholder.GetChild(0).GetComponent<fishscript>().countingdown = true;
         inshop = !inshop;
         playerscript.enabled = true;
         playertarvenscript.enabled = true;
@@ -155,9 +180,9 @@ public class sketchmarket : MonoBehaviour, IInteractable
             return;
         }
         stats fishstats = playerfishholder.GetChild(0).GetComponent<stats>();
-        weight.text = Mathf.RoundToInt(fishstats.weight).ToString() + "g";
+        weight.text = NumberFormatter.FormatNumber(Mathf.RoundToInt(fishstats.weight)) + "g";
         sellpricevalue = Mathf.RoundToInt(fishstats.weight * 0.05f);
-        sellprice.text = sellpricevalue.ToString() + "$";
+        sellprice.text = NumberFormatter.FormatNumber(sellpricevalue) + "$";
     }
     public void sell()
     {
@@ -183,8 +208,10 @@ public class sketchmarket : MonoBehaviour, IInteractable
             return;
         }
         stats fishstats = playerfishholder.GetChild(0).GetComponent<stats>();
-        winamountvalue = Mathf.RoundToInt(fishstats.skilllevel * fishstats.skilllevel * 50);
-        winamount.text = "Win amount = " + winamountvalue.ToString() + "$";
+
+        int usableskillllevel = Mathf.Min(fishstats.skilllevel, maxlevel);
+        winamountvalue = Mathf.RoundToInt(usableskillllevel * usableskillllevel * 50);
+        winamount.text = "Win amount = " + NumberFormatter.FormatNumber(winamountvalue) + "$";
     }
     public void joinfight()
     {
@@ -192,7 +219,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
         List<GameObject> possibleopponents = new List<GameObject>();
         foreach (GameObject possibleopponent in handler.avaliblefish)
         {
-            if(possibleopponent.GetComponent<stats>().skilllevel == playerfishholder.GetChild(0).GetComponent<stats>().skilllevel)
+            if(possibleopponent.GetComponent<stats>().skilllevel == Mathf.Min(playerfishholder.GetChild(0).GetComponent<stats>().skilllevel, maxlevel))
             {
                 possibleopponents.Add(possibleopponent);
             }
@@ -211,7 +238,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
 
         tournamententryfeevalue = tournamentlevel * tournamentlevel * tournamentlevel * 500f;
 
-        tournamentEntryFee.text = "Entry fee: " + tournamententryfeevalue + "$";
+        tournamentEntryFee.text = "Entry fee: " + NumberFormatter.FormatNumber(tournamententryfeevalue) + "$";
 
 
         string pricetext = tournamentEntryFee.text;
@@ -219,7 +246,8 @@ public class sketchmarket : MonoBehaviour, IInteractable
 
         if (float.TryParse(numberText, out float price))
         {
-            if (tournamentlevel >= maxtournamentlevel)
+
+            if (tournamentlevel > maxlevel)
             {
                 tournamentbutton.interactable = false;
                 tournamentbutton.GetComponent<Image>().color = new Color(0.55f, 0, 0);
@@ -333,10 +361,6 @@ public class sketchmarket : MonoBehaviour, IInteractable
         
 
 
-
-    }
-    private void Update()
-    {
 
     }
 }

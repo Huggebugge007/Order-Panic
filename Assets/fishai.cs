@@ -364,8 +364,8 @@ public class FishAI : MonoBehaviour
 
             RotateTowards(dir);
 
-            float preferred = attackRange * 0.9f;
-            float buffer = 0.25f;
+            float preferred = attackRange * 0.7f;
+            float buffer = 0.1f;
 
             float speed = 0f;
 

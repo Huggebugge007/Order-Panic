@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
-    [SerializeField] private float interactionRadius = 2f;
+    [SerializeField] public float interactionRadius = 2f;
     [SerializeField] private LayerMask interactableLayer;
 
     private playerscript playerscript;
@@ -13,9 +13,12 @@ public class Interact : MonoBehaviour
     private GameObject currentAnimation;
     private Transform currentInteractable;
 
+    public float usableinteractionRadius;
+
     private void Start()
     {
         playerscript = GetComponent<playerscript>();
+        usableinteractionRadius = interactionRadius;
     }
 
     private void Update()
@@ -79,13 +82,14 @@ public class Interact : MonoBehaviour
         {
             closestInteractable?.Interact();
         }
+
     }
 
     private IInteractable FindClosestInteractable()
     {
         Collider2D[] nearbyColliders = Physics2D.OverlapCircleAll(
             transform.position,
-            interactionRadius,
+            usableinteractionRadius,
             interactableLayer
         );
 
@@ -123,6 +127,15 @@ public class Interact : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, interactionRadius);
+        Gizmos.DrawWireSphere(transform.position, usableinteractionRadius);
+    }
+    public bool CanInteractWith(IInteractable target)
+    {
+        if (playerscript.isgrappled || target == null)
+            return false;
+
+        IInteractable closestInteractable = FindClosestInteractable();
+
+        return closestInteractable == target;
     }
 }

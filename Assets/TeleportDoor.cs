@@ -67,11 +67,13 @@ public class TeleportDoor : MonoBehaviour, IInteractable
     private IEnumerator ShowTextForSeconds(float numberofseconds, GameObject text)
     {
         costtext.text = "This door is locked \n Pay " + unlockcost + "$ to unlock";
-        if(moneyscript.money >= unlockcost)
+        Button button = unlockbutton.GetComponent<Button>();
+
+        button.onClick.RemoveAllListeners();
+
+        if (!doorunlocked && moneyscript.money >= unlockcost)
         {
             unlockbutton.SetActive(true);
-            Button button = unlockbutton.GetComponent<Button>();
-            button.onClick.RemoveListener(buydoor);
             button.onClick.AddListener(buydoor);
         }
         else

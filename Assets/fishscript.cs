@@ -85,11 +85,8 @@ public class fishscript : MonoBehaviour
 
         if(!inwater && !inpool && countingdown)
         {
-            if (market.activeSelf == false)
-            {
-                countdown -= Time.deltaTime;
-            }
-            
+            countdown -= Time.deltaTime;
+
         }
         if(countdown <= 0)
         {

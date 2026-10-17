@@ -41,6 +41,7 @@ public class stats : MonoBehaviour
     public int cost;
 
     public int skilllevel;
+    
 
 
     private void Awake()

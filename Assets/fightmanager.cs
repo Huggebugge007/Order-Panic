@@ -16,7 +16,7 @@ public class fightmanager : MonoBehaviour
     public playerscript playerscript;
     public Gradient fadegradient;
 
-    private sketchmarket sketchmarket;
+    public sketchmarket sketchmarket;
 
     private void Awake()
     {
