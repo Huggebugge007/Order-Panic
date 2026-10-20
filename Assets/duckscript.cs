@@ -66,7 +66,8 @@ public class duckscript : MonoBehaviour
     {
         yield return null;
         target = targets[targetindex];
-        wantedfish = handler.avaliblefish[Random.Range(0, handler.resturantquality - 1)];
+        wantedfish = handler.avaliblefish[handler.resturantquality - 1];
+
     }
 
     void FixedUpdate()
