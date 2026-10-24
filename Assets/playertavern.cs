@@ -15,7 +15,7 @@ public class playertavern : MonoBehaviour
 
     [Header("Rooms")]
     public int unlockedrooms;
-    [SerializeField] private GameObject roomnohole, roomhole;
+    [SerializeField] private GameObject roomnohole, roomhole, gamblingfloor;
     GameObject roomClone = null;
     [SerializeField] private Transform roomparent;
     [SerializeField] private float roomspacing = 0.96f;
@@ -140,15 +140,20 @@ private void Awake()
     {
         while (unlockedrooms > currentrooms)
         {
-            if (roomClone != null)
+            if(currentrooms == 2)
             {
                 Destroy(roomClone);
-                roomClone = Instantiate(
-                roomhole,
-                new Vector2(0f, roompos+roomspacing),
-                Quaternion.identity,
-                roomparent
-            );
+                roomClone = Instantiate(roomhole, new Vector2(0f, roompos + roomspacing), Quaternion.identity, roomparent);
+                roomClone.transform.localPosition += Vector3.up * 0.12f;
+
+                roomClone = Instantiate(gamblingfloor, new Vector2(0f, roompos), Quaternion.identity, roomparent);
+                roomClone.transform.localPosition += Vector3.up * 0.12f;
+                roompos -= roomspacing;
+            }
+            else if (roomClone != null && currentrooms != 2)
+            {
+                Destroy(roomClone);
+                roomClone = Instantiate(roomhole,new Vector2(0f, roompos+roomspacing),Quaternion.identity,roomparent);
                 roomClone.transform.localPosition += Vector3.up * 0.12f;
             }
             roomClone = Instantiate(

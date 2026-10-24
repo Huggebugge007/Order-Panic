@@ -8,10 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 776740064267589881, guid: 426c46f096ea9ef4aac86f95944bb2a6, type: 3}
+      propertyPath: m_LinearDamping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1831424833153560152, guid: 426c46f096ea9ef4aac86f95944bb2a6, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 457d187b98cf9e64cad8f3158c8ef4bf, type: 2}
+    - target: {fileID: 5034104072828995125, guid: 426c46f096ea9ef4aac86f95944bb2a6, type: 3}
+      propertyPath: waterDrag
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7886649589749185074, guid: 426c46f096ea9ef4aac86f95944bb2a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

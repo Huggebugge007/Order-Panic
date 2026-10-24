@@ -35,6 +35,7 @@ public class handler : MonoBehaviour
 
     void Start()
     {
+
         usablespawntime = spawntime;
         playerscript = player.GetComponent<playerscript>();
         parent = new GameObject();
@@ -46,7 +47,6 @@ public class handler : MonoBehaviour
 
         StartCoroutine(CheckFish());
     }
-
 
     public void findseats()
     {
@@ -139,7 +139,8 @@ public class handler : MonoBehaviour
     }
     private void Update()
     {
-        if(avalibleseats.Count > 0)
+
+        if (avalibleseats.Count > 0)
         {
             usablespawntime -= Time.deltaTime;
             if(usablespawntime <= 0)

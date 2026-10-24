@@ -170,7 +170,7 @@ MonoBehaviour:
   evadetime: 0
   aggression: 0
   idlemiddletime: 0
-  cost: 45
+  cost: 90
   skilllevel: 1
 --- !u!114 &8603879748995801571
 MonoBehaviour:
@@ -208,6 +208,8 @@ MonoBehaviour:
   market: {fileID: 0}
   explosion1: {fileID: 1597623158702358751, guid: fa23cb21bc629c4478ff7f5e70fbd45a, type: 3}
   explosion2: {fileID: 8889277204553287237, guid: 43d4fb53def25c046a25af663e88ac34, type: 3}
+  breedtimer: 0
+  countingdown: 1
 --- !u!50 &4994633912047767654
 Rigidbody2D:
   serializedVersion: 5

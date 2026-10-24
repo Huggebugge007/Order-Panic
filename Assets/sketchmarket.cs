@@ -37,7 +37,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
     public GameObject sellTab;
     public GameObject tournamentTab;
 
-    public TMP_Text weight, sellprice;
+    public TMP_Text weight, sellprice, sellpricenormal, basevalue;
     public TMP_Text winamount;
 
     public TMP_Text tournamentEntryFee, fishelinstars;
@@ -183,6 +183,9 @@ public class sketchmarket : MonoBehaviour, IInteractable
         weight.text = NumberFormatter.FormatNumber(Mathf.RoundToInt(fishstats.weight)) + "g";
         sellpricevalue = Mathf.RoundToInt(fishstats.weight * 0.05f);
         sellprice.text = NumberFormatter.FormatNumber(sellpricevalue) + "$";
+
+        basevalue.text = "Base value: " + NumberFormatter.FormatNumber(fishstats.cost) + "$";
+        sellpricenormal.text = "Sellprice: " + NumberFormatter.FormatNumber(fishstats.cost * 0.3f) + "$";
     }
     public void sell()
     {
@@ -191,13 +194,29 @@ public class sketchmarket : MonoBehaviour, IInteractable
             playerscript.enabled = true;
             playertarvenscript.enabled = true;
 
-            StartCoroutine(openshop());
+            Destroy(playerfishholder.GetChild(0).gameObject);
 
-            fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
-            fishscript.DestroyWithExplosion();
+            closeshop();
+
             moneyscript.Changemoney(sellpricevalue);
         }
 
+    }
+    public void sellnormal()
+    {
+        if (playerfishholder.childCount == 1)
+        {
+            playerscript.enabled = true;
+            playertarvenscript.enabled = true;
+
+            moneyscript.Changemoney(playerfishholder.GetChild(0).GetComponent<stats>().cost * 0.3f);
+
+            Destroy(playerfishholder.GetChild(0).gameObject);
+
+            closeshop();
+
+           
+        }
     }
 
     public void fighttab()
@@ -316,9 +335,9 @@ public class sketchmarket : MonoBehaviour, IInteractable
                 fightmanager.fightover = false;
                 if (!fightmanager.won && playerfishholder.childCount == 1)
                 {
-                    fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
+                    
                     closeshopwithoutfade();
-                    fishscript.DestroyWithExplosion();
+                    Destroy(playerfishholder.GetChild(0));
                     opponent.Clear();
                 }
                 yield break;
@@ -346,7 +365,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
         {
             fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
             closeshopwithoutfade();
-            fishscript.DestroyWithExplosion();
+            Destroy(playerfishholder.GetChild(0));
             opponent.Clear();
         }
         else if (fightmanager.won)

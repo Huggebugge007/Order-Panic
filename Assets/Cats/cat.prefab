@@ -186,7 +186,7 @@ MonoBehaviour:
   dampingStrength: 0.0045
   movementSpeed: 0.5
   floatForce: 12
-  waterDrag: 5
+  waterDrag: 8
   explosion1: {fileID: 1597623158702358751, guid: fa23cb21bc629c4478ff7f5e70fbd45a, type: 3}
   explosion2: {fileID: 8889277204553287237, guid: 43d4fb53def25c046a25af663e88ac34, type: 3}
   finsihed: 0
@@ -214,7 +214,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.4
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0
   m_GravityScale: 0.25
   m_Material: {fileID: 0}

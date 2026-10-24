@@ -66,7 +66,8 @@ public class duckscript : MonoBehaviour
     {
         yield return null;
         target = targets[targetindex];
-        wantedfish = handler.avaliblefish[handler.resturantquality - 1];
+
+        wantedfish = handler.avaliblefish[Random.Range(handler.resturantquality - 1, handler.resturantquality + 2)];
 
     }
 
@@ -180,6 +181,8 @@ public class duckscript : MonoBehaviour
                     if (target.name.Contains("3") || target.name.Contains("1"))
                     {
                         transform.localScale = new Vector3(1, 1, 1);
+                        thoughtbubble.transform.localPosition = new Vector3(-0.24f, 0.44f, 0f);
+                        thoughtbubble.GetComponent<SpriteRenderer>().flipX = true;
                     }
                     thoughtbubble.SetActive(true);
                     int sortingnumber = 0;
@@ -189,10 +192,11 @@ public class duckscript : MonoBehaviour
                         int.TryParse(target.name.Split('(', ')')[1], out sortingnumber);
                     }
                     animator.SetBool("Walking", false);
-                    thoughtbubble.GetComponent<SpriteRenderer>().sortingOrder = -sortingnumber;
+                    thoughtbubble.GetComponent<SpriteRenderer>().sortingOrder = -sortingnumber-1;
                     SpriteRenderer thoughtbubblechildrenderer = thoughtbubble.transform.GetChild(0).GetComponent<SpriteRenderer>();
                     thoughtbubblechildrenderer.sortingOrder = -sortingnumber;
                     thoughtbubblechildrenderer.sprite = wantedfish.transform.Find("sprite").GetComponent<SpriteRenderer>().sprite;
+                    
                 }
                 else
                 {
