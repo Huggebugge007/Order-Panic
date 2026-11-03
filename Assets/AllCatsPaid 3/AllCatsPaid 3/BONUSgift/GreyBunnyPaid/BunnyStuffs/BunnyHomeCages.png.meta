@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BunnyHomeCages_0: 9013158307322944564
+      BunnyHomeCages_1: -5122818686024820504
+      BunnyHomeCages_2: -8851188668572146426
+      BunnyHomeCages_3: 2397934587539640886
+      BunnyHomeCages_4: -393294852403627626
+      BunnyHomeCages_5: -7044112520533814829
+      BunnyHomeCages_6: -4983638435262216840
+      BunnyHomeCages_7: 2694982280618800879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

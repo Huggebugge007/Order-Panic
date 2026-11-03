@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IdlePumpkingLighton_0: 8757975524806959824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

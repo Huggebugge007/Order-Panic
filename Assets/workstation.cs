@@ -30,6 +30,18 @@ public class workstation : MonoBehaviour, IInteractable
 
     private Interact interact;
 
+    public GameObject Fishingtab;
+    public GameObject Restauranttab;
+
+    public GameObject droppertab;
+
+    public GameObject Shoppingtab;
+
+    private shopscript shopscript;
+
+
+    
+
 
     private void Update()
     {
@@ -58,6 +70,7 @@ public class workstation : MonoBehaviour, IInteractable
     {
         buttons = moneyscript.buttons;
         interact = playerscript.GetComponent<Interact>();
+        shopscript = GetComponent<shopscript>();
     }
 
 
@@ -98,21 +111,16 @@ public class workstation : MonoBehaviour, IInteractable
         }
     }
 
-    private IEnumerator openshop()
+    public void resetshop()
     {
-        yield return faderimage.GetComponent<fadescript>().FadeIn(1);
-
-        shopui.SetActive(!shopui.activeSelf);
-        if(shopui.activeSelf == true)
-        {
-            foreach (Button btn in buttons)
+        foreach (Button btn in buttons)
             {
-                string pricetext = btn.transform.parent.Find("Price").GetComponent<TMP_Text>().text;
-                string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
+                
+                upgrade upgradescript = btn.GetComponentInParent<upgrade>();
+            if (upgradescript != null)
+            {
+                float price = upgradescript.cost;
 
-                if (float.TryParse(numberText, out float price))
-                {
-                    upgrade upgradescript = btn.GetComponentInParent<upgrade>();
                     if (upgradescript.currentrupgradenumber >= upgradescript.maxupgrade)
                     {
                         btn.interactable = false;
@@ -130,16 +138,61 @@ public class workstation : MonoBehaviour, IInteractable
                             btn.GetComponent<Image>().color = new Color(0.55f, 0, 0);
                         }
                     }
-
-
-
-                }
             }
+                
+            }
+    }
+    private IEnumerator openshop()
+    {
+        yield return faderimage.GetComponent<fadescript>().FadeIn(1);
+
+        shopui.SetActive(!shopui.activeSelf);
+        if(shopui.activeSelf == true)
+        {
+            resetshop();
+            shopscript.resetshop();
         
         }
 
         yield return faderimage.GetComponent<fadescript>().FadeOut(1);
         ready = true;
+    }
+
+    public void togglefishingtab()
+    {
+        Fishingtab.SetActive(true);
+        Restauranttab.SetActive(false);
+        Shoppingtab.SetActive(false);
+        droppertab.SetActive(false);
+        resetshop();
+        shopscript.resetshop();
+    }
+    public void togglerestauranttab()
+    {
+        Fishingtab.SetActive(false);
+        Restauranttab.SetActive(true);
+        Shoppingtab.SetActive(false);
+        droppertab.SetActive(false);
+        resetshop();
+        shopscript.resetshop();
+    }
+    public void toggledroppertab()
+    {
+        Fishingtab.SetActive(false);
+        Restauranttab.SetActive(false);
+        Shoppingtab.SetActive(false);
+        droppertab.SetActive(true);
+        resetshop();
+        shopscript.resetshop();
+    }
+    public void toggleshoptab()
+    {
+        Fishingtab.SetActive(false);
+        Restauranttab.SetActive(false);
+        Shoppingtab.SetActive(true);
+        droppertab.SetActive(false);
+        resetshop();
+        shopscript.resetshop();
     }
 
 

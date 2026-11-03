@@ -84,6 +84,13 @@ public class playerscript : MonoBehaviour
 
     public breeding breedingscript;
 
+    private rocketmeterscript rocketmeterscript;
+
+    public GameObject rocketmeter;
+    public bool inWater, inPool;
+
+    
+
     void Awake()
     {
         fightmanager = GameObject.FindGameObjectWithTag("fightmanager").GetComponent<fightmanager>();
@@ -92,8 +99,9 @@ public class playerscript : MonoBehaviour
 
     void Update()
     {
-        bool inWater = waterCollider.bounds.Contains(transform.position);
-        bool inPool = ispool();
+        inWater = waterCollider.bounds.Contains(transform.position);
+        inPool = ispool();
+
 
 
 
@@ -156,16 +164,38 @@ public class playerscript : MonoBehaviour
         }
 
 
-        // När spelaren precis går ner i vatten
+
         if (!previouswater && inWater && isgrappled)
         {
-            usableboost = totalboost;
+            
+            if(totalboost > 0)
+            {
+                if (!rocketmeter.activeSelf)
+                {
+                    rocketmeter.SetActive(true);
+                    rocketmeterscript = rocketmeter.GetComponentInChildren<rocketmeterscript>();
+                }
+
+            }
+            
+        }
+        if(!inWater && !inPool)
+        {
+            usableboost += (totalboost / 2f) * Time.deltaTime;
+            usableboost = Mathf.Min(usableboost, totalboost);
         }
 
 
         if (!previouspool && inPool)
         {
-            usableboost = totalboost;
+            if(totalboost > 0)
+            {
+                if (!rocketmeter.activeSelf)
+                {
+                    rocketmeter.SetActive(true);
+                    rocketmeterscript = rocketmeter.GetComponentInChildren<rocketmeterscript>();
+                }
+            }
         }
 
 
@@ -514,7 +544,7 @@ public class playerscript : MonoBehaviour
         {
             if (!fightmanager.won && mybait != null)
             {
-                Destroy(mybait);
+                mybait.GetComponent<stats>().lostmacthes += 1;
                 stopfishing();
             }
             else if (fightmanager.won &&

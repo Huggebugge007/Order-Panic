@@ -56,6 +56,11 @@ public class sketchmarket : MonoBehaviour, IInteractable
 
     private Interact interact;
 
+    public List<GameObject> bosses = new List<GameObject>();
+
+    public upgrade qualityupgrade;
+
+    private bestfish bestfishscript;
     public void Update()
     {
         if (!interact.CanInteractWith(this))
@@ -73,6 +78,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
     {
         interact = playerscript.GetComponent<Interact>();
         fightmanager = GameObject.FindGameObjectWithTag("fightmanager").GetComponent<fightmanager>();
+        bestfishscript = handler.GetComponent<bestfish>();
     }
 
 
@@ -182,10 +188,10 @@ public class sketchmarket : MonoBehaviour, IInteractable
         stats fishstats = playerfishholder.GetChild(0).GetComponent<stats>();
         weight.text = NumberFormatter.FormatNumber(Mathf.RoundToInt(fishstats.weight)) + "g";
         sellpricevalue = Mathf.RoundToInt(fishstats.weight * 0.05f);
-        sellprice.text = NumberFormatter.FormatNumber(sellpricevalue) + "$";
+        sellprice.text = "$" + NumberFormatter.FormatNumber(sellpricevalue);
 
-        basevalue.text = "Base value: " + NumberFormatter.FormatNumber(fishstats.cost) + "$";
-        sellpricenormal.text = "Sellprice: " + NumberFormatter.FormatNumber(fishstats.cost * 0.3f) + "$";
+        basevalue.text = "Base value: $" + NumberFormatter.FormatNumber(fishstats.cost);
+        sellpricenormal.text = "Sellprice: $" + NumberFormatter.FormatNumber(fishstats.cost * 0.3f);
     }
     public void sell()
     {
@@ -223,28 +229,30 @@ public class sketchmarket : MonoBehaviour, IInteractable
     {
         if (playerfishholder.childCount != 1)
         {
-            winamount.text = "Win amount = 0$";
+            winamount.text = "Win amount = $0";
             return;
         }
         stats fishstats = playerfishholder.GetChild(0).GetComponent<stats>();
 
         int usableskillllevel = Mathf.Min(fishstats.skilllevel, maxlevel);
         winamountvalue = Mathf.RoundToInt(usableskillllevel * usableskillllevel * 50);
-        winamount.text = "Win amount = " + NumberFormatter.FormatNumber(winamountvalue) + "$";
+        winamount.text = "Win amount = $" + NumberFormatter.FormatNumber(winamountvalue);
     }
     public void joinfight()
     {
         fightingusingmarket = true;
         List<GameObject> possibleopponents = new List<GameObject>();
+        int usableskillllevel = Mathf.Min(playerfishholder.GetChild(0).GetComponent<stats>().skilllevel, maxlevel);
         foreach (GameObject possibleopponent in handler.avaliblefish)
         {
-            if(possibleopponent.GetComponent<stats>().skilllevel == Mathf.Min(playerfishholder.GetChild(0).GetComponent<stats>().skilllevel, maxlevel))
+            if(possibleopponent.GetComponent<stats>().skilllevel == usableskillllevel)
             {
                 possibleopponents.Add(possibleopponent);
             }
         }
 
         opponent.Add(possibleopponents[Random.Range(0, possibleopponents.Count)]);
+
         possibleopponents.Clear();
         StartCoroutine(Singlefight());
     }
@@ -253,40 +261,36 @@ public class sketchmarket : MonoBehaviour, IInteractable
     {
         tournamentlevel = handler.fishelinstars + 1;
 
-        fishelinstars.text = "Fishelin stars: " + handler.fishelinstars + " > " + (handler.fishelinstars + 1);
+        int tournamentmaxlevel = Mathf.Min(maxlevel, bosses.Count);
 
-        tournamententryfeevalue = tournamentlevel * tournamentlevel * tournamentlevel * 500f;
-
-        tournamentEntryFee.text = "Entry fee: " + NumberFormatter.FormatNumber(tournamententryfeevalue) + "$";
-
-
-        string pricetext = tournamentEntryFee.text;
-        string numberText = Regex.Replace(pricetext, @"[^0-9.]", "");
-
-        if (float.TryParse(numberText, out float price))
+        if(tournamentlevel < tournamentmaxlevel + 1)
         {
+            fishelinstars.text = "Fishelin stars: " + handler.fishelinstars + " > " + (handler.fishelinstars + 1);
 
-            if (tournamentlevel > maxlevel)
+            tournamententryfeevalue = bosses[tournamentlevel-1].GetComponent<stats>().cost*4;
+
+            tournamentEntryFee.text = "Entry fee: $" + NumberFormatter.FormatNumber(tournamententryfeevalue);
+
+            if (moneyscript.money >= tournamententryfeevalue)
             {
-                tournamentbutton.interactable = false;
-                tournamentbutton.GetComponent<Image>().color = new Color(0.55f, 0, 0);
-                tournamentbutton.GetComponentInChildren<TMP_Text>().text = "MAX";
+                tournamentbutton.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
             }
             else
             {
-                if (moneyscript.money >= price)
-                {
-                    tournamentbutton.GetComponent<Image>().color = new Color(0.29f, 0.55f, 0);
-                }
-                else
-                {
-                    tournamentbutton.GetComponent<Image>().color = new Color(0.55f, 0, 0);
-                }
+                tournamentbutton.GetComponent<Image>().color = new Color(0.55f, 0, 0);
             }
+        }
+        else
+        {
+            fishelinstars.text = "Fishelin stars: " + handler.fishelinstars + " > MAX" ;
+            tournamentEntryFee.text = "Congrats fisherman, you beat the final fight";
+            tournamentbutton.interactable = false;
+            tournamentbutton.GetComponent<Image>().color = new Color(0.55f, 0, 0);
+            tournamentbutton.GetComponentInChildren<TMP_Text>().text = "MAX";
         }
     }
 
-    public void startAtournamentfight(int numberoffish)
+    public void startAtournamentfight(int numberoffish, bool boss)
     {
         fightingusingmarket = true;
 
@@ -303,6 +307,12 @@ public class sketchmarket : MonoBehaviour, IInteractable
             opponent.Add(possibleopponents[Random.Range(0, possibleopponents.Count)]);
         }
         possibleopponents.Clear();
+
+        if (boss)
+        {
+            opponent.Clear();
+            opponent.Add(bosses[tournamentlevel-1]);
+        }
         fightmanager.changescene(numberoffish);
     }
 
@@ -322,13 +332,13 @@ public class sketchmarket : MonoBehaviour, IInteractable
     }
     private IEnumerator Tournament()
     {
-        for (int j = 2; j < 5; j++)
+        for (int j = 2; j < 6; j++)
         {
-            startAtournamentfight(j);
-
+            if(j != 5)
+            {
+             startAtournamentfight(j,false);
 
             yield return new WaitUntil(() => fightmanager.fightover);
-
 
             if (!fightmanager.won)
             {
@@ -337,11 +347,32 @@ public class sketchmarket : MonoBehaviour, IInteractable
                 {
                     
                     closeshopwithoutfade();
-                    Destroy(playerfishholder.GetChild(0));
+                    playerfishholder.GetChild(0).gameObject.GetComponent<stats>().lostmacthes += 1;
                     opponent.Clear();
                 }
                 yield break;
             }
+            }
+            if(j == 5)
+            {
+                startAtournamentfight(1,true);
+
+            yield return new WaitUntil(() => fightmanager.fightover);
+
+            if (!fightmanager.won)
+            {
+                fightmanager.fightover = false;
+                if (!fightmanager.won && playerfishholder.childCount == 1)
+                {
+                    
+                    closeshopwithoutfade();
+                    playerfishholder.GetChild(0).gameObject.GetComponent<stats>().lostmacthes += 1;
+                    opponent.Clear();
+                }
+                yield break;
+            }
+            }
+
 
 
             fightmanager.fightover = false;
@@ -350,12 +381,17 @@ public class sketchmarket : MonoBehaviour, IInteractable
         }
         closeshopwithoutfade();
         handler.fishelinstars += 1;
-        StartCoroutine(ShowTextForSeconds(15, wontournamentscreen));
+        qualityupgrade.doupgrade();
+        bestfishscript.boss = bosses[tournamentlevel-1];
+        handler.spawnbosses(bosses[tournamentlevel-1]);
+        bestfishscript.possiblefish = bestfishscript.getpossiblefish();
+        qualityupgrade.cost = qualityupgrade.cost / qualityupgrade.costmultiplier;
+        StartCoroutine(ShowTextForSeconds(10, wontournamentscreen));
     }
     private IEnumerator Singlefight()
     {
 
-        startAtournamentfight(1);
+        fightmanager.changescene(1);
 
 
         yield return new WaitUntil(() => fightmanager.fightover);
@@ -365,7 +401,7 @@ public class sketchmarket : MonoBehaviour, IInteractable
         {
             fishscript fishscript = playerfishholder.GetChild(0).GetComponent<fishscript>();
             closeshopwithoutfade();
-            Destroy(playerfishholder.GetChild(0));
+            playerfishholder.GetChild(0).gameObject.GetComponent<stats>().lostmacthes += 1;
             opponent.Clear();
         }
         else if (fightmanager.won)

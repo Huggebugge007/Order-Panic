@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -40,7 +41,7 @@ public class fightscript : MonoBehaviour
         timertime = countdowntimer;
         started = false;
         initialized = false;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = fightmanager.instance.playerscript.gameObject;
         playerscript playerscript = player.GetComponent<playerscript>();
         if (playerscript.catchingfish != null)
         {
@@ -92,6 +93,10 @@ public class fightscript : MonoBehaviour
                     enemy.transform.rotation = spawns[spawn].transform.rotation;
                     enemy.transform.localScale = new Vector3(Mathf.Abs(enemy.transform.localScale.x), enemy.transform.localScale.y, enemy.transform.localScale.z);
                     spawns.RemoveAt(spawn);
+                    Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+                    rb.bodyType = RigidbodyType2D.Dynamic;
+                    rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+                    rb.interpolation = RigidbodyInterpolation2D.Interpolate;
                     enemy.GetComponent<fishscript>().enabled = false;
                     healthbar = Instantiate(healthbar, enemy.transform.position, Quaternion.identity);
                     healthbar.transform.parent = enemy.transform;
@@ -109,6 +114,10 @@ public class fightscript : MonoBehaviour
             enemy.transform.rotation = spawns[spawn].transform.rotation;
             enemy.transform.localScale = new Vector3(Mathf.Abs(enemy.transform.localScale.x),enemy.transform.localScale.y,enemy.transform.localScale.z);
             spawns.RemoveAt(spawn);
+            Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
             enemy.GetComponent<fishscript>().enabled = false;
             healthbar = Instantiate(healthbar,enemy.transform.position, Quaternion.identity);
             healthbar.transform.parent = enemy.transform;
@@ -122,7 +131,10 @@ public class fightscript : MonoBehaviour
             myplayer.transform.parent = null;
             myplayer.transform.rotation = spawns[0].transform.rotation;
             myplayer.GetComponent<fishscript>().enabled = false;
-            myplayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            Rigidbody2D rb = myplayer.GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
             myplayer.GetComponent<Collider2D>().enabled = true;
             healthbar = Instantiate(healthbar, myplayer.transform.position, Quaternion.identity);
             healthbar.transform.parent = myplayer.transform;
@@ -207,7 +219,6 @@ public class fightscript : MonoBehaviour
             if (enemy.GetComponent<FishAI>().health <= 0)
             {
                 fightersleft--;
-                enemy.GetComponent<FishAI>().enabled = false;
                 fighters.RemoveAt(i);
             }
         }

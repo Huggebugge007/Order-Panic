@@ -59,7 +59,7 @@ public class moneyhandler : MonoBehaviour
     private void UpdateMoneyText(float amount)
     {
         string moneyformatted = NumberFormatter.FormatNumber(amount);
-        moneytext.text = "Cash: " + moneyformatted + "$";
+        moneytext.text = "Cash: $" + moneyformatted;
     }
 }
 

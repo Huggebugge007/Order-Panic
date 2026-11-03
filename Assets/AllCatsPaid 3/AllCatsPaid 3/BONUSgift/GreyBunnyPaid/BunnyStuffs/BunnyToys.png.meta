@@ -709,7 +709,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BunnyToys_0: 750862665449748840
+      BunnyToys_1: 2562618282483161299
+      BunnyToys_10: 5733230168210651309
+      BunnyToys_11: 5896111239313121829
+      BunnyToys_12: 704016096194354434
+      BunnyToys_13: 2143314718828932463
+      BunnyToys_14: 290430144393404709
+      BunnyToys_15: 4443100028531931616
+      BunnyToys_16: 5194348316220714714
+      BunnyToys_17: 8971283460799766195
+      BunnyToys_18: 6148747859955237029
+      BunnyToys_19: 5348273951383483899
+      BunnyToys_2: -2458145793131854210
+      BunnyToys_20: 6627605672101979456
+      BunnyToys_21: -5808115806336133009
+      BunnyToys_22: 8507034262819088951
+      BunnyToys_23: 1469116861733989469
+      BunnyToys_3: -5394303246553304146
+      BunnyToys_4: -5352491522407100432
+      BunnyToys_5: -3331375111771874097
+      BunnyToys_6: 7143506596650738709
+      BunnyToys_7: 8594919632983166147
+      BunnyToys_8: 6331948033251949431
+      BunnyToys_9: 8318845316895519574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

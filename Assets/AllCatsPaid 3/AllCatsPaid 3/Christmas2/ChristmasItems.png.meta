@@ -584,7 +584,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ChristmasItems_0: 8701481951992994427
+      ChristmasItems_1: -2729682515952764082
+      ChristmasItems_10: 3374855090936032157
+      ChristmasItems_11: -4905042248400028327
+      ChristmasItems_12: -7330263430059569445
+      ChristmasItems_13: -920061406017472981
+      ChristmasItems_14: 6816416773804341876
+      ChristmasItems_15: -2666011033078549543
+      ChristmasItems_16: 5147022097831212291
+      ChristmasItems_17: 5308233454453883084
+      ChristmasItems_18: 4344446846070545895
+      ChristmasItems_2: 4976302092482870788
+      ChristmasItems_3: 8771569927769522042
+      ChristmasItems_4: -1912443160971583246
+      ChristmasItems_5: 3088006593360937308
+      ChristmasItems_6: 8039691260900192804
+      ChristmasItems_7: -3903799662807957366
+      ChristmasItems_8: 384129888940309809
+      ChristmasItems_9: -4487481315028747205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HairBrush_0: 3353505788049594590
+      HairBrush_1: -860969927182583981
+      HairBrush_2: -5800818519502493761
+      HairBrush_3: 6291146960619989532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

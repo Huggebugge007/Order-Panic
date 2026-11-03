@@ -66,8 +66,8 @@ public class duckscript : MonoBehaviour
     {
         yield return null;
         target = targets[targetindex];
-
-        wantedfish = handler.avaliblefish[Random.Range(handler.resturantquality - 1, handler.resturantquality + 2)];
+        int wantedfishindex = Random.Range(handler.resturantquality - 1, handler.resturantquality + 2);
+        wantedfish = handler.avaliblefish[wantedfishindex];
 
     }
 
@@ -244,30 +244,46 @@ public class duckscript : MonoBehaviour
             }
         }
         iterationCount++;
-        if(arewethereyet && !exploding && !finsihed)
-        {
-            bool touchingfish = Physics2D.OverlapCircle(transform.position, 0.2f, fishlayer);
-            if (touchingfish)
-            {
-                Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f);
-                if(hit.name.Length > 7)
-                {
-                    if (hit.name.Substring(0, hit.name.Length - 7) == wantedfish.name)
-                    {
-                        if(hit.transform.parent == null)
-                        {
-                            int cost = hit.GetComponent<stats>().cost;
-                            moneyhandler.Changemoney(cost * (1 + handler.fishelinstars));
+        if (arewethereyet && !exploding && !finsihed)
+{
+    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.5f);
 
-                            hit.GetComponent<fishscript>().DestroyWithExplosion();
-                            finsihed = true;
-                            DestroyWithExplosion();
-                        }
-                    }
-                }
+    foreach (Collider2D hit in hits)
+    {
+        if (hit == null)
+            continue;
 
-            }
-        }
+        // Only accept fish that have been released
+        if (hit.transform.parent != null)
+            continue;
+
+        // Check whether the object's layer is included in the LayerMask
+        if ((fishlayer.value & (1 << hit.gameObject.layer)) == 0)
+            continue;
+
+        // Check that the fish name matches the wanted fish
+        if (hit.name.Length <= 7)
+            continue;
+
+        if (hit.name.Substring(0, hit.name.Length - 7) != wantedfish.name)
+            continue;
+
+        stats fishStats = hit.GetComponent<stats>();
+        fishscript fish = hit.GetComponent<fishscript>();
+
+        if (fishStats == null || fish == null)
+            continue;
+
+        int cost = fishStats.cost;
+        moneyhandler.Changemoney(cost * (1 + handler.fishelinstars));
+
+        fish.DestroyWithExplosion();
+
+        finsihed = true;
+        DestroyWithExplosion();
+        break;
+    }
+}
     }
 
     private void movement()

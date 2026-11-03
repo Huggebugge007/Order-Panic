@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GrassandWoodSnacks_0: -736009567437727736
+      GrassandWoodSnacks_1: 6174129216063358918
+      GrassandWoodSnacks_10: 3019864906249898529
+      GrassandWoodSnacks_11: 5136568388900536243
+      GrassandWoodSnacks_12: 524425086579020642
+      GrassandWoodSnacks_13: 4515058524425363795
+      GrassandWoodSnacks_14: 8899297604166418507
+      GrassandWoodSnacks_15: -3717459981616291394
+      GrassandWoodSnacks_2: 8051706314030315163
+      GrassandWoodSnacks_3: 2281511014328127449
+      GrassandWoodSnacks_4: -453690746936784559
+      GrassandWoodSnacks_5: 5707002740954414635
+      GrassandWoodSnacks_6: 8753804308260687228
+      GrassandWoodSnacks_7: 974677324706372114
+      GrassandWoodSnacks_8: -8738839252056688043
+      GrassandWoodSnacks_9: -6256934798251334731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

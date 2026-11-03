@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BonusCuteGhostIdle_0: -2612285265755754060
+      BonusCuteGhostIdle_1: 8584412299960006948
+      BonusCuteGhostIdle_2: -6884497874945065935
+      BonusCuteGhostIdle_3: 6369471241011337771
+      BonusCuteGhostIdle_4: -7567145414175976388
+      BonusCuteGhostIdle_5: 5308611461274882049
+      BonusCuteGhostIdle_6: 7751337614181334075
+      BonusCuteGhostIdle_7: 1365423511253169070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

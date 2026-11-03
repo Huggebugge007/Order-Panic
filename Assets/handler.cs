@@ -32,19 +32,21 @@ public class handler : MonoBehaviour
 
     public int fishelinstars = 0;
 
+    public GameObject gasparticlesystem;
+
+    public bool unlockeddropper;
+
+
 
     void Start()
     {
-
         usablespawntime = spawntime;
         playerscript = player.GetComponent<playerscript>();
+
         parent = new GameObject();
         parent.name = "fishparent";
-        for (int i = 0; i < fishCount; i++)
-        {
-            SpawnRandom();
-        }
 
+        StartCoroutine(SpawnFishGradually());
         StartCoroutine(CheckFish());
     }
 
@@ -63,58 +65,137 @@ public class handler : MonoBehaviour
         }
     }
 
+    public void spawnbosses(GameObject selected)
+    {
+
+           
+            for (int i = 0; i < 50; i++)
+            {
+            float spawndepht = selected.GetComponent<stats>().spawndepht;
+
+
+
+
+            float ypos = spawndepht + Random.Range(-5, 5);
+            float slopepos = (ypos * 2) - 1.5f;
+            float xpos = Random.Range(slopepos, slopepos - width);
+            Vector2 pos = new Vector2(
+                xpos,
+                ypos
+            );
+    
+    
+            GameObject fish = Instantiate(selected, pos, Quaternion.identity);
+            fishList.Add(fish);
+            fishscript clonefishscript = fish.GetComponent<fishscript>();
+            clonefishscript.market = market;
+            clonefishscript.handler = this;
+            clonefishscript.fishtype = selected;
+            fish.transform.parent = parent.transform;
+            if (fish.GetComponent<stats>().poisnous)
+            {
+                Instantiate(gasparticlesystem, fish.transform.position,Quaternion.identity).transform.parent = fish.transform;
+            }
+
+                
+        }
+
+            
+
+        
+    }
+
+    IEnumerator SpawnFishGradually()
+    {
+        int spawned = 0;
+
+        while (spawned < fishCount)
+        {
+           
+            for (int i = 0; i < 50 && spawned < fishCount; i++)
+            {
+                SpawnRandom();
+                spawned++;
+            }
+
+            
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
     void SpawnRandom()
     {
         GameObject selected = GetRandomPrefab();
         float spawndepht = selected.GetComponent<stats>().spawndepht;
 
-        Vector2 pos = Vector2.zero;
-        bool found = false;
 
-        for (int i = 0; i < 3; i++)
+
+
+        float ypos = spawndepht + Random.Range(-5, 5);
+        float slopepos = (ypos * 2) - 1.5f;
+        float xpos = Random.Range(slopepos, slopepos - width);
+        Vector2 pos = new Vector2(
+            xpos,
+            ypos
+        );
+
+
+        GameObject fish = Instantiate(selected, pos, Quaternion.identity);
+        fishList.Add(fish);
+        fishscript clonefishscript = fish.GetComponent<fishscript>();
+        clonefishscript.market = market;
+        clonefishscript.handler = this;
+        clonefishscript.fishtype = selected;
+        fish.transform.parent = parent.transform;
+        if (fish.GetComponent<stats>().poisnous)
         {
-            pos = new Vector2(
-                Random.Range(-width / 2f, width * 1.5f),
-                spawndepht + Random.Range(-10, 10)
-            );
-
-            // X position of the sloped edge at this Y position
-            float slopeX = -3f + ((pos.y + 1f) * 2f);
-
-            // Only allow positions on the left side of the slope
-            if (pos.x < slopeX)
-            {
-                found = true;
-                break;
-            }
+            Instantiate(gasparticlesystem, fish.transform.position,Quaternion.identity).transform.parent = fish.transform;
         }
-
-        if (found)
-        {
-            GameObject fish = Instantiate(selected, pos, Quaternion.identity);
-            fishList.Add(fish);
-
-            fish.GetComponent<fishscript>().market = market;
-            fish.transform.parent = parent.transform;
-        }
+        
     }
 
-    IEnumerator CheckFish()
+    public void repopulate(stats stats, GameObject fishtype)
     {
-        while (player != null && player.gameObject.activeInHierarchy)
+        float ypos = stats.spawndepht + Random.Range(-5, 5);
+        float slopepos = (ypos * 2) - 1.5f;
+        float xpos = Random.Range(slopepos, slopepos - width);
+        Vector2 pos = new Vector2(
+            xpos,
+            ypos
+        );
+
+        GameObject fishcopy = Instantiate(fishtype, pos, Quaternion.identity);
+        fishscript clonefishscript = fishcopy.GetComponent<fishscript>();
+        clonefishscript.market = market;
+        clonefishscript.handler = this;
+        fishcopy.transform.parent = parent.transform;
+        if (fishcopy.GetComponent<stats>().poisnous)
+        {
+            Instantiate(gasparticlesystem, fishcopy.transform.position,Quaternion.identity).transform.parent = fishcopy.transform;
+        }
+    }
+        
+
+   IEnumerator CheckFish()
+{
+    while (true)
+    {
+        if (player != null && player.gameObject.activeInHierarchy)
         {
             for (int i = 0; i < fishList.Count; i++)
             {
                 if (fishList[i] == null) continue;
 
-                float sqrDist = (player.position - fishList[i].transform.position).sqrMagnitude;
+                float sqrDist =
+                    (player.position - fishList[i].transform.position).sqrMagnitude;
 
                 fishList[i].SetActive(sqrDist < 7 * 7);
             }
-
-            yield return new WaitForSeconds(0.2f);
         }
+
+        yield return new WaitForSeconds(0.2f);
     }
+}
 
     GameObject GetRandomPrefab()
     {
@@ -158,11 +239,12 @@ public class handler : MonoBehaviour
             dephttext.text = "Depth:???";
         }
 
+
     }
     [ContextMenu("Spawn Duck")]
     private void spawnduck()
     {
-        avalibleseats.RemoveAll(s => s == null); // clean stale/destroyed refs first
+        avalibleseats.RemoveAll(s => s == null);  
 
         if (avalibleseats.Count == 0)
         {

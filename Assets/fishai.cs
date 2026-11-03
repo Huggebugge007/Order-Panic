@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class FishAI : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class FishAI : MonoBehaviour
     private floatinghealthbar healthbar;
     private BoxCollider2D weaponHitbox;
     public GameObject Weapon;
+    public bool poisoned = false;
+    Coroutine regenCoroutine;
 
     // =========================================================
     // TARGETING
@@ -64,12 +67,23 @@ public class FishAI : MonoBehaviour
 
     private float idleUntilTime;
     private float evadeUntilTime;
+    private float previoushealth;
+    private bool frozen;
+    private Coroutine freezeRoutine;
+    public bool IsFrozen => frozen;
 
     // =========================================================
     // STATE MACHINE (IMPORTANT FIX)
     // Only ONE state coroutine runs at a time
     // =========================================================
     private Coroutine stateRoutine;
+
+    [Header("Rapid Fire")]
+    public float rapidFireDuration = 2f;
+    public float rapidFireSpinSpeed = 120;
+    public float rapidFireReloadMultiplier = 0.5f;
+
+    private bool rapidFiring;
 
     enum State
     {
@@ -86,9 +100,52 @@ public class FishAI : MonoBehaviour
     private bool isDead;
     private bool isAttacking;
 
-    // =========================================================
-    // UNITY LIFECYCLE
-    // =========================================================
+    private SpriteRenderer [] sprites;
+
+    private float timetonextterretorial;
+    private float regentimer = 0;
+
+
+    [Header("Camouflage")]
+    private float camoRevealDistance = 0.75f;
+    private float camoFadeSpeed = 0.5f;      // alpha per second when hiding
+    [Range(0f, 1f)] private float camoMinAlpha = 0f;
+    private float camoAlpha = 1f;
+    private float camoRevealUntil;
+
+    private CanvasGroup healthbarGroup;
+
+    bool ShouldCamouflage()
+    {
+        if (Time.time < camoRevealUntil) return false;
+        if (currentState == State.Chase) return false;
+        if (isAttacking || rapidFiring) return false;
+        if (currentTarget != null && DistanceToTarget() < camoRevealDistance) return false;
+        return true;
+    }
+
+    void LateUpdate()
+    {
+        if (isDead) return;
+
+        if(!fishStats.Camoflage)return;
+        
+        float target = ShouldCamouflage() ? camoMinAlpha : 1f;
+        float speed = target < camoAlpha ? camoFadeSpeed : camoFadeSpeed * 4f;
+        camoAlpha = Mathf.MoveTowards(camoAlpha, target, speed * Time.deltaTime);
+
+        foreach (SpriteRenderer s in sprites)
+        {
+            Color c = s.color;
+            c.a = camoAlpha;
+            s.color = c;
+        }
+        if (healthbarGroup != null)
+        {
+
+            healthbarGroup.alpha = Mathf.InverseLerp(camoMinAlpha, 1f, camoAlpha);
+        }
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -98,9 +155,24 @@ public class FishAI : MonoBehaviour
         weaponHitbox = Weapon.GetComponentInChildren<BoxCollider2D>();
         float weaponSize = sr.bounds.size.x;
 
-        attackRange = weaponSize + 0.25f;
-        panicRange = attackRange * 2f;
-        safeEvadeDistance = attackRange * 4f;
+        if (fishStats.shooter)
+        {
+            attackRange = fishStats.shootdistance;
+            panicRange = attackRange / 2f;
+            safeEvadeDistance = attackRange;
+            Destroy(Weapon.GetComponent<damage>());
+        }
+        else
+        {
+            attackRange = weaponSize + 0.25f;
+            panicRange = attackRange * 2f;
+            safeEvadeDistance = attackRange * 4f;
+        }
+
+        if(fishStats.reloadtime <= 0)
+        {
+            attackCooldown = 2f;
+        }
 
         // Stats
         health = fishStats.health;
@@ -114,12 +186,20 @@ public class FishAI : MonoBehaviour
 
         rb.gravityScale = 0f;
 
-
+        sprites = GetComponentsInChildren<SpriteRenderer>();
+        previoushealth = health;
     }
 
     private void OnEnable()
     {
         healthbar = GetComponentInChildren<floatinghealthbar>();
+
+        if (healthbar != null)
+        {
+            healthbarGroup = healthbar.GetComponent<CanvasGroup>();
+            if (healthbarGroup == null)
+                healthbarGroup = healthbar.gameObject.AddComponent<CanvasGroup>();
+        }
 
         StartCoroutine(TargetScanLoop());
 
@@ -136,22 +216,89 @@ public class FishAI : MonoBehaviour
         if (isDead) return;
 
         UpdateHealthBar();
+        if (health <= 0)
+{
+    this.enabled = false;
+
+    foreach (SpriteRenderer sprite in sprites)
+    {
+        sprite.color = Color.red;
+    }
+
+    if (regenCoroutine != null)
+    {
+        StopCoroutine(regenCoroutine);
+        regenCoroutine = null;
+    }
+
+    return;
+}
+
+// Detect health changes
+if (health < previoushealth && !poisoned)
+{
+            if (!frozen)
+            {
+                StartCoroutine(flashred(Color.white));
+            }
+            else
+            {
+                StartCoroutine(flashred(new Color(0/ 255f, 210/255f, 1f)));
+            }
+   
+
+    regentimer = 0f;
+
+    if (regenCoroutine != null)
+    {
+        StopCoroutine(regenCoroutine);
+        regenCoroutine = null;
+    }
+}
+
+// Wait 5 seconds after damage before regenerating
+if (!poisoned && health < maxHealth && regentimer >= 5f)
+{
+    if (regenCoroutine == null)
+    {
+        regenCoroutine = StartCoroutine(regen());
+    }
+}
+
+regentimer += Time.deltaTime;
+previoushealth = health;
+        previoushealth = health;
 
         if (health <= 0)
         {
+
             Die();
+
         }
 
+        if(Vector2.Distance(transform.position,currentTarget.position) < fishStats.personalspace && fishStats.terretorial && timetonextterretorial <= 0)
+        {
+            shootmany();
+            timetonextterretorial = fishStats.terretorialattacktime;
+        }
+        timetonextterretorial-=Time.deltaTime;
+
+    }
+    
+            
+
+
+void FixedUpdate()
+{
+    if (frozen)
+    {
+        velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
+        return;
     }
 
-    void FixedUpdate()
-    {
-        rb.linearVelocity = Vector2.Lerp(
-            rb.linearVelocity,
-            velocity,
-            Time.fixedDeltaTime * 6f
-        );
-    }
+    rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, velocity, Time.fixedDeltaTime * 6f);
+}
 
     // =========================================================
     // CORE HELPERS
@@ -165,10 +312,16 @@ public class FishAI : MonoBehaviour
 
     void Die()
     {
-        isDead = true;
         velocity = Vector2.zero;
         rb.linearVelocity = Vector2.zero;
+
+
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            sprite.color = Color.red;
+        }
         StopAllCoroutines();
+        isDead = true;
         this.enabled = false;
     }
 
@@ -213,6 +366,8 @@ public class FishAI : MonoBehaviour
     // =========================================================
     // AI LOOP (SINGLE BRAIN LOOP)
     // =========================================================
+    private float nextEngageRollTime;
+
     IEnumerator AILoop()
     {
         while (!isDead)
@@ -225,18 +380,17 @@ public class FishAI : MonoBehaviour
                 continue;
             }
 
+            // Idle and Evade end themselves. Only Chase is re-evaluated here.
+            if ((currentState == State.Idle || currentState == State.Evade) && stateRoutine != null)
+                continue;
+
             float dist = DistanceToTarget();
-
-            bool panic = dist < panicRange;
             bool close = dist < attackRange;
-            bool far = dist > safeEvadeDistance;
 
-            // ATTACK FIRST: fire immediately whenever in range, regardless of current state
             if (close && Time.time >= nextAttackTime)
             {
                 TryAttack();
 
-                // Only now roll fight-or-flight, once, right after the swing
                 if (Random.value > aggression)
                 {
                     evadeUntilTime = Time.time + evadeTime;
@@ -246,30 +400,22 @@ public class FishAI : MonoBehaviour
                 {
                     ChangeState(State.Chase);
                 }
-
                 continue;
             }
 
-            if (Time.time < evadeUntilTime)
+            // Aggression decides whether to keep chasing, rolled every few
+            // seconds instead of every tick.
+            if (Time.time >= nextEngageRollTime)
             {
-                ChangeState(State.Evade);
+                nextEngageRollTime = Time.time + Random.Range(2f, 4f);
+                if (Random.value > aggression)
+                {
+                    ChangeState(State.Idle);
+                    continue;
+                }
             }
-            else if (far && Random.value < 0.4f)
-            {
-                ChangeState(State.Idle);
-            }
-            else if (close)
-            {
-                ChangeState(State.Chase);
-            }
-            else if (!close && !panic && Random.value < 0.2f)
-            {
-                ChangeState(State.Idle);
-            }
-            else
-            {
-                ChangeState(State.Chase);
-            }
+
+            ChangeState(State.Chase);
         }
     }
 
@@ -295,6 +441,7 @@ public class FishAI : MonoBehaviour
         Vector2 dir = Random.insideUnitCircle.normalized;
         float nextDirChangeTime = Time.time + Random.Range(1f, 2.5f);
 
+        float nextPanicRoll = 0f;
         while (currentState == State.Idle)
         {
             if (currentTarget != null)
@@ -303,18 +450,32 @@ public class FishAI : MonoBehaviour
 
                 // A nearby target should make the fish engage.
                 // Aggression is only rolled after an attack, not repeatedly while approaching.
-                if (dist < panicRange)
+                // Target too close: fight or flee, rolled at most once per second
+            if (dist < panicRange && Time.time >= nextPanicRoll)
+            {
+                nextPanicRoll = Time.time + 1f;
+                if (Random.value < aggression)
                 {
                     ChangeState(State.Chase);
-                    yield break;
                 }
+                else
+                {
+                    evadeUntilTime = Time.time + evadeTime;
+                    ChangeState(State.Evade);
+                }
+                yield break;
+            }
 
-                // Time to chase: idle window is over and target is within range
-                if (Time.time >= endTime && dist <= safeEvadeDistance)
+            // Idle window over: only engage if feeling aggressive, else keep hiding
+            if (Time.time >= endTime)
+            {
+                if (dist <= safeEvadeDistance && Random.value < aggression)
                 {
                     ChangeState(State.Chase);
                     yield break;
                 }
+                endTime = Time.time + Random.Range(idleTimeBase * 0.7f, idleTimeBase * 1.3f);
+            }
 
                 // Gentle avoidance bias while idle
                 if (dist < safeEvadeDistance)
@@ -395,6 +556,11 @@ public class FishAI : MonoBehaviour
         }
 
     }
+    IEnumerator waitbeforespin()
+    {
+        yield return new WaitForSeconds(2);
+        StartRapidFire();
+    }
 
     void FindTarget()
     {
@@ -438,6 +604,8 @@ public class FishAI : MonoBehaviour
 
     void RotateTowards(Vector2 dir)
     {
+        if (rapidFiring || frozen) return;
+
         if (dir.sqrMagnitude < 0.001f) return;
 
         float targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -570,17 +738,18 @@ public class FishAI : MonoBehaviour
 
             // Exit conditions
             // Exit conditions
-            if (dist > safeEvadeDistance)
+           bool minTimePassed = timeEvading >= evadeTime * 0.5f;
+
+            if (minTimePassed && dist > safeEvadeDistance)
             {
                 evadeUntilTime = 0f;
-                idleUntilTime = Time.time + Random.Range(1.5f, 3.5f);
                 ChangeState(State.Idle);
                 yield break;
             }
             else if (timeEvading > escapeLimit)
             {
                 evadeUntilTime = 0f;
-                ChangeState(State.Chase);
+                ChangeState(Random.value < aggression ? State.Chase : State.Idle);
                 yield break;
             }
 
@@ -617,7 +786,15 @@ public class FishAI : MonoBehaviour
 
         isAttacking = true;
 
-        nextAttackTime = Time.time + attackCooldown;
+        if(fishStats.reloadtime <= 0)
+        {
+            nextAttackTime = Time.time + 2;
+        }
+        else
+        {
+            nextAttackTime = Time.time + fishStats.reloadtime;
+        }
+
 
         weaponHitbox.enabled = true;
 
@@ -658,8 +835,17 @@ public class FishAI : MonoBehaviour
     // =========================================================
     public void TryAttack()
     {
+        if (rapidFiring|| frozen) return;
         if (Time.time < nextAttackTime) return;
-        StartCoroutine(AttackRoutine());
+
+        if (fishStats.shooter)
+        {
+            shoot();
+        }
+        else
+        {
+            StartCoroutine(AttackRoutine());
+        }
     }
     // =========================================================
     // SAFE DISTANCE CHECK (avoids repeated Distance calls)
@@ -678,4 +864,251 @@ public class FishAI : MonoBehaviour
         velocity = Vector2.zero;
         rb.linearVelocity = Vector2.zero;
     }
+        IEnumerator flashred(Color originalcolor)
+    {
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            sprite.color = Color.red;
+        }
+
+
+        yield return new WaitForSeconds(0.3f);
+
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            sprite.color = originalcolor;
+        }
+    }
+
+        void shoot()
+        {
+            nextAttackTime = Time.time + fishStats.reloadtime;
+            if (Weapon != null)
+            {
+            if (!fishStats.burst)
+            {
+                 float step = 360f / fishStats.shotsatatime;
+
+                for(int i = 0; i < fishStats.shotsatatime; i++)
+                {
+                    float angle = transform.eulerAngles.z + step * i;
+
+                    GameObject projectile = Instantiate(Weapon,transform.position,Quaternion.Euler(0f, 0f, angle));
+
+                    BoxCollider2D weaponhitbox = projectile.GetComponent<BoxCollider2D>();
+                    projectilescript projectilescript = projectile.AddComponent<projectilescript>();
+                    projectilescript.Initialize(gameObject);
+                    projectilescript.damage = fishStats.damage;
+                    projectilescript.shotspeed = fishStats.shotspeed;
+                    
+                    weaponhitbox.enabled = true;
+                }
+            }
+
+            else
+            {
+                StartCoroutine(burstshots(fishStats.shotsatatime, fishStats.bursttime));
+            }
+
+            }
+        }
+        void shootmany()
+        {
+            nextAttackTime = Time.time + fishStats.reloadtime;
+            if (Weapon != null)
+            {
+                int shots = fishStats.shotsatatime + 3;
+                float step = 360f / shots;
+
+                for(int i = 0; i < shots; i++)
+                {
+                    float angle = transform.eulerAngles.z + step * i;
+
+                    GameObject projectile = Instantiate(Weapon,transform.position,Quaternion.Euler(0f, 0f, angle));
+
+                    BoxCollider2D weaponhitbox = projectile.GetComponent<BoxCollider2D>();
+                    projectilescript projectilescript = projectile.AddComponent<projectilescript>();
+                    projectilescript.Initialize(gameObject);
+                    projectilescript.damage = fishStats.damage;
+                    projectilescript.shotspeed = fishStats.shotspeed;
+                    
+                    weaponhitbox.enabled = true;
+                }
+
+            }
+        }
+        public void StartRapidFire()
+        {
+            if (isDead || !fishStats.shooter || rapidFiring)
+                return;
+
+            StartCoroutine(RapidFireRoutine());
+        }
+
+    IEnumerator RapidFireRoutine()
+    {
+        rapidFiring = true;
+
+        float endTime = Time.time + rapidFireDuration;
+
+        float reload = fishStats.reloadtime > 0
+            ? fishStats.reloadtime * 0.2f
+            : 1f;
+
+        while (Time.time < endTime && !isDead)
+        {
+            // Spin the fish
+            transform.Rotate(
+                0f,
+                0f,
+                rapidFireSpinSpeed * Time.deltaTime
+            );
+
+            // Fire if the reload is finished
+            if (Time.time >= nextAttackTime)
+            {
+                shoot();
+                nextAttackTime = Time.time + reload;
+            }
+
+            yield return null;
+        }
+
+        rapidFiring = false;
+    }
+    public IEnumerator poision(float poisondamage)
+    {
+        poisoned = true;
+
+        for(int i = 0;i < 5;i++)
+        {
+            foreach(SpriteRenderer sprite in sprites)
+            {
+                sprite.color = new Color(6/255,96/255,31/255);
+            }
+            yield return new WaitForSeconds(1f);
+            health -= poisondamage / 5;
+            
+            foreach(SpriteRenderer sprite in sprites)
+            {
+                sprite.color = Color.red;
+            }
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        foreach(SpriteRenderer sprite in sprites)
+        {
+            sprite.color = Color.white;
+        }
+        poisoned = false;
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(!isActiveAndEnabled)
+            return;
+
+        if(collision.gameObject.tag == "fish")
+        {
+            if (collision.gameObject.GetComponent<stats>().poisnous)
+            {
+                if (!poisoned)
+                {
+                    StartCoroutine(poision(collision.gameObject.GetComponent<stats>().damage));
+                }
+            }
+        }
+    }
+        IEnumerator regen()
+{
+    while (health < maxHealth && !poisoned)
+    {
+        foreach (SpriteRenderer sprite in sprites)
+        {
+            sprite.color =new Color(34/255, 255/255, 0);
+        }
+
+        if (health < maxHealth && !poisoned)
+        {
+            health = Mathf.Min(
+                health + maxHealth * 0.01f,
+                maxHealth
+            );
+        }
+
+
+        yield return new WaitForSeconds(0.3f);
+
+
+
+        foreach (SpriteRenderer sprite in sprites)
+        {
+            sprite.color = Color.white;
+        }
+        yield return new WaitForSeconds(0.7f);
+    }
+
+    regenCoroutine = null;
+}
+    public IEnumerator heal(float amount)
+    {
+            foreach(SpriteRenderer sprite in sprites)
+            {
+                sprite.color =new Color (84/255, 255/255, 0);
+            }
+            health += amount;
+
+            yield return new WaitForSeconds(0.3f);
+
+            foreach(SpriteRenderer sprite in sprites)
+            {
+                sprite.color = Color.white;
+            }
+
+    }
+
+    IEnumerator burstshots(int shots, float delay)
+    {
+        for(int i = 0; i < shots; i++)
+        {
+                    GameObject projectile = Instantiate(Weapon,transform.position,transform.rotation);
+
+                    BoxCollider2D weaponhitbox = projectile.GetComponent<BoxCollider2D>();
+                    projectilescript projectilescript = projectile.AddComponent<projectilescript>();
+                    projectilescript.damage = fishStats.damage;
+                    projectilescript.shotspeed = fishStats.shotspeed;
+                    projectilescript.Initialize(gameObject);
+                    weaponhitbox.enabled = true;
+                    yield return new WaitForSeconds(delay);
+        }
+        yield return null;
+    }
+
+        public void Freeze(float duration)
+{
+    if (isDead) return;
+
+    if (freezeRoutine != null)
+        StopCoroutine(freezeRoutine);
+
+    freezeRoutine = StartCoroutine(FreezeRoutine(duration));
+}
+
+IEnumerator FreezeRoutine(float duration)
+{
+    frozen = true;
+    velocity = Vector2.zero;
+
+    foreach (SpriteRenderer sprite in sprites)
+        sprite.color = new (0/ 255f, 210/255f, 1f);
+
+    yield return new WaitForSeconds(duration);
+
+    frozen = false;
+
+    foreach (SpriteRenderer sprite in sprites)
+        sprite.color = Color.white;
+
+    freezeRoutine = null;
+}
+    
 }

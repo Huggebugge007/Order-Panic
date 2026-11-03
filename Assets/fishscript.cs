@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.XR;
 
 public class fishscript : MonoBehaviour
 {
     public bool inwater, inpool;
     public stats stats;
+
+    public handler handler;
 
     public float speed;
     public Vector2 goal;
@@ -36,17 +39,26 @@ public class fishscript : MonoBehaviour
     public float breedtimer = 0f;
 
     public bool countingdown = true;
+
+    public bool wasdefeated = false;
+
+    private int lastlostmacthes;
+
+    public GameObject fishtype;
     void Awake()
     {
         wasinwater = false;
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<stats>();
+        speed = stats.speed;
+        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     void Start()
     {
         countdown = timetildry;
-        speed = stats.speed;
-        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     void Update()
@@ -139,6 +151,22 @@ public class fishscript : MonoBehaviour
         {
             goal.y = Mathf.Min(goal.y, -2.5f);
         }
+        
+        if(stats.defeated && !wasdefeated)
+        {
+            handler.repopulate(stats,fishtype);
+        }
+        wasdefeated = stats.defeated;
+
+        if(stats.lostmacthes >= 3)
+        {
+            Destroy(gameObject);
+        }
+        if(stats.lostmacthes != lastlostmacthes)
+        {
+            countdown = timetildry;
+        }
+        lastlostmacthes = stats.lostmacthes;
     }
 
     void FixedUpdate()
@@ -195,10 +223,9 @@ public class fishscript : MonoBehaviour
                 startpos.y + Random.Range(-wanderY, wanderY)
             );
 
-            // X position of the slope at this Y
             float slopeX = -3f + ((goal.y + 1f) * 2f);
 
-            // Keep trying while the goal is NOT on the left side
+
             if (goal.x < slopeX)
             {
                 break;

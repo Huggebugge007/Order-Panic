@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BunnyFlowerfood_0: -2657504554440519747
+      BunnyFlowerfood_1: -6246920885474777787
+      BunnyFlowerfood_10: -4412450320014519540
+      BunnyFlowerfood_11: -5492918202967184988
+      BunnyFlowerfood_2: -6862782979679431184
+      BunnyFlowerfood_3: -7752192013131962446
+      BunnyFlowerfood_4: 860686599521908822
+      BunnyFlowerfood_5: -791607638366653653
+      BunnyFlowerfood_6: 7256544747244917755
+      BunnyFlowerfood_7: -452306537888427034
+      BunnyFlowerfood_8: -6034777883525292309
+      BunnyFlowerfood_9: 3618140110323180327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

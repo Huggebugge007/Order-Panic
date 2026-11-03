@@ -13,6 +13,43 @@ public class stats : MonoBehaviour
     public float middledamage;
     public float weightmiddlegrams = 8;
     public float middlesize;
+    public int cost;
+
+    [Header("shooter")]
+    public bool shooter;
+    public bool burst;
+
+    public float bursttime;
+    public float shotspeed;
+    public float reloadtime;
+    public float shootdistance;
+    public int shotsatatime;
+
+    [Header("terretorialshooter")]
+    public bool terretorial;
+    public float personalspace;
+
+    public float terretorialattacktime;
+
+    [Header("venomous")]
+
+    public bool poisnous;
+    public bool venemousweapon;
+
+    [Header("Lifesteal")]
+    public bool lifesteal;
+    public float lifestealamount;
+
+    [Header("Camoflage")]
+    public bool Camoflage;
+
+    [Header("Freeze")]
+    public bool freezer;
+    public float freezeduration;
+
+
+
+
 
 
     [Header("Species ai values")]
@@ -38,9 +75,15 @@ public class stats : MonoBehaviour
     public float evadetime;
     public float aggression;
     public float idlemiddletime;
-    public int cost;
+
 
     public int skilllevel;
+
+    public int lostmacthes;
+
+    
+
+    
     
 
 
@@ -74,7 +117,7 @@ public class stats : MonoBehaviour
             transform.localScale = new Vector2(size, size);
 
 
-
+            lostmacthes = 0;
 
             instanisated = true;
         }

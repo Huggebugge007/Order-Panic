@@ -68,13 +68,13 @@ public class handlerforgambler : MonoBehaviour
         dropgamecurrent = worth * (streak * 0.1f) * Mathf.Pow(1.5f, streak - 1);
         dropgamepotential = worth * ((streak + 1)* 0.1f) * Mathf.Pow(1.5f, streak);
 
-        fishdropcurrent.text = "Current winnings: " + dropgamecurrent + "$";
-        fishdroppotential.text = "Potential winnings: " + dropgamepotential + "$";
+        fishdropcurrent.text = "Current winnings: $" + dropgamecurrent;
+        fishdroppotential.text = "Potential winnings: $" + dropgamepotential;
 
-        cointosspotentialtext.text = "Potential worth: " + cointosspotential + "$";
-        cointosscurrenttext.text = "Current worth: "+ worth + "$";
+        cointosspotentialtext.text = "Potential worth: $" + cointosspotential;
+        cointosscurrenttext.text = "Current worth: $"+ worth;
 
-        moneytext.text = "Cash: " + NumberFormatter.FormatNumber(moneyscript.money) + "$";
+        moneytext.text = "Cash: $" + NumberFormatter.FormatNumber(moneyscript.money);
     }
 
 
@@ -163,7 +163,8 @@ public class handlerforgambler : MonoBehaviour
         }
         if (won)
         {
-            fish.GetComponent<stats>().cost = Mathf.FloorToInt(fish.GetComponent<stats>().cost * 1.5f);
+            fish.GetComponent<stats>().cost = Mathf.FloorToInt(fish.GetComponent<stats>().cost * 2f);
+            //add gold effect
         }
         midgame = false;
         recheckstats();

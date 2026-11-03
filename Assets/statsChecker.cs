@@ -123,7 +123,7 @@ public class statsChecker : MonoBehaviour, IInteractable
         health.text = "Health: " + NumberFormatter.FormatNumber(stats.health);
         speed.text = "Speed: " + NumberFormatter.FormatNumber(stats.speed * 100);
         level.text = "Fighting Level: " + stats.skilllevel.ToString();
-        upgradeprice.text = "Skill Level Upgrade Price: " + NumberFormatter.FormatNumber(stats.skilllevel * stats.skilllevel * 150) + "$";
+        upgradeprice.text = "Skill Level Upgrade Price: $" + NumberFormatter.FormatNumber(stats.skilllevel * stats.skilllevel * 150);
 
         price = stats.skilllevel * stats.skilllevel * 150;
 

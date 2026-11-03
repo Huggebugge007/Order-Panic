@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BunnyFoods_0: 1720280882051862291
+      BunnyFoods_1: -5568042369292988718
+      BunnyFoods_2: -4268109388533552151
+      BunnyFoods_3: -7230204945892020936
+      BunnyFoods_4: -5341548665777235585
+      BunnyFoods_5: 1693581336734511050
+      BunnyFoods_6: -3805672705176054107
+      BunnyFoods_7: -8951537589601113979
+      BunnyFoods_8: 4410785392932686717
+      BunnyFoods_9: 2330836216742094152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

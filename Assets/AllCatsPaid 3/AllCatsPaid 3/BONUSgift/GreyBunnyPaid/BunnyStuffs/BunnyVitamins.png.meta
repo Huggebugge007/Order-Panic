@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BunnyVitamins_0: 8603063442844483370
+      BunnyVitamins_1: 6263671506226397840
+      BunnyVitamins_2: 263745493257918777
+      BunnyVitamins_3: 8143241389282445861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

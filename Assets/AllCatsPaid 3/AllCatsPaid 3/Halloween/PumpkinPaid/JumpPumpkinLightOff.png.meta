@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JumpPumpkinLightOff_0: 3715448303676711542
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

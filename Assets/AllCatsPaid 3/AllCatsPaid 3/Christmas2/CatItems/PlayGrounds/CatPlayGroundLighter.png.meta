@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CatPlayGroundLighter_0: 4345613103797465956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

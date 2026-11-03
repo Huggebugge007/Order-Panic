@@ -559,7 +559,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Liking_0: -5295795627295327995
+      Liking_1: 6239906815078628787
+      Liking_10: -6988913706540138305
+      Liking_11: -9011880422355638387
+      Liking_12: -1935061582342252470
+      Liking_13: -2491548410780299130
+      Liking_14: 8488121446109148359
+      Liking_15: -355662729685683209
+      Liking_16: -6197449781892309347
+      Liking_17: -8605005579705788311
+      Liking_2: 7178128142432255017
+      Liking_3: -2819155585626003792
+      Liking_4: 4923326396989601410
+      Liking_5: -8825557983652277476
+      Liking_6: -3888848593814539375
+      Liking_7: -5026566718075935724
+      Liking_8: 5131098770102142197
+      Liking_9: -4938597089273526787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

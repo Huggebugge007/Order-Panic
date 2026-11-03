@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PetCarryBox_0: 2443003105922782698
+      PetCarryBox_1: 8744718084597809132
+      PetCarryBox_2: -2116367197609409333
+      PetCarryBox_3: -1433001162383744831
+      PetCarryBox_4: 8047807560542490144
+      PetCarryBox_5: -6371900339740479193
+      PetCarryBox_6: 2119452275423047160
+      PetCarryBox_7: 6224051067594887991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

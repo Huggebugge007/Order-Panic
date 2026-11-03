@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VitaminPaste_0: 3406367381263674704
+      VitaminPaste_1: -7942386541463023612
+      VitaminPaste_2: 6512193843021805752
+      VitaminPaste_3: 7902330098233545266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

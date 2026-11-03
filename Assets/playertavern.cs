@@ -176,7 +176,7 @@ private void Awake()
 
     private void UpdateCameraSize()
     {
-        cam.orthographicSize = insideTavern ? 1.4f : 2f;
+        cam.orthographicSize = insideTavern ? 1.75f : 2f;
     }
 
     public void UseDoor(Vector2 destination,bool changesTavernState,bool destinationIsInsideTavern)

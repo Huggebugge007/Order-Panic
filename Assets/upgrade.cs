@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class upgrade : MonoBehaviour
 {
@@ -15,11 +16,18 @@ public class upgrade : MonoBehaviour
     public int currentrupgradenumber;
 
     public int addormult;
+    private workstation workstation;
+
+    public dropperscript dropperscript;
+
+    private shopscript shopscript;
 
     private void Start()
     {
+        workstation = FindFirstObjectByType<workstation>();
+        shopscript = workstation.GetComponent<shopscript>();
         string formattedcost = NumberFormatter.FormatNumber(cost);
-        pricetext.text = "Cost: " + formattedcost + "$";
+        pricetext.text = "Cost: $" + formattedcost;
         if(addormult == 1)
         {
             string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
@@ -43,27 +51,25 @@ public class upgrade : MonoBehaviour
             currentrupgradenumber +=1;
             moneyhandler.Changemoney(-cost);
             cost *= costmultiplier;
-
             
             
             string formattedcost = NumberFormatter.FormatNumber(cost);
-            pricetext.text = "Cost: " + formattedcost + "$";
+            pricetext.text = "Cost: $" + formattedcost;
             if (addormult == 1)
             {
                 currentamount += upgradeamount;
-                string formattedupgrade = NumberFormatter.FormatNumber((currentamount + upgradeamount));
-                upgradenexttext.text = formattedupgrade;
+                upgradenexttext.text = (currentamount + upgradeamount).ToString();
             }
             else
             {
                 currentamount *= upgradeamount;
-                string formattedupgrade = NumberFormatter.FormatNumber((currentamount * upgradeamount));
+                string formattedupgrade = (currentamount * upgradeamount).ToString();
                 upgradenexttext.text = formattedupgrade;
             }
             
             
-            string formattedcurrentupgrade = NumberFormatter.FormatNumber(currentamount);
-            currentupgradetext.text = formattedcurrentupgrade;
+            
+            currentupgradetext.text = (currentamount).ToString();
 
             if (upgradenumber == 1)
             {
@@ -97,7 +103,22 @@ public class upgrade : MonoBehaviour
             {
                 handler.upgradequality(((int)currentamount));
             }
+            else if(upgradenumber == 9)
+            {
+                dropperscript.newtime(currentamount);
+            }
         }
+        StartCoroutine(DoNextFrame());
+        
+    }
+
+
+    IEnumerator DoNextFrame()
+    {
+         yield return null;
+
+        workstation.resetshop();
+        shopscript.resetshop();
     }
 
 }

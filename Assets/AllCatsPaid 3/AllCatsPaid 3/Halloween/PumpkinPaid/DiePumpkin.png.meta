@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DiePumpkin_0: 674150686681818851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
